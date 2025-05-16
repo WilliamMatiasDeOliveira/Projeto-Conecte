@@ -21,6 +21,10 @@ header .menu{
 
 }
 
+header .menu .logo{
+    margin-left: 2rem;
+}
+
 header .menu .logo a{
     text-decoration: none;
     color: var(--preto);
@@ -48,7 +52,7 @@ header .menu-nav ul li a{
     font-size: 1.5rem;
     font-weight: 500;
     padding: 2rem;
-    transition: 0.3s eade;
+    transition: 0.5s ease;
 }
 
 header .menu-nav ul a:hover{
@@ -123,6 +127,10 @@ footer .apoio a {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+    }
+
+    header .menu .logo{
+        margin-left: 0;
     }
 
     header .menu-nav ul{
