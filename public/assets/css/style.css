@@ -140,7 +140,7 @@ footer .apoio a {
     margin-top: 5rem;
 }
 
-.hero .hero-intro h1 strong{
+.hero .hero-intro h1 strong {
     color: var(--azul-escuro);
 }
 
@@ -169,6 +169,15 @@ footer .apoio a {
 */
 
 @media (max-width: 480px) {
+
+    header .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: var(--azul-escuro);
+    }
+
     header .menu-nav {
         flex-direction: column;
         justify-content: center;
@@ -213,27 +222,29 @@ footer .apoio a {
 ==================================================
 */
 
-.hero .hero-intro {
-    padding: 0 1rem;
-    width: 100%;
-}
+    .hero .hero-intro {
+        padding: 0 1rem;
+        width: 100%;
+    }
 
-.hero .hero-intro h1 {
-    font-size: 2rem;
-    margin-top: 2rem;
-}
+    .hero .hero-intro h1 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
 
-.hero .hero-intro p {
-    text-align: left;
-}
+    .hero .hero-intro p {
+        text-align: left;
+    }
 
-.hero .hero-intro .btn {
-    margin-bottom: 2rem;
-}
+    .hero .hero-intro .btn {
+        margin-bottom: 2rem;
+    }
 
-.hero .hero-img img{
-    margin-top: 0;
-    width: 350px;
-}
+    .hero .hero-img img {
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
 
 }

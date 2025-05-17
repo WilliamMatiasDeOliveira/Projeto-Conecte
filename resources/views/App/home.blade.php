@@ -1,11 +1,9 @@
 @extends('Layouts.main_layout')
 @section('title', 'Home')
 
-@include('Layouts.header')
-
 @section('content')
 
-
+    @include('Layouts.header')
 
     <div class="hero">
 
@@ -24,7 +22,6 @@
             <img src="{{ asset('assets/imgs/hero4.png') }}" alt="Imagem de fundo">
         </div>
     </div>
-    </section>
 
     @include('Layouts.footer')
 
