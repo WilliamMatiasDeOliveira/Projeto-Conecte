@@ -158,6 +158,56 @@ footer .apoio a {
     flex: 1;
 }
 
+/*
+==================================================
+    PAGINA SOBRE
+==================================================
+*/
+
+.sobre {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--azul-claro);
+}
+
+.sobre .sobre-info {
+    width: 50%;
+    padding: 3rem;
+}
+
+.sobre .sobre-info h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--azul-escuro);
+}
+
+.sobre .sobre-info p {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.sobre .sobre-info p strong {
+    color: var(--azul-escuro);
+}
+
+.sobre .sobre-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.sobre .sobre-img div {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.sobre .sobre-img img {
+    border-radius: 50%;
+
+}
 
 
 
@@ -197,6 +247,7 @@ footer .apoio a {
         padding: 0 2rem;
         background-color: var(--azul-medio);
         border-radius: 8px;
+        color: var(--azul-escuro);
     }
 
     header .menu-nav .buttons {
@@ -216,7 +267,7 @@ footer .apoio a {
         gap: 20px;
     }
 
-    /*
+/*
 ==================================================
     PAGINA HOME @MEDIA QUERY
 ==================================================
@@ -247,4 +298,54 @@ footer .apoio a {
         display: block;
     }
 
+    /*
+==================================================
+    PAGINA HOME @MEDIA QUERY
+==================================================
+*/
+
+
+.sobre {
+    flex-direction: column;
 }
+
+.sobre .sobre-info {
+    width: 100%;
+    padding: 1rem;
+}
+
+.sobre .sobre-info h1 {
+    /* font-size: 3rem;
+    text-align: center;
+    color: var(--azul-escuro); */
+}
+
+.sobre .sobre-info p {
+    /* font-size: 1.2rem;
+    text-align: justify; */
+}
+
+.sobre .sobre-info p strong {
+    /* color: var(--azul-escuro); */
+}
+
+.sobre .sobre-img {
+    /* flex-direction: column; */
+    width: 100%;
+}
+
+ .sobre .sobre-img div {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.sobre .sobre-img img {
+    border-radius: 50%;
+    width: 100%;
+
+}
+
+
+
+}/*fim da media query de celular*/
