@@ -1,13 +1,60 @@
-*, ::after, ::before{
+*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 16px;
+    height: 100vh;
 }
 
-body{
+body {
     font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+main {
+    flex: 1;
+}
+
+.btn {
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--azul-claro);
+    color: var(--azul-escuro);
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: var(--azul-medio);
+    color: var(--azul-escuro);
+}
+
+.btn-secondary {
+    background-color: var(--azul-medio);
+    color: var(--azul-escuro);
+    font-weight: 500;
+}
+
+.btn-secondary:hover {
+    background-color: var(--azul-claro);
+    color: var(--azul-escuro);
+}
+
+.btn-success{
+    background-color: var(--azul-escuro);
+    font-weight: 500;
+}
+
+.btn-success:hover{
+    background-color: var(--azul-medio);
+    color: var(--preto);
 }
