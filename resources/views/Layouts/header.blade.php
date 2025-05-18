@@ -16,13 +16,16 @@
         </button>
 
         <!-- menu no modo desktop -->
-        <nav class="menu-nav col-md-8 collapse navbar-collapse" id="navbarNav" style="flex-grow:0;">
+        <nav class="menu-nav col-md-10 collapse navbar-collapse" id="navbarNav" style="flex-grow:0;">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="{{route('home')}}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Cuidadores</a>
+                    <a href="#" class="nav-link">Contrate um Cuidador</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Trabalhe Conosco</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{route('sobre')}}" class="nav-link">Sobre</a>
@@ -30,10 +33,11 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">Contatos</a>
                 </li>
+
             </ul>
-            <div class="buttons ms-md-5">
+            <div class="buttons ms-md-">
                 <a href="#"class="btn btn-primary form-control">Entrar</a>
-                <a href="#"class="btn btn-secondary form-control">Cadastrar</a>
+                <a href="{{route('cadastro')}}"class="btn btn-secondary form-control">Cadastrar</a>
             </div>
         </nav>
 

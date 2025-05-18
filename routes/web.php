@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AppController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function(){
-    return view('App.home');
-});
+Route::get('/', [AppController::class, 'home'])->name('home');
+Route::get('/sobre', [AppController::class, 'sobre'])->name('sobre');
+Route::get('/cadastro', [AppController::class, 'cadastro'])->name('cadastro');
+
