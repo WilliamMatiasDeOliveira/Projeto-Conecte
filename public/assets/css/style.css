@@ -288,7 +288,7 @@ footer .apoio img {
     padding: 2rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
-    border-radius: 8px;
+    border-radius: 20px;
     border: none;
     font-size: 1.2rem;
 }
@@ -456,14 +456,10 @@ footer .apoio img {
 
 
     .como-funciona-container h1 {
-        text-align: center;
         font-size: 2rem;
-        font-weight: 500;
     }
 
     .como-funciona {
-        display: flex;
-        justify-content: center;
         flex-direction: column;
         gap: 1rem;
         margin-top: 0.5rem;
@@ -472,103 +468,24 @@ footer .apoio img {
 
     .como-funciona .card {
         width: 100%;
-        border-radius: 20px;
-        border: none;
-    }
-
-    .como-funciona .card .card-img {
-        width: 100px;
-        margin: 1rem auto;
-        padding: 1rem;
-        border-radius: 50%;
-        background-color: var(--azul-claro);
-    }
-
-    .como-funciona .card .card-title {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 500;
-    }
-
-    .como-funciona .card .card-text {
-        text-align: center;
-        font-size: 1.2rem;
-        font-weight: 500;
-    }
-
-    .como-funciona .color1 {
-        background-color: var(--azul-medio);
-    }
-
-    .como-funciona .color2 {
-        background-color: var(--azul-escuro);
-        color: white;
-        font-weight: 500;
     }
 
     /* /////////////////////////////////////////////////////////// */
     /* /////////////////////////////////////////////////////////// */
 
     .papeis-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
-        padding: 1.5rem;
     }
 
     .papeis-container h1 {
-        text-align: center;
         font-size: 2rem;
-        font-weight: 500;
     }
 
     .papeis {
-        display: flex;
         flex-direction: column;
-        gap: 1rem;
+        padding: 1rem;
+        gap: 0rem;
     }
-
-    .papeis .papeis-item {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 2rem;
-        margin-top: 2rem;
-        margin-bottom: 3rem;
-        border-radius: 8px;
-        border: none;
-        font-size: 1.2rem;
-    }
-
-    .papeis .papeis-item h2 {
-        font-size: 2.2rem;
-    }
-
-    .papeis .item1 {
-        background-color: var(--azul-medio);
-    }
-
-    .papeis .item2 {
-        background-color: var(--azul-escuro);
-        color: white;
-    }
-
-    .papeis-item .btn {
-        font-size: 1.2rem;
-        font-weight: 500;
-        color: var(--preto);
-        background-color: var(--azul-claro);
-    }
-
-    .papeis-item .btn:hover {
-        background-color: #c9e3f3;
-        text-decoration: underline;
-    }
-
-
-
-
 
 }
 

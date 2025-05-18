@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="card color1">
+             <div class="card color1">
                 <img src="{{ asset('assets/imgs/funciona4.png') }}" class="card-img" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Comece o cuidado</h5>
