@@ -17,4 +17,8 @@ class AppController extends Controller
     public function cadastro(){
         return view('App.cadastro');
     }
+
+    public function contatos(){
+        return view('App.contatos');
+    }
 }

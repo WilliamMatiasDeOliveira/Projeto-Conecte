@@ -16,7 +16,7 @@
                 e segura. Nossa plataforma simplifica a busca e a conexão, priorizando o cuidado humanizado e a
                 confiança entre as partes.
             </p>
-            <a href="#"class="btn btn-success">Quero saber mais</a>
+            <a href="{{route('cadastro')}}"class="btn btn-success">Quero saber mais</a>
         </div>
         <div class="hero-img">
             <img src="{{ asset('assets/imgs/hero4.png') }}" alt="Imagem de fundo">

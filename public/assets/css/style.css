@@ -318,6 +318,51 @@ footer .apoio img {
     text-decoration: underline;
 }
 
+/*
+==================================================
+    PAGINA CONTATOS
+==================================================
+*/
+
+.contatos-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.contatos-redes {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.contatos-redes span {
+    margin-left: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.contatos-redes span a {
+    color: var(--preto);
+    text-decoration: none;
+}
+
+.contatos-redes span a:hover {
+    color: var(--azul-escuro);
+}
+
+.contatos-mapa {
+    width: 70%;
+}
+
+.contatos-mapa iframe {
+    width: 100%;
+    border-radius: 20px;
+
+}
+
 
 /*
 ======================================================================================================================================================
@@ -487,6 +532,59 @@ footer .apoio img {
         gap: 0rem;
     }
 
+/*
+==================================================
+    PAGINA CONTATOS @MEDIA QUERY
+==================================================
+*/
+
+
+.contatos-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem;
 }
 
-/*fim da media query de celular*/
+.contatos-redes {
+    width: 100%;
+    gap: 2rem;
+}
+
+.contatos-redes span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.contatos-redes span a {
+    color: var(--preto);
+    text-decoration: none;
+}
+
+.contatos-redes span a:hover {
+    color: var(--azul-escuro);
+}
+
+.contatos-mapa {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.contatos-mapa iframe {
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}/*fim da media query de celular*/
