@@ -1,8 +1,9 @@
 :root {
     --azul-claro: #dcedf7;
     --azul-medio: #A4CDEB;
-    --azul-escuro: #5A7D95;
+    --azul-escuro: #6b8cb1;
     --preto: #1F2A33;
+    --preto2: #3D4346;
     --font-padrao: "Roboto", sans-serif;
     --font-destaque: "Poppins", sans-serif; 
     --font-decorativa: "Lobster", sans-serif;
@@ -48,6 +49,7 @@ header .menu-nav {
 
 header .menu-nav ul {
     gap: 1.25rem;
+
 }
 
 header .menu-nav ul li {
@@ -66,7 +68,7 @@ header .menu-nav ul li a {
 header .menu-nav ul a:hover {
     color: var(--preto);
     border-bottom: 2px solid var(--preto);
-    transition: 0.25s ease-in;
+    transition: 0.25s ease;
 }
 
 header .menu-nav .buttons {
@@ -75,11 +77,12 @@ header .menu-nav .buttons {
 }
 
 footer {
+    margin-top: 0.75rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px 0px;
+    padding:15px 0px;
     background-color: var(--azul-escuro);
 
 }
@@ -87,6 +90,7 @@ footer {
 footer .logo {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 5px;
     font-family: var(--font-decorativa);
     font-weight: 500;
@@ -131,7 +135,7 @@ footer .apoio img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1300px;
+    max-width: 1300px;
     margin: 0 auto;
     gap: 2rem;
 }
@@ -168,12 +172,13 @@ footer .apoio img {
 .hero .hero-img {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex: 1;
     margin: 0 auto;
 }
 
 .hero .hero-img img {
-    max-width: 550px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -187,7 +192,7 @@ footer .apoio img {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 1300px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -369,7 +374,7 @@ PAGINA CONTATOS
     display: flex;
     justify-content: space-between;
     padding: 2rem;
-    width: 1300px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -425,27 +430,29 @@ PAGINA CONTATOS
     header .menu {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        background-color: var(--azul-escuro);
+        flex-wrap: wrap;
+        gap: 0;
     }
 
     header .menu-nav {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         text-align: center;
     }
 
     header .menu .logo {
+        gap: 0;
         margin-left: 0;
     }
 
     header .menu-nav ul {
-        margin: 2rem 0;
+        margin: 1rem 0;
         gap: 1rem;
     }
-
+    
     header .menu-nav ul li a {
+        gap: 0;
         padding: 0 2rem;
         background-color: var(--azul-medio);
         border-radius: 8px;
@@ -460,6 +467,7 @@ PAGINA CONTATOS
 
     header .menu-nav .buttons {
         align-items: center;
+        margin: 1rem 0;
         flex-direction: column;
         gap: 1rem;
     }
@@ -480,23 +488,28 @@ PAGINA CONTATOS
     PAGINA HOME @MEDIA QUERY
 ==================================================
 */
-
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .hero .hero-intro {
-        padding: 0 1rem;
-        width: 100%;
+        width: 90%;
     }
 
     .hero .hero-intro h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-top: 2rem;
     }
 
     .hero .hero-intro p {
         text-align: left;
+        font-size: .8rem;
     }
 
     .hero .hero-intro .btn {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        margin: 0 auto;
     }
 
     .hero .hero-img img {

@@ -1,7 +1,17 @@
 <header class="navbar navbar-expand-lg bg-body-tertiary">
 
     <div class="menu-bg container-fluid">
+
         <div class="menu container">
+
+
+        <div class="logo">
+            <a href="#">
+                <img src="{{ asset('assets/imgs/logo.png') }}" alt="logo">
+                <span>Conecte</span>
+            </a>
+        </div>
+
             <!-- botão do menu hamburguer -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,12 +19,6 @@
             </button>
             <!-- menu no modo desktop -->
             <nav class="menu-nav col-md-10 collapse navbar-collapse" id="navbarNav" style="flex-grow:0;">
-                <div class="logo">
-                <a href="#">
-                    <img src="{{ asset('assets/imgs/logo.png') }}" alt="logo">
-                    <span>Conecte</span>
-                </a>
-            </div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="{{ route('home') }}" class="nav-link">Home</a>
