@@ -4,6 +4,7 @@
     --azul-escuro: #5A7D95;
     --preto: #1F2A33;
     --font-padrao: "Roboto", sans-serif;
+    --font-destaque: "Poppins", sans-serif; 
     --font-decorativa: "Lobster", sans-serif;
 }
 
@@ -12,35 +13,41 @@
     padding: 0;
 }
 
-header .menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1.5rem;
+header .menu-bg {
     background-color: var(--azul-escuro);
-
 }
 
-header .menu .logo {
-    margin-left: 2rem;
+header .menu {
+    display: flex;
+    align-items: center;
+    padding: 1.3rem;
+    gap: 4rem;
 }
 
 header .menu .logo a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: var(--preto);
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: var(--font-decorativa);
     font-weight: 500;
+    gap: 8px;
+}
+
+header .menu .logo a img {
+    width: 45px;
+    height: auto;
 }
 
 header .menu-nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    gap: 2rem;
 }
 
-
 header .menu-nav ul {
-    gap: 2rem;
+    gap: 1.25rem;
 }
 
 header .menu-nav ul li {
@@ -50,14 +57,16 @@ header .menu-nav ul li {
 header .menu-nav ul li a {
     color: white;
     font-weight: 500;
-    padding: 2rem;
-    transition: 0.5s ease;
+    padding: .50rem;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+
 }
 
 header .menu-nav ul a:hover {
     color: var(--preto);
-    border-bottom: 3px solid var(--preto);
-    padding: 1.5rem;
+    border-bottom: 2px solid var(--preto);
+    transition: 0.25s ease-in;
 }
 
 header .menu-nav .buttons {
@@ -121,17 +130,23 @@ footer .apoio img {
 .hero {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1300px;
+    margin: 0 auto;
+    gap: 2rem;
 }
 
 .hero .hero-intro {
+    margin: 1rem 0 1rem 0;
     display: flex;
     flex-direction: column;
-    padding: 0 3rem;
     width: 50%;
 }
 
 .hero .hero-intro h1 {
-    font-size: 3rem;
+    font-family: var(--font-destaque);
+    font-weight: bold;
+    font-size: 2.75rem;
     margin-top: 5rem;
 }
 
@@ -140,17 +155,26 @@ footer .apoio img {
 }
 
 .hero .hero-intro p {
-    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
     text-align: justify;
 }
 
 .hero .hero-intro .btn {
-    margin-bottom: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 4.5rem;
 }
 
 .hero .hero-img {
-    margin-top: 2rem;
+    display: flex;
+    align-items: center;
     flex: 1;
+    margin: 0 auto;
+}
+
+.hero .hero-img img {
+    max-width: 550px;
+    height: auto;
 }
 
 /*
@@ -163,17 +187,25 @@ footer .apoio img {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 1300px;
+    margin: 0 auto;
 }
 
 .sobre .sobre-info {
     width: 50%;
     padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sobre .sobre-info h1 {
+    font-family: var(--font-destaque);
+    font-weight: 600;
     font-size: 3rem;
     text-align: center;
     color: var(--azul-escuro);
+    margin-bottom: 2rem;
 }
 
 .sobre .sobre-info p {
@@ -200,7 +232,6 @@ footer .apoio img {
 
 .sobre .sobre-img img {
     border-radius: 20px;
-
 }
 
 /*
@@ -209,10 +240,75 @@ footer .apoio img {
 ==================================================
 */
 
-.como-funciona-container h1 {
+.papeis-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.papeis-container h1 {
     text-align: center;
     font-size: 3rem;
     font-weight: 500;
+}
+
+.papeis {
+    display: flex;
+    gap: 5rem;
+}
+
+.papeis .papeis-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 1rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.papeis .papeis-item h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.papeis .item1 {
+    flex: 1;
+    background-color: var(--azul-medio);
+}
+
+.papeis .item2 {
+    flex: 1;
+    background-color: var(--azul-escuro);
+    color: white;
+}
+
+.papeis-item .btn {
+
+    margin-top: auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--preto);
+    background-color: var(--azul-claro);
+}
+
+.papeis-item .btn:hover {
+    background-color: #c9e3f3;
+    text-decoration: underline;
+}
+
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+
+
+.como-funciona-container h1 {
+    font-family: var(--font-destaque);
+    font-weight: 600;
+    text-align: center;
+    font-size: 3rem;
 }
 
 .como-funciona {
@@ -220,19 +316,21 @@ footer .apoio img {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 2rem;
-    padding: 3rem;
+    padding: 1rem;    
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 .como-funciona .card {
-    width: 40vw;
+    width: 35vw;
+    padding: 0.5rem;
     border-radius: 20px;
     border: none;
 }
 
 .como-funciona .card .card-img {
-    width: 100px;
-    margin: 1rem auto;
+    width: 75px;
+    margin: auto;
     padding: 1rem;
     border-radius: 50%;
     background-color: var(--azul-claro);
@@ -240,7 +338,7 @@ footer .apoio img {
 
 .como-funciona .card .card-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 500;
 }
 
@@ -260,67 +358,10 @@ footer .apoio img {
     font-weight: 500;
 }
 
-/* /////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////// */
-
-.papeis-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.papeis-container h1 {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 500;
-}
-
-.papeis {
-    display: flex;
-    gap: 5rem;
-}
-
-.papeis .papeis-item {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    border-radius: 20px;
-    border: none;
-    font-size: 1.2rem;
-}
-
-.papeis .papeis-item h2 {
-    font-size: 2.2rem;
-}
-
-.papeis .item1 {
-    background-color: var(--azul-medio);
-}
-
-.papeis .item2 {
-    background-color: var(--azul-escuro);
-    color: white;
-}
-
-.papeis-item .btn {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--preto);
-    background-color: var(--azul-claro);
-}
-
-.papeis-item .btn:hover {
-    background-color: #c9e3f3;
-    text-decoration: underline;
-}
 
 /*
 ==================================================
-    PAGINA CONTATOS
+PAGINA CONTATOS
 ==================================================
 */
 
@@ -328,13 +369,16 @@ footer .apoio img {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
+    width: 1300px;
+    margin: 0 auto;
 }
 
 .contatos-redes {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 30%;
-    gap: 2rem;
+    gap: 3rem;
     padding: 1rem;
 }
 
@@ -352,6 +396,7 @@ footer .apoio img {
 .contatos-redes span a:hover {
     color: var(--azul-escuro);
 }
+
 
 .contatos-mapa {
     width: 70%;
