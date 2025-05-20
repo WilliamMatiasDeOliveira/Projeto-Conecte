@@ -363,6 +363,40 @@ footer .apoio img {
 
 }
 
+/*
+==================================================
+    PAGINA FORM-CLIENTE E FORM-CUIDADOR
+==================================================
+*/
+.form-cliente-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-cliente {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    padding: 30px;
+    margin: 3rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 20px;
+    background-color: var(--azul-escuro);
+
+}
+
+.form-cliente h1 {
+    text-align: center;
+
+}
+
+.form-cliente div {
+    margin: 0.5rem;
+}
+
+
 
 /*
 ======================================================================================================================================================
@@ -532,59 +566,62 @@ footer .apoio img {
         gap: 0rem;
     }
 
-/*
+    /*
 ==================================================
     PAGINA CONTATOS @MEDIA QUERY
 ==================================================
 */
 
 
-.contatos-container {
-    display: flex;
-    flex-direction: column;
-    padding: 0rem;
+    .contatos-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0rem;
+    }
+
+    .contatos-redes {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .contatos-redes span {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .contatos-redes span a {
+        color: var(--preto);
+        text-decoration: none;
+    }
+
+    .contatos-redes span a:hover {
+        color: var(--azul-escuro);
+    }
+
+    .contatos-mapa {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .contatos-mapa iframe {
+        width: 100%;
+        border-radius: 20px;
+
+    }
+
+    /*
+==================================================
+    PAGINA CONTATOS @MEDIA QUERY
+==================================================
+*/
+
+    .form-cliente {
+        width: 100%;
+        padding: 30px;
+        margin: 1rem;
+    }
+
+
 }
 
-.contatos-redes {
-    width: 100%;
-    gap: 2rem;
-}
-
-.contatos-redes span {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.contatos-redes span a {
-    color: var(--preto);
-    text-decoration: none;
-}
-
-.contatos-redes span a:hover {
-    color: var(--azul-escuro);
-}
-
-.contatos-mapa {
-    width: 100%;
-    padding: 0.5rem;
-}
-
-.contatos-mapa iframe {
-    width: 100%;
-    border-radius: 20px;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-}/*fim da media query de celular*/
+/*fim da media query de celular*/

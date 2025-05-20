@@ -22,10 +22,10 @@
                     <a href="{{ route('home') }}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Contrate um Cuidador</a>
+                    <a href="{{ route('form.cliente') }}" class="nav-link">Contrate um Cuidador</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Trabalhe Conosco</a>
+                    <a href="{{ route('form.cuidador') }}" class="nav-link">Trabalhe Conosco</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('sobre') }}" class="nav-link">Sobre</a>
