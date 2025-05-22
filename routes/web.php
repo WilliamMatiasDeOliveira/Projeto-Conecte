@@ -13,5 +13,6 @@ Route::get('/form-cuidador', [AppController::class, 'form_cuidador'])->name('for
 Route::get('/login', [AppController::class, 'login'])->name('login');
 
 
-Route::post('/form-cliente-submit', [AuthController::class, 'form_cliente_submit'])->name('form.cliente.submit');
 Route::post('login-submit', [AuthController::class, 'login_submit'])->name('login.submit');
+Route::post('/form-cliente-submit', [AuthController::class, 'form_cliente_submit'])->name('form.cliente.submit');
+Route::post('/form-cuidador-submit', [AuthController::class, 'form_cuidador_submit'])->name('form.cuidador.submit');

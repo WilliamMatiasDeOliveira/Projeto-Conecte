@@ -16,7 +16,7 @@
                     <li>Sem burocracia.</li>
                     <li>Encontre ajuda quando mais precisar.</li>
                 </ul>
-                <a href="#"class="btn form-control">Preciso de um</a>
+                <a href="{{route('form.cliente')}}"class="btn form-control">Preciso de um</a>
             </div>
             <div class="papeis-item item2">
                 <h2>Quer oferecer <br> cuidado ?</h2>
@@ -26,7 +26,7 @@
                     <li>Conexão direta, sem burocracia.</li>
                     <li>Flexibilidade para escolher seus serviços.</li>
                 </ul>
-                <a href="#"class="btn form-control">Seja Cuidador</a>
+                <a href="{{route('form.cuidador')}}"class="btn form-control">Seja Cuidador</a>
             </div>
         </div>
     </section>

@@ -9,6 +9,9 @@
             <h1>Cadastre-se Gratuitamente ?</h1>
             <form action="{{ route('form.cliente.submit') }}" method="post"enctype="multipart/form-data">
                 @csrf
+
+                <input type="hidden"name="papel"value="cliente">
+
                 <div>
                     <label for="nome">Nome</label>
                     <input type="text"name="nome" class="form-control"value="{{ old('nome') }}">

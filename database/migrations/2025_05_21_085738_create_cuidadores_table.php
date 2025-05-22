@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('cuidadores', function (Blueprint $table) {
             $table->id();
+            $table->string('papel', 8);
             $table->string('nome', 60);
             $table->string('email', 100);
             $table->string('telefone', 11);
@@ -21,7 +22,7 @@ return new class extends Migration
             $table->string('bairro', 100);
             $table->string('rua', 100);
             $table->string('password', 255);
-            $table->string('foto')->null();
+            $table->string('foto')->nullable();
             $table->string('curriculo');
             $table->timestamps();
             $table->softDeletes();
