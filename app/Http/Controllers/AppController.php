@@ -29,4 +29,8 @@ class AppController extends Controller
     public function form_cuidador(){
         return view('App.form-cuidador');
     }
+
+    public function login(){
+        return view('App.login');
+    }
 }

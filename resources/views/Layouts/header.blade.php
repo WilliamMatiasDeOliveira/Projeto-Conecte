@@ -36,7 +36,7 @@
 
             </ul>
             <div class="buttons ms-md-">
-                <a href="#"class="btn btn-primary form-control">Entrar</a>
+                <a href="{{ route('login') }}"class="btn btn-primary form-control">Entrar</a>
                 <a href="{{ route('cadastro') }}"class="btn btn-secondary form-control">Cadastrar</a>
             </div>
         </nav>
