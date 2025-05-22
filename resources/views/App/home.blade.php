@@ -9,7 +9,7 @@
 
         <div class="hero-intro">
             <h1>
-                Conectamos quem cuida a quem precisa. <strong>Simples, rápido e humano.</strong>
+                Conectamos quem cuida a quem precisa. <br><strong>Simples, rápido e humano.</strong>
             </h1>
             <p>
                 Encontre o cuidador ideal para suas necessidades ou ofereça seus serviços de cuidado de forma fácil
