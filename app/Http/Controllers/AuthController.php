@@ -70,20 +70,28 @@ class AuthController extends Controller
             ]
         );
 
+        if ($request->hasFile('foto') && $request->file('foto')->isValid())
+        {
+            $extension = $request->foto->extension();
+
+            $image_name = md5($request->foto->getClientOriginalName() . strtotime("now")) . "." . $extension;
+
+            // path, name
+            $request->foto->move(public_path('/assets/imgs/clientes/'), $image_name);
+        }
+
         Cliente::insert([
-            [
-                'nome' => $request->nome,
-                'email' => $request->email,
-                'telefone' => $request->telefone,
-                'cpf' => $request->cpf,
-                'cidade' => $request->cidade,
-                'bairro' => $request->bairro,
-                'rua' => $request->rua,
-                'password' => Hash::make($request->password),
-                'foto' => $request->foto,
-            ]
+            'nome' => $request->nome,
+            'email' => $request->email,
+            'telefone' => $request->telefone,
+            'cpf' => $request->cpf,
+            'cidade' => $request->cidade,
+            'bairro' => $request->bairro,
+            'rua' => $request->rua,
+            'password' => Hash::make($request->password),
+            'foto' => $image_name,
         ]);
-        
+
         $msg_success = "Seu cadastro foi feito com Sucesso !";
 
         return redirect()
