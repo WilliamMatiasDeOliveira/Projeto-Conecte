@@ -21,4 +21,16 @@ class AppController extends Controller
     public function contatos(){
         return view('App.contatos');
     }
+
+    public function form_cliente(){
+        return view('App.form-cliente');
+    }
+
+    public function form_cuidador(){
+        return view('App.form-cuidador');
+    }
+
+    public function login(){
+        return view('App.login');
+    }
 }
