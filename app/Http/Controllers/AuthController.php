@@ -83,17 +83,7 @@ class AuthController extends Controller
                 'foto' => $request->foto,
             ]
         ]);
-
-        session([
-            'cliente' =>
-            [
-                'nome' => $request->nome,
-                'email' => $request->email,
-                'foto' => $request->foto,
-
-            ]
-        ]);
-
+        
         $msg_success = "Seu cadastro foi feito com Sucesso !";
 
         return redirect()
