@@ -82,32 +82,6 @@
         </section>
     </div>
 
-    <section class="papeis-container">
-        <h1>A ajuda certa, no momento certo!</h1>
-        <div class="papeis">
-            <div class="papeis-item item1">
-                <h2>Buscando um <br> cuidador ?</h2>
-                <ul>
-                    <li>Profissionais confiáveis.</li>
-                    <li>Escolha fácil e rápida.</li>
-                    <li>Sem burocracia.</li>
-                    <li>Encontre ajuda quando mais precisar.</li>
-                </ul>
-                <a href="{{ route('form.cliente') }}"class="btn form-control">Preciso de um</a>
-            </div>
-            <div class="papeis-item item2">
-                <h2>Quer oferecer <br> cuidado ?</h2>
-                <ul>
-                    <li>Alcance mais pessoas.</li>
-                    <li>Destaque sua experiência.</li>
-                    <li>Conexão direta, sem burocracia.</li>
-                    <li>Flexibilidade para escolher seus serviços.</li>
-                </ul>
-                <a href="{{ route('form.cuidador') }}"class="btn form-control">Seja Cuidador</a>
-            </div>
-        </div>
-    </section>
-
     @include('Layouts.footer')
 
 @endsection
