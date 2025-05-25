@@ -1,3 +1,4 @@
+
 @extends('Layouts.main_layout')
 @include('Layouts.header')
 
@@ -10,7 +11,7 @@
             <form action="{{ route('form.cliente.submit') }}" method="post"enctype="multipart/form-data">
                 @csrf
 
-                <input type="hidden"name="papel"value="cliente">
+                <input type="hidden"name="papel" value="cliente">
 
                 <div>
                     <label for="nome">Nome</label>

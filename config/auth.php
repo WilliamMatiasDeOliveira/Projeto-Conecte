@@ -14,9 +14,10 @@ return [
     */
 
     'defaults' => [
-        'guard' => env('AUTH_GUARD', 'web'),
-        'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
-    ],
+    'guard' => 'cliente',
+    'passwords' => 'clientes',
+],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -36,11 +37,23 @@ return [
     */
 
     'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
+    'web' => [
+        'driver' => 'session',
+        'provider' => 'users',
     ],
+
+    'cliente' => [
+        'driver' => 'session',
+        'provider' => 'clientes',
+    ],
+
+    'cuidador' => [
+        'driver' => 'session',
+        'provider' => 'cuidadores',
+    ],
+],
+
+
 
     /*
     |--------------------------------------------------------------------------
@@ -60,16 +73,22 @@ return [
     */
 
     'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
-        ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+    'users' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Cliente::class,
     ],
+
+    'clientes' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Cliente::class,
+    ],
+
+    'cuidadores' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Cuidador::class,
+    ],
+],
+
 
     /*
     |--------------------------------------------------------------------------

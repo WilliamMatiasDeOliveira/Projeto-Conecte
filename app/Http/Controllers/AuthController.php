@@ -5,44 +5,61 @@ namespace App\Http\Controllers;
 use App\Models\Cliente;
 use App\Models\Cuidador;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
 
-    public function login_submit(Request $request)
-    {
-        $request->validate(
-            // regras
-            [
-                'email' => 'required|email',
-                'password' => 'required|min:8|max:16'
-            ],
-            // menssagen
-            [
-                'email.required' => 'Este campo é obrigatório',
-                'email.email' => 'Este não é um E-mail válido',
+public function login_submit(Request $request)
+{
+    $request->validate(
+        [
+            'email' => 'required|email',
+            'password' => 'required|min:8|max:16',
+        ],
+        [
+            'email.required' => 'Este campo é obrigatório',
+            'email.email' => 'Este não é um E-mail válido',
+            'password.required' => 'Este campo é obrigatório',
+            'password.min' => 'A senha deve ter no mínimo :min caracteres',
+            'password.max' => 'A senha deve ter no máximo :max caracteres',
+        ]
+    );
 
-                'password.required' => 'Este campo é obrigatório',
-                'password.min' => 'A senha deve ter no minimo :min caracteres',
-                'password.max' => 'A senha deve ter no minimo :max caracteres',
+    // Tentativa de login como cliente
+    $cliente = Cliente::where('email', $request->email)->first();
+    if ($cliente && Hash::check($request->password, $cliente->password) && $cliente->papel == 'cliente') {
+        Auth::guard('cliente')->login($cliente);
 
-            ]
-        );
+        $request->session()->regenerate(); // Segurança
 
-        // check is cliente
-        $cliente  = Cliente::where('email', $request->email)->first();
-
-        if ($cliente && Hash::check($request->password, $cliente->password)) {
-            echo "EU SOU CLIENTE";
-        }
-
-        $cuidador = Cuidador::where('email', $request->email)->first();
-
-        if ($cuidador && Hash::check($request->password, $cuidador->password)) {
-            echo "EU SOU UM CUIDADOR";
-        }
+        $cuidadores = Cuidador::all();
+        return view('Auth.dashboard-cliente', compact('cuidadores'));
     }
+
+    // Tentativa de login como cuidador
+    $cuidador = Cuidador::where('email', $request->email)->first();
+    if ($cuidador && Hash::check($request->password, $cuidador->password) && $cuidador->papel == 'cuidador') {
+        Auth::guard('cuidador')->login($cuidador);
+
+        $request->session()->regenerate(); // Segurança
+
+        return view('Auth.dashboard-cuidador');
+    }
+
+    // Se não achou nenhum válido
+    return back()->withErrors(['email' => 'E-mail ou senha inválidos'])->withInput();
+}
+
+   public function logout(Request $request)
+{
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+
+    return redirect()->route('home');
+}
 
     public function form_cliente_submit(Request $request)
     {

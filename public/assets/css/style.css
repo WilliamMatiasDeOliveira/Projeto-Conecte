@@ -5,7 +5,7 @@
     --preto: #1F2A33;
     --preto2: #3D4346;
     --font-padrao: "Roboto", sans-serif;
-    --font-destaque: "Poppins", sans-serif; 
+    --font-destaque: "Poppins", sans-serif;
     --font-decorativa: "Lobster", sans-serif;
 }
 
@@ -321,7 +321,7 @@ footer .apoio img {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 1rem;    
+    padding: 1rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
@@ -446,6 +446,50 @@ PAGINA CONTATOS
     margin: 0.5rem;
 }
 
+/*
+==================================================
+PAGINA DASHBOARD-CLIENTE
+==================================================
+*/
+.dashboard-cliente.card{
+    background-color: var(--azul-escuro);
+    color:white;
+}
+
+ .dashboard-cliente-card .card-body{
+    background-color: var(--azul-escuro);
+    color: white;
+ }
+
+.dashboard-cliente-servicos-container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.dashboard-cliente-servicos-container .card{
+    width: 25rem;
+}
+
+/*
+==================================================
+PAGINA DASHBOARD-CUIDADOR
+==================================================
+*/
+
+.dashboard-cuidador-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dashboard-cuidador-container .card{
+    background-color: var(--azul-escuro);
+    color: white;
+    margin: 3rem 0rem;
+}
+
 
 
 /*
@@ -484,7 +528,7 @@ PAGINA CONTATOS
         margin: 1rem 0;
         gap: 1rem;
     }
-    
+
     header .menu-nav ul li a {
         gap: 0;
         padding: 0 2rem;
