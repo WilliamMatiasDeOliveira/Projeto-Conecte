@@ -424,26 +424,57 @@ PAGINA CONTATOS
 }
 
 .form-cliente {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 30%;
+    width: 50%;
     padding: 30px;
     margin: 3rem;
     color: white;
     font-weight: 500;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: var(--azul-escuro);
-
+    font-family: var(--font-destaque);
 }
 
 .form-cliente h1 {
+    font-size: 2.5rem;
     text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
 
+.form-cliente form {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.form-cliente div input {
+    gap: 0.5rem;
+    padding: 0.3rem 2rem;
+    border-radius: 8px;
+    border: none;
 }
 
 .form-cliente div {
-    margin: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/*
+.form-cliente-pessoal {
+}
+
+.form-cliente-endereco {
+} 
+*/
+
+.form-cliente-senha {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
 
