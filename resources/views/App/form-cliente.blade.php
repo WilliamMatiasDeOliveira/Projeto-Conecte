@@ -6,20 +6,27 @@
 @section('content')
     <div class="form-cliente-container">
         <section class="form-cliente">
-            <h1>Cadastre-se Gratuitamente ?</h1>
+
+            <div class="form-cliente-side">
+                <h1>Cadastre-se Gratuitamente!</h1>
+                <p>Preencha os campos abaixo para criar sua conta como cliente.</p>
+                <p>Ja possui uma conta? <a href="{{ route('login') }}">Entre aqui!</a></p>
+                <img src="{{ asset('assets/imgs/cadastro.png') }}" alt="Imagem de fundo">
+            </div>
+
             <form action="{{ route('form.cliente.submit') }}" method="post"enctype="multipart/form-data">
                 @csrf
 
-                <input type="hidden"name="tipo"value="cliente">
+                <input type="hidden"name="papel"value="cliente">
 
                 <div class="form-cliente-pessoal">
                     <div>
                         <label for="nome">Nome</label>
                         <input type="text"name="nome" class="form-control"value="{{ old('nome') }}">
                         @error('nome')
-                            <div class="text-warning">
-                                {{ $message }}
-                            </div>
+                        <div class="text-warning">
+                            {{ $message }}
+                        </div>
                         @enderror
                     </div>
                     <div>
@@ -44,9 +51,9 @@
                         <label for="telefone">Telefone</label>
                         <input type="text"name="telefone" class="form-control"value="{{ old('telefone') }}">
                         @error('telefone')
-                            <div class="text-warning">
-                                {{ $message }}
-                            </div>
+                        <div class="text-warning">
+                            {{ $message }}
+                        </div>
                         @enderror
                     </div>
                 </div>
@@ -102,13 +109,14 @@
                     </div>
                 </div>
 
-                <div>
-                    <label for="foto">Foto</label>
-                    <input type="file"name="foto" class="form-control">
-                </div>
-
-                <div>
-                    <input type="submit"class="btn btn-secondary form-control mt-4" value="Cadastrar-se">
+                <div class="form-cliente-fim">
+                    <div>
+                        <label for="foto">Foto</label>
+                        <input type="file"name="foto" class="form-control">
+                    </div>
+                    <div>
+                        <input type="submit"class="btn btn-secondary form-control mt-4" value="Cadastrar-se">
+                    </div>
                 </div>
             </form>
         </section>

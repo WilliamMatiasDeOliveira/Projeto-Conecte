@@ -424,59 +424,96 @@ PAGINA CONTATOS
 }
 
 .form-cliente {
-    width: 50%;
+    display: flex;
+    width: 80%;
     padding: 30px;
     margin: 3rem;
-    color: white;
-    font-weight: 500;
-    border-radius: 15px;
+    gap: 1rem;
+
     background-color: var(--azul-escuro);
+    color: white;
     font-family: var(--font-destaque);
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.form-cliente-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.form-cliente-side img {
+    max-width: 300px;
 }
 
 .form-cliente h1 {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: var(--font-destaque);
+}
+
+.form-cliente-side p {
+    font-size: 1.1rem;
     text-align: center;
     margin-bottom: 1rem;
+    font-weight: 400;
+    font-family: var(--font-padrao);
+}
+
+.form-cliente-side a {
+    color: inherit;
+    text-decoration: underline;
     font-weight: 600;
 }
 
+.form-cliente .btn {
+    color: var(--preto);
+}
+
 .form-cliente form {
-    max-width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 1rem;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .form-cliente div input {
     gap: 0.5rem;
-    padding: 0.3rem 2rem;
-    border-radius: 8px;
+    padding: 0.3rem auto;
+    border-radius: 5px;
     border: none;
 }
 
-.form-cliente div {
-    margin-bottom: 1rem;
-}
-
-
-/*
-.form-cliente-pessoal {
-}
-
-.form-cliente-endereco {
-} 
-*/
-
-.form-cliente-senha {
+.form-cliente-pessoal,
+.form-cliente-endereco,
+.form-cliente-senha,
+.form-cliente-fim {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1rem;
+    margin-top: .5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid white;
 }
 
+.form-cliente-pessoal > div,
+.form-cliente-endereco > div,
+.form-cliente-senha > div,
+.form-cliente-fim > div {
+    flex: 1 1 48%;
+    min-width: 200px;
+}
+
+.form-cliente-fim {
+    border: none;
+}
 
 /*
 ==================================================
@@ -759,6 +796,10 @@ PAGINA CONTATOS
         width: 100%;
         padding: 30px;
         margin: 1rem;
+        flex-direction: column;
+    }
+    .form-cliente-side img {
+        max-width: 260px;
     }
 
 
