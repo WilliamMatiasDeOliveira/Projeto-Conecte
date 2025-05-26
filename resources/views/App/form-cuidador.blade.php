@@ -104,26 +104,6 @@
                 </div>
 
                 <div>
-                    <label for="password">Senha</label>
-                    <input type="password"name="password" class="form-control">
-                    @error('password')
-                        <div class="text-warning">
-                            {{ $message }}
-                        </div>
-                    @enderror
-                </div>
-
-                <div>
-                    <label for="password_confirmation">Confirmar Senha</label>
-                    <input type="password"name="password_confirmation" class="form-control">
-                    @error('password_confirmation')
-                        <div class="text-warning">
-                            {{ $message }}
-                        </div>
-                    @enderror
-                </div>
-
-                <div>
                     <label for="foto">Foto</label>
                     <input type="file"name="foto" class="form-control">
                 </div>

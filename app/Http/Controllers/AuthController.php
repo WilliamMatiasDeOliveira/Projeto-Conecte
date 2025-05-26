@@ -41,6 +41,11 @@ class AuthController extends Controller
                     $cuidadores = User::where('tipo', 'cuidador')->get();
                     return view('Auth.dashboard-cliente', compact('cuidadores'));
                 }
+
+                if ($user->tipo == 'cuidador') {
+                    // pegar todos os cuidadores
+                    return view('Auth.dashboard-cuidador');
+                }
             } else {
                 return redirect()
                     ->back()
@@ -208,5 +213,14 @@ class AuthController extends Controller
         return redirect()
             ->route('login')
             ->with('create_user_success', compact('msg_success'));
+    }
+
+    public function logout(){
+        Auth::logout();
+
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+        return redirect()->route('home');
+
     }
 }

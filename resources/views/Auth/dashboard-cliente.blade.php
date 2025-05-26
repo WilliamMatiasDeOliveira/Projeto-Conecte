@@ -12,6 +12,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            padding: 0rem 1rem;
         }
 
         .dashboard-cuidador .img-user {
@@ -48,6 +49,13 @@
             justify-content: center;
             align-items: center;
             gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .lista-cuidadores .card-body {
+            background-color: var(--azul-escuro);
+            padding: 1rem;
+            border: 1px solid var(--azul-escuro);
         }
     </style>
 
@@ -66,20 +74,23 @@
                 <p>CIDADE : {{ Auth::user()->cidade }}</p>
                 <p>BAIRRO : {{ Auth::user()->bairro }}</p>
                 <p>RUA : {{ Auth::user()->rua }}</p>
+                 <a href="#" class="btn btn-danger mt-4 mb-4">Atualizar Dados</a>
             </div>
 
-            <a href="#" class="btn btn-danger form-control mt-4 mb-4">Atualizar Dados</a>
-
+            <h1 class="text-center">Contrate um de nossos cuidadores</h1>
             <section class="lista-cuidadores-container">
                 @foreach ($cuidadores as $cuidador)
                     <div class="lista-cuidadores" style="width: 25rem;">
                         <img src="{{ asset('assets/imgs/cuidadores/' . $cuidador->foto) }}"alt="imagem do cuidador">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $cuidador->nome }}</h5>
-                            <p class="card-text">{{ $cuidador->email }}</p>
-                            <p class="card-text">{{ $cuidador->telefone }}</p>
-                            <p class="card-text">{{ $cuidador->cidade }}</p>
+                            <h5 class="card-title text-center">{{ $cuidador->nome }}</h5>
+                            <p class="card-text">E-MAIL: {{ $cuidador->email }}
+                                <br>TELEFONE: {{ $cuidador->telefone }}
+                                <br>CIDADE: {{ $cuidador->cidade }}
+                            </p>
+
                             <a href="#" class="btn btn-primary">Go somewhere</a>
+
                         </div>
                     </div>
                 @endforeach
