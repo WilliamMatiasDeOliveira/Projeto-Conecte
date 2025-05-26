@@ -5,7 +5,7 @@
     --preto: #1F2A33;
     --preto2: #3D4346;
     --font-padrao: "Roboto", sans-serif;
-    --font-destaque: "Poppins", sans-serif; 
+    --font-destaque: "Poppins", sans-serif;
     --font-decorativa: "Lobster", sans-serif;
 }
 
@@ -82,7 +82,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding:15px 0px;
+    padding: 15px 0px;
     background-color: var(--azul-escuro);
 
 }
@@ -321,7 +321,7 @@ footer .apoio img {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 1rem;    
+    padding: 1rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
@@ -447,6 +447,56 @@ PAGINA CONTATOS
 }
 
 
+/*
+==================================================
+    PAGINA DASHBOARD-CUIDADOR
+==================================================
+*/
+.dashboard-cuidador-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.dashboard-cuidador .img-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dashboard-cuidador .img-user img {
+    width: 220px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 2rem
+}
+
+.dashboard-cuidador .img-user h1 {
+    font-size: 40px;
+}
+
+.dashboard-cuidador .info-user {
+    text-align: center;
+    font-weight: 600;
+}
+
+.dashboard-cuidador .info-user iframe {
+    width: 800px;
+}
+
+/*
+==================================================
+    PAGINA DASHBOARD-CLIENTE
+==================================================
+*/
+
+
+
+
+
 
 /*
 ======================================================================================================================================================
@@ -484,7 +534,7 @@ PAGINA CONTATOS
         margin: 1rem 0;
         gap: 1rem;
     }
-    
+
     header .menu-nav ul li a {
         gap: 0;
         padding: 0 2rem;
@@ -527,6 +577,7 @@ PAGINA CONTATOS
         align-items: center;
         justify-content: center;
     }
+
     .hero .hero-intro {
         width: 90%;
     }

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cliente;
-use App\Models\Cuidador;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
@@ -30,17 +30,22 @@ class AuthController extends Controller
             ]
         );
 
-        // check is cliente
-        $cliente  = Cliente::where('email', $request->email)->first();
+        $user = User::where('email', $request->email)->first();
+        if ($user) {
+            if (Hash::check($request->password, $user->password)) {
+                // autenticar o usuario
+                Auth::login($user);
 
-        if ($cliente && Hash::check($request->password, $cliente->password)) {
-            echo "EU SOU CLIENTE";
-        }
-
-        $cuidador = Cuidador::where('email', $request->email)->first();
-
-        if ($cuidador && Hash::check($request->password, $cuidador->password)) {
-            echo "EU SOU UM CUIDADOR";
+                if ($user->tipo == 'cliente') {
+                    // pegar todos os cuidadores
+                    $cuidadores = User::where('tipo', 'cuidador')->get();
+                    return view('Auth.dashboard-cliente', compact('cuidadores'));
+                }
+            } else {
+                return redirect()
+                    ->back()
+                    ->with('login_error', 'E-mail ou Senha incorreta !');
+            }
         }
     }
 
@@ -57,7 +62,8 @@ class AuthController extends Controller
                 'bairro' => 'required|string',
                 'rua' => 'required|string',
                 'password' => 'required|min:8|max:16|confirmed',
-                'foto' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+
+                'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
             ],
             // menssagens
             [
@@ -81,8 +87,10 @@ class AuthController extends Controller
                 'password.min' => 'A senha deve ter no minimo :min caracteres',
                 'password.max' => 'A senha deve ter no minimo :max caracteres',
 
-                'foto.mimes' => 'Este arquivo deve ser do tipo jpg, jpeg ou png',
-                'foto.max' => 'O arquivo não deve sser maior que 2048 kb'
+
+                'foto.mimes' => 'A imagem deve ser do tipo: :values',
+                'foto.max' => 'A imagem deve ter no maximo :max KB',
+                'foto.image' => 'O arquivo deve ser uma imagem',
             ]
         );
 
@@ -95,8 +103,8 @@ class AuthController extends Controller
             $request->foto->move(public_path('/assets/imgs/clientes/'), $image_name);
         }
 
-        Cliente::create([
-            'papel' => $request->papel,
+        User::insert([
+            'tipo' => $request->tipo,
             'nome' => $request->nome,
             'email' => $request->email,
             'telefone' => $request->telefone,
@@ -112,7 +120,7 @@ class AuthController extends Controller
 
         return redirect()
             ->route('login')
-            ->with('create_user_success', compact('msg_success'));
+            ->with('create_cliente_success', compact('msg_success'));
     }
 
     public function form_cuidador_submit(Request $request)
@@ -128,8 +136,8 @@ class AuthController extends Controller
                 'bairro' => 'required|string',
                 'rua' => 'required|string',
                 'password' => 'required|min:8|max:16|confirmed',
-                'foto' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-                // 'curriculo' => 'nullable|mimes:pdf,docx|max:2048',
+                'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
+                'curriculo' => 'file|mimes:pdf,docx|max:2048',
             ],
             // menssagens
             [
@@ -153,32 +161,35 @@ class AuthController extends Controller
                 'password.min' => 'A senha deve ter no minimo :min caracteres',
                 'password.max' => 'A senha deve ter no minimo :max caracteres',
 
-                'foto.mimes' => 'Este arquivo deve ser do tipo jpg, jpeg ou png',
-                'foto.max' => 'O arquivo não deve sser maior que 2048 kb'
+                'foto.mimes' => 'A imagem deve ser do tipo: :values',
+                'foto.max' => 'A imagem deve ter no maximo :max KB',
+                'foto.image' => 'O arquivo deve ser uma imagem',
+
+                'curriculo.mimes' => 'O arquivo deve ser do tipo: :values',
+                'curriculo.max' => 'O arquivo deve ter no maximo :max KB',
+                'curriculo.file' => 'O arquivo deve ser um arquivo',
             ]
         );
 
-        // Para foto
+        // salvar a foto
         if ($request->hasFile('foto') && $request->file('foto')->isValid()) {
             $extension = $request->foto->extension();
             $image_name = md5($request->foto->getClientOriginalName() . strtotime("now")) . "." . $extension;
-            $request->foto->move(public_path('/assets/imgs/cuidadores/'), $image_name);
-        } else {
-            $image_name = null;
+
+            $request->foto->move(public_path('assets/imgs/cuidadores/'), $image_name);
         }
 
-        // Para currículo (PDF, DOCX, etc)
+        // salvar o curriculo pdf ou docx
         if ($request->hasFile('curriculo') && $request->file('curriculo')->isValid()) {
             $extension = $request->curriculo->extension();
             $curriculo_name = md5($request->curriculo->getClientOriginalName() . strtotime("now")) . "." . $extension;
-            $request->curriculo->move(public_path('/assets/imgs/curriculos/'), $curriculo_name);
-        } else {
-            $curriculo_name = null;
+
+            $request->curriculo->move(public_path('assets/imgs/curriculos/'), $curriculo_name);
         }
 
-        // Agora salve no banco com nomes distintos
-        Cuidador::create([
-            'papel' => $request->papel,
+
+        User::insert([
+            'tipo' => $request->tipo,
             'nome' => $request->nome,
             'email' => $request->email,
             'telefone' => $request->telefone,
@@ -187,8 +198,8 @@ class AuthController extends Controller
             'bairro' => $request->bairro,
             'rua' => $request->rua,
             'password' => Hash::make($request->password),
-            'foto' => $image_name,
-            'curriculo' => $curriculo_name,
+            'foto' => $image_name ?? null,
+            'curriculo' => $curriculo_name ?? null,
         ]);
 
 

@@ -10,7 +10,7 @@
             <form action="{{ route('form.cliente.submit') }}" method="post"enctype="multipart/form-data">
                 @csrf
 
-                <input type="hidden"name="papel"value="cliente">
+                <input type="hidden"name="tipo"value="cliente">
 
                 <div>
                     <label for="nome">Nome</label>
