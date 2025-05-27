@@ -26,12 +26,13 @@ class UserTableSeeder extends Seeder
                     'bairro'=>'bairro'.$i,
                     'rua'=>"rua".$i,
                     'password'=>"12345678",
-                    'foto'=>null,
-                    'curriculo'=>null
+                    'foto'=>"{{asset('assets/imgs/cuidadores/af49fcd30f99601e11a10e2f856ba7b6.jpg')}}",
+                    'curriculo'=>"public/assets/imgs/curriculos/758b1dab55e2855d0193dcf02771ed3e.pdf"
+
                 ];
             }
 
-        DB::table('users')->insert($dados);         
-    
+        DB::table('users')->insert($dados);
+
     }
 }
