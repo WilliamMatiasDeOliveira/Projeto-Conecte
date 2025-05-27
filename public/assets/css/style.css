@@ -503,10 +503,10 @@ PAGINA CONTATOS
     border-bottom: 2px solid white;
 }
 
-.form-cliente-pessoal > div,
-.form-cliente-endereco > div,
-.form-cliente-senha > div,
-.form-cliente-fim > div {
+.form-cliente-pessoal>div,
+.form-cliente-endereco>div,
+.form-cliente-senha>div,
+.form-cliente-fim>div {
     flex: 1 1 48%;
     min-width: 200px;
 }
@@ -572,9 +572,7 @@ PAGINA CONTATOS
     MEDIAS QUERY CELULAR
 ======================================================================================================================================================
 ======================================================================================================================================================
-
 ]
-
 */
 
 @media (max-width: 480px) {
@@ -798,6 +796,7 @@ PAGINA CONTATOS
         margin: 1rem;
         flex-direction: column;
     }
+
     .form-cliente-side img {
         max-width: 260px;
     }
@@ -805,4 +804,53 @@ PAGINA CONTATOS
 
 }
 
+
 /*fim da media query de celular*/
+
+
+/*
+======================================================================================================================================================
+======================================================================================================================================================
+    MEDIAS QUERY TABLET
+======================================================================================================================================================
+======================================================================================================================================================
+]
+*/
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+    header .menu {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    header .menu-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    header .menu-nav .buttons {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    header .menu-nav .buttons .btn{
+        width: 100vw;
+    }
+
+    header .menu-nav ul {
+        margin: 1rem 0;
+    }
+
+
+}
+
+
+/*fim da media query de tablet*/

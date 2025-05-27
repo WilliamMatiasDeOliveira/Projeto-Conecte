@@ -3,8 +3,6 @@
 
 @section('content')
 
-    @include('Layouts.header')
-
     <section class="papeis-container">
         <h1>A ajuda certa, no momento certo!</h1>
         <div class="papeis">
