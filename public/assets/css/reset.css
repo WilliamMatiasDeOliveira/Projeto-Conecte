@@ -6,9 +6,15 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 html {
     font-size: 16px;
-    height: 100vh;
+    height: 100%;
 }
 
 body {
@@ -17,7 +23,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: var(--azul-claro);
-
+     min-height: 100vh;
 }
 
 main {

@@ -1,5 +1,4 @@
 @extends('Layouts.main_layout')
-@include('Layouts.header')
 
 @section('title', 'Cadastro')
 
@@ -122,7 +121,5 @@
         </section>
 
     </div>
-
-    @include('Layouts.footer')
-
+    
 @endsection

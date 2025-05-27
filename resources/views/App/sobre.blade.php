@@ -4,8 +4,6 @@
 
 @section('content')
 
-    @include('Layouts.header')
-
     <section class="sobre">
         <div class="sobre-info">
             <h1>Quem somos nós?</h1>
@@ -27,7 +25,5 @@
             </div>
         </div>
     </section>
-
-    @include('Layouts.footer')
 
 @endsection

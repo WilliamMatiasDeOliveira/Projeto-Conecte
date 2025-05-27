@@ -57,6 +57,7 @@
                             <input type="submit"value="Logout"class="btn btn-danger">
                         </form>
                     </div>
+                    
                 @endauth
             </nav>
         </div>

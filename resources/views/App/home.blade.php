@@ -3,8 +3,6 @@
 
 @section('content')
 
-    @include('Layouts.header')
-
     <div class="hero">
 
         <div class="hero-intro">
@@ -23,6 +21,5 @@
         </div>
     </div>
 
-    @include('Layouts.footer')
 
 @endsection

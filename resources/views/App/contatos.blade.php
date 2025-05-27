@@ -3,8 +3,6 @@
 
 @section('content')
 
-    @include('Layouts.header')
-
     <section class="contatos-container">
 
         <div class="contatos-redes">
@@ -65,10 +63,5 @@
         </div>
 
     </section>
-
-
-
-
-    @include('Layouts.footer')
 
 @endsection

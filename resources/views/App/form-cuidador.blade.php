@@ -1,5 +1,4 @@
 @extends('Layouts.main_layout')
-@include('Layouts.header')
 
 @section('title', 'Cadastro')
 
@@ -17,7 +16,7 @@
             <form action="{{ route('form.cuidador.submit') }}" method="post" enctype="multipart/form-data">
                 @csrf
 
-                <input type="hidden"name="tipo"value="cuidador">
+                <input type="hidden"name="tipo" value="cuidador">
 
                 <div class="form-cliente-pessoal">
                     <div>
@@ -29,7 +28,7 @@
                             </div>
                         @enderror
                     </div>
-                    
+
                     <div>
                         <label for="cpf">Cpf</label>
                         <input type="text"name="cpf" class="form-control"value="{{ old('cpf') }}">
@@ -39,7 +38,7 @@
                             </div>
                         @enderror
                     </div>
-                    
+
                     <div>
                         <label for="email">E-mail</label>
                         <input type="email"name="email" class="form-control"value="{{ old('email') }}">
@@ -70,7 +69,7 @@
                             </div>
                         @enderror
                     </div>
-    
+
                     <div>
                         <label for="bairro">Bairro</label>
                         <input type="text"name="bairro" class="form-control"value="{{ old('bairro') }}">
@@ -80,7 +79,7 @@
                             </div>
                         @enderror
                     </div>
-    
+
                     <div>
                         <label for="rua">Rua</label>
                         <input type="text"name="rua" class="form-control"value="{{ old('rua') }}">
@@ -130,7 +129,5 @@
         </section>
 
     </div>
-
-    @include('Layouts.footer')
 
 @endsection

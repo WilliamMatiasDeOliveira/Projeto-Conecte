@@ -5,8 +5,6 @@
 
 @section('content')
 
-    @include('Layouts.header')
-
     <section class="dashboard-cuidador-container">
 
         <div class="dashboard-cuidador">
@@ -34,5 +32,4 @@
 
     </section>
 
-    @include('Layouts.footer')
 @endsection

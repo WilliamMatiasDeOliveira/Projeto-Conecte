@@ -1,10 +1,7 @@
 @extends('Layouts.main_layout')
 @section('title', 'Dashboard Cliente')
 
-
-
 @section('content')
-    @include('Layouts.header')
 
     <style>
         .dashboard-cuidador-container {
@@ -131,5 +128,4 @@
 
     </section>
 
-    @include('Layouts.footer')
 @endsection
