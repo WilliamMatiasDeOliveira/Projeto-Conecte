@@ -517,6 +517,34 @@ PAGINA CONTATOS
 
 /*
 ==================================================
+    PAGINA LOGIN
+==================================================
+*/
+
+.form-login-container {
+
+    display: flex;
+    justify-content: center;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 4rem;
+    border-radius: 20px;
+    padding: 3rem;
+    background-color: var(--azul-escuro);
+    color: white;
+    font-family: var(--font-destaque);
+}
+
+.form-login h1 {
+    text-align: center;
+}
+
+/*
+==================================================
     PAGINA DASHBOARD-CUIDADOR
 ==================================================
 */
@@ -606,7 +634,7 @@ PAGINA CONTATOS
         padding: 0 2rem;
         background-color: var(--azul-medio);
         border-radius: 8px;
-        color: var(--azul-escuro);
+        color: white;
         transition: none;
     }
 
@@ -786,7 +814,7 @@ PAGINA CONTATOS
 
     /*
 ==================================================
-    PAGINA CONTATOS @MEDIA QUERY
+    PAGINA CADASTRO @MEDIA QUERY
 ==================================================
 */
 
@@ -801,6 +829,16 @@ PAGINA CONTATOS
         max-width: 260px;
     }
 
+    /*
+==================================================
+PAGINA LOGIN @MEDIA QUERY
+==================================================
+*/
+
+    .form-login {
+        width: 80%;
+        margin-bottom: 4rem;
+    }
 
 }
 
@@ -841,7 +879,7 @@ PAGINA CONTATOS
         width: 100vw;
     }
 
-    header .menu-nav .buttons .btn{
+    header .menu-nav .buttons .btn {
         width: 100vw;
     }
 
@@ -849,7 +887,12 @@ PAGINA CONTATOS
         margin: 1rem 0;
     }
 
-
+    header .menu-nav ul li a {
+        padding: 0 2rem;
+        background-color: var(--azul-medio);
+        border-radius: 8px;
+        color: white;
+    }
 }
 
 

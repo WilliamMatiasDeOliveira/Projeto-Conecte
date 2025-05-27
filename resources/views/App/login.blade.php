@@ -3,8 +3,8 @@
 @section('title', 'Cadastro')
 
 @section('content')
-    <div class="form-cliente-container">
-        <section class="form-cliente">
+    <div class="form-login-container">
+        <section class="form-login">
             <h1>LOGIN</h1>
             <form action="{{ route('login.submit') }}" method="post">
                 @csrf
