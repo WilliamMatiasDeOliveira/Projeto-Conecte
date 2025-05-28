@@ -26,8 +26,8 @@ class UserTableSeeder extends Seeder
                     'bairro'=>'bairro'.$i,
                     'rua'=>"rua".$i,
                     'password'=>"12345678",
-                    'foto'=>"{{asset('assets/imgs/cuidadores/af49fcd30f99601e11a10e2f856ba7b6.jpg')}}",
-                    'curriculo'=>"public/assets/imgs/curriculos/758b1dab55e2855d0193dcf02771ed3e.pdf"
+                    'foto'=>"f9e70a7fcc58ac692b7b6f508d5af524.jpg)",
+                    'curriculo'=>"191ce55c54c81d6574684d78267f4220.pdf"
 
                 ];
             }
