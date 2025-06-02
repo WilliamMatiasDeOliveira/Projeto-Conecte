@@ -34,4 +34,8 @@ Route::controller(AuthController::class)->group(function() {
     Route::post('/login-submit', 'login_submit')->name('login.submit');
 
     Route::post('/logout', 'logout')->name('logout');
+
+    Route::get('/update/{id}', 'update')->name('update');
+
+    Route::post('/update-submit', 'update_submit')->name('update.submit');
 });

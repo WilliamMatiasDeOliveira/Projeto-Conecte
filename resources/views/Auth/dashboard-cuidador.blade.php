@@ -24,7 +24,7 @@
                         height="600px"></iframe></p>
             </div>
 
-            <a href="#" class="btn btn-danger form-control mt-4 mb-4">Atualizar Dados</a>
+            <a href="{{route('update', encrypt(Auth::user()->id))}}" class="btn btn-danger mt-4 mb-4">Atualizar Dados</a>
 
 
         </div>

@@ -84,8 +84,13 @@
                 <p>CIDADE : {{ Auth::user()->cidade }}</p>
                 <p>BAIRRO : {{ Auth::user()->bairro }}</p>
                 <p>RUA : {{ Auth::user()->rua }}</p>
-                <a href="#" class="btn btn-danger mt-4 mb-4">Atualizar Dados</a>
+                <a href="{{route('update', encrypt(Auth::user()->id))}}" class="btn btn-danger mt-4 mb-4">Atualizar Dados</a>
             </div>
+
+            @php
+                $cuidadores = session('cuidadores');
+            @endphp
+
 
             <h1 class="text-center">Contrate um de nossos cuidadores</h1>
             <section class="lista-cuidadores-container">

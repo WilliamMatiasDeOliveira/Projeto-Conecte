@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class UserTableSeeder extends Seeder
 {
@@ -25,9 +26,9 @@ class UserTableSeeder extends Seeder
                     'cidade'=>"cidade".$i,
                     'bairro'=>'bairro'.$i,
                     'rua'=>"rua".$i,
-                    'password'=>"12345678",
-                    'foto'=>"f9e70a7fcc58ac692b7b6f508d5af524.jpg)",
-                    'curriculo'=>"191ce55c54c81d6574684d78267f4220.pdf"
+                    'password'=>Hash::make('12345678'),
+                    'foto'=>"2b8b8693e61bf9db64d6d664fcc222f5.jpg",
+                    'curriculo'=>"59868390bf7bcb6c92d9d2e3beab797a.pdf"
 
                 ];
             }
