@@ -1,6 +1,13 @@
 @extends('Layouts.main_layout')
 @section('title', 'Cadastro')
 
+@php
+    if(Auth::user()){
+        return
+        
+    }
+@endphp
+
 @section('content')
 
     <section class="papeis-container">
