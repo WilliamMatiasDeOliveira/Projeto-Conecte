@@ -550,17 +550,73 @@ PAGINA CONTATOS
 */
 .dashboard-cuidador-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100vw;
+    background-color: black;
 
 }
 
+.dashboard-cuidador {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-dados{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: yellow;
+}
+
+.box-dados .img-user img{
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.dasboard-cuidador .dados{
+    display: flex;
+    flex-direction: column;
+}
+
+.show-data{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: green;
+}
+
+
+
+
+
+
+
+/*
+
+.dashboard-cuidador .dados{
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-cuidador .show-data{
+    width: 40%;
+} */
+/*
 .dashboard-cuidador .img-user {
     display: flex;
-    justify-content: center;
+    width: 40%;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+    background-color: silver;
+}
+
+.dashboard-cuidador .dashboard-dados{
+    width: 100%;
+    background-color: red;
 }
 
 .dashboard-cuidador .img-user img {
@@ -579,9 +635,9 @@ PAGINA CONTATOS
     font-weight: 600;
 }
 
-.dashboard-cuidador .info-user iframe {
-    width: 800px;
-}
+.dashboard-cuidador .show-data{
+    width: 40%;
+} */
 
 /*
 ==================================================
