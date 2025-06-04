@@ -28,7 +28,7 @@ class UserTableSeeder extends Seeder
                     'rua'=>"rua".$i,
                     'password'=>Hash::make('12345678'),
                     'foto'=>"2b8b8693e61bf9db64d6d664fcc222f5.jpg",
-                    'curriculo'=>"59868390bf7bcb6c92d9d2e3beab797a.pdf"
+                    'curriculo'=>"9cc15266e2fb8f7b1e6d1d10fa871a52.pdf"
 
                 ];
             }

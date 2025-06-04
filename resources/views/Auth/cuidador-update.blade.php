@@ -16,35 +16,33 @@
             <form action="{{ route('update.submit') }}" method="post"enctype="multipart/form-data">
                 @csrf
 
-                <input type="hidden"name="id"value="{{$userUpdate->id}}">
+                <input type="hidden"name="id" value="{{ $userUpdate->id }}">
 
                 <div class="form-cliente-pessoal">
                     <div>
                         <label for="nome">Nome</label>
                         <input type="text"name="nome" class="form-control"
-                        value="@php
+                            value="@php
                             if (isset($userUpdate)) {
                                 echo $userUpdate->nome;
                             } else {
                                 echo old('nome');
-                            }
-                        @endphp">
+                            } @endphp">
                         @error('nome')
-                        <div class="text-warning">
-                            {{ $message }}
-                        </div>
+                            <div class="text-warning">
+                                {{ $message }}
+                            </div>
                         @enderror
                     </div>
                     <div>
                         <label for="cpf">Cpf</label>
                         <input type="text"name="cpf" class="form-control"
-                        value="@php
+                            value="@php
                             if (isset($userUpdate)) {
                                 echo $userUpdate->cpf;
                             } else {
                                 echo old('cpf');
-                            }
-                        @endphp">
+                            } @endphp">
                         @error('cpf')
                             <div class="text-warning">
                                 {{ $message }}
@@ -54,13 +52,12 @@
                     <div>
                         <label for="email">E-mail</label>
                         <input type="email"name="email" class="form-control"
-                        value="@php
+                            value="@php
                             if (isset($userUpdate)) {
                                 echo $userUpdate->email;
                             } else {
                                 echo old('email');
-                            }
-                        @endphp">
+                            } @endphp">
                         @error('email')
                             <div class="text-warning">
                                 {{ $message }}
@@ -70,17 +67,16 @@
                     <div>
                         <label for="telefone">Telefone</label>
                         <input type="text"name="telefone" class="form-control"
-                        value="@php
+                            value="@php
                             if (isset($userUpdate)) {
                                 echo $userUpdate->telefone;
                             } else {
                                 echo old('telefone');
-                            }
-                        @endphp">
+                            } @endphp">
                         @error('telefone')
-                        <div class="text-warning">
-                            {{ $message }}
-                        </div>
+                            <div class="text-warning">
+                                {{ $message }}
+                            </div>
                         @enderror
                     </div>
                 </div>
@@ -89,13 +85,12 @@
                     <div>
                         <label for="cidade">Cidade</label>
                         <input type="text"name="cidade" class="form-control"
-                        value="@php
+                            value="@php
                             if (isset($userUpdate)) {
                                 echo $userUpdate->cidade;
                             } else {
                                 echo old('cidade');
-                            }
-                        @endphp">
+                            } @endphp">
                         @error('cidade')
                             <div class="text-warning">
                                 {{ $message }}
@@ -105,13 +100,12 @@
                     <div>
                         <label for="bairro">Bairro</label>
                         <input type="text"name="bairro" class="form-control"
-                        value="@php
+                            value="@php
                             if (isset($userUpdate)) {
                                 echo $userUpdate->bairro;
                             } else {
                                 echo old('bairro');
-                            }
-                        @endphp">
+                            } @endphp">
                         @error('bairro')
                             <div class="text-warning">
                                 {{ $message }}
@@ -121,13 +115,12 @@
                     <div>
                         <label for="rua">Rua</label>
                         <input type="text"name="rua" class="form-control"
-                        value="@php
+                            value="@php
                             if (isset($userUpdate)) {
                                 echo $userUpdate->rua;
                             } else {
                                 echo old('rua');
-                            }
-                        @endphp">
+                            } @endphp">
                         @error('rua')
                             <div class="text-warning">
                                 {{ $message }}
@@ -157,38 +150,40 @@
                     </div>
                 </div>
 
-            <div class="form-cliente-fim">
-    {{-- Campo de Foto --}}
-    <div>
-        <label for="foto">Foto Atual</label><br>
-        @if ($userUpdate->foto)
-            <img src="{{ asset('assets/imgs/cuidadores/' . $userUpdate->foto) }}" alt="Foto do usuário" style="width: 120px; height: 120px;margin-bottom: 10px;">
-        @else
-            <p>Sem foto cadastrada.</p>
-        @endif
+                <div class="form-cliente-fim">
+                    {{-- Campo de Foto --}}
+                    <div>
+                        <label for="foto">Foto Atual</label><br>
+                        @if ($userUpdate->foto)
+                            <img src="{{ asset('assets/imgs/cuidadores/' . $userUpdate->foto) }}" alt="Foto do usuário"
+                                style="width: 120px; height: 120px;margin-bottom: 10px;">
+                        @else
+                            <p>Sem foto cadastrada.</p>
+                        @endif
 
 
-        <input type="file" name="foto" class="form-control">
-    </div>
+                        <input type="file" name="foto" class="form-control">
+                    </div>
 
-    {{-- campo curriculo --}}
-    <div>
-        <label for="curriculo">Currículo Atual</label><br>
-        @if ($userUpdate->curriculo)
-            <a href="{{ asset('assets/imgs/curriculos/' . $userUpdate->curriculo) }}" target="_blank"style="color:black">Ver Currículo</a>
-        @else
-            <p>Sem currículo cadastrado.</p>
-        @endif
+                    {{-- campo curriculo --}}
+                    <div>
+                        <label for="curriculo">Currículo Atual</label><br>
+                        @if ($userUpdate->curriculo)
+                            <a href="{{ asset('assets/imgs/curriculos/' . $userUpdate->curriculo) }}"
+                                target="_blank"style="color:black">Ver Currículo</a>
+                        @else
+                            <p>Sem currículo cadastrado.</p>
+                        @endif
 
 
-        <input type="file" name="curriculo" class="form-control"  style="margin-top: 106px;">
-    </div>
+                        <input type="file" name="curriculo" class="form-control">
+                    </div>
 
-    {{-- Botão de envio --}}
-    <div class="mt-4">
-        <input type="submit" class="btn btn-secondary form-control" value="Atualizar">
-    </div>
-</div>
+                    {{-- Botão de envio --}}
+                    <div class="mt-4">
+                        <input type="submit" class="btn btn-secondary form-control" value="Atualizar">
+                    </div>
+                </div>
 
             </form>
         </section>

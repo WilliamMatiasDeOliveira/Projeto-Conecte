@@ -1,3 +1,4 @@
+
 @extends('Layouts.main_layout')
 
 @section('title', 'Cadastro')

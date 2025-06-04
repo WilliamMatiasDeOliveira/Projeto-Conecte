@@ -1,3 +1,15 @@
+@php
+    if(Auth::user()){
+        if(Auth::user()->tipo == "cliente"){
+            return redirect()->route("dashboard.cliente");
+        }
+
+        return redirect()->route("dashboard.cuidador");
+    }
+@endphp
+
+
+
 @extends('Layouts.main_layout')
 
 @section('title', 'Cadastro')

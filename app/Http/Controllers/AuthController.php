@@ -293,7 +293,11 @@ class AuthController extends Controller
             $extension = $request->foto->extension();
             $image_name = md5($request->foto->getClientOriginalName() . strtotime("now")) . "." . $extension;
 
-            $request->foto->move(public_path('assets/imgs/clientes/'), $image_name);
+            if($user->tipo == "cliente"){
+                $request->foto->move(public_path('assets/imgs/clientes/'), $image_name);
+            }else if($user->tipo == "cuidador"){
+                $request->foto->move(public_path('assets/imgs/cuidadores/'), $image_name);
+            }
         } else {
             $image_name = $user->foto;
         }
@@ -313,25 +317,45 @@ class AuthController extends Controller
             $password = $user->password;
         }
 
-        $user->update([
-            'nome' => $request->nome,
-            'email' => $request->email,
-            'telefone' => $request->telefone,
-            'cpf' => $request->cpf,
-            'cidade' => $request->cidade,
-            'bairro' => $request->bairro,
-            'rua' => $request->rua,
-            'password' => $password,
-            'foto' => $image_name,
-            'curriculo' => $curriculo_name
-        ]);
+        // $user->update([
+        //     'nome' => $request->nome,
+        //     'email' => $request->email,
+        //     'telefone' => $request->telefone,
+        //     'cpf' => $request->cpf,
+        //     'cidade' => $request->cidade,
+        //     'bairro' => $request->bairro,
+        //     'rua' => $request->rua,
+        //     'password' => $password,
+        //     'foto' => $image_name,
+        //     'curriculo' => $curriculo_name
+        // ])->save();
 
+        // instanciar um objeto do usuario e ir dando update
+        $user->nome = $request->nome;
+        $user->email = $request->email;
+        $user->telefone = $request->telefone;
+        $user->cpf = $request->cpf;
+        $user->cidade = $request->cidade;
+        $user->bairro = $request->bairro;   
+        $user->rua = $request->rua;
+        $user->password = $password;
+        $user->foto = $image_name;
+        $user->curriculo = $curriculo_name;
+        $user->save();
 
         $msg_success = "Seus dados foram atualizados com sucesso !";
 
-        return redirect()
+        if($user->tipo == "cuidador"){
+            return redirect()
             ->route('dashboard.cuidador')
             ->with('update_cuidador_success', compact('msg_success'));
+        }
+     
+        return redirect()
+            ->route('dashboard.cliente')
+            ->with('update_cuidador_success', compact('msg_success'));
+
+        
     }
 }
 
