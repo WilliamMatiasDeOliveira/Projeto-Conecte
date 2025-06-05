@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -23,7 +24,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: var(--azul-claro);
-     min-height: 100vh;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 main {
@@ -56,12 +58,12 @@ main {
     color: var(--azul-escuro);
 }
 
-.btn-success{
+.btn-success {
     background-color: var(--azul-escuro);
     font-weight: 500;
 }
 
-.btn-success:hover{
+.btn-success:hover {
     background-color: var(--azul-medio);
     color: var(--preto);
 }

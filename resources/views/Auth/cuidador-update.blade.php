@@ -150,10 +150,10 @@
                     </div>
                 </div>
 
-                <div class="form-cliente-fim">
+                <div class="campo-dados">
                     {{-- Campo de Foto --}}
-                    <div>
-                        <label for="foto">Foto Atual</label><br>
+                    <div class="campo-foto">
+                        <label for="foto">Foto Atual</label>
                         @if ($userUpdate->foto)
                             <img src="{{ asset('assets/imgs/cuidadores/' . $userUpdate->foto) }}" alt="Foto do usuário"
                                 style="width: 120px; height: 120px;margin-bottom: 10px;">
@@ -162,21 +162,21 @@
                         @endif
 
 
-                        <input type="file" name="foto" class="form-control">
+                        <input type="file" name="foto" class="form-control mb-3">
                     </div>
 
                     {{-- campo curriculo --}}
-                    <div>
-                        <label for="curriculo">Currículo Atual</label><br>
+                    <div class="campo-curriculo">
+                        <label for="curriculo"class="mb-2">Currículo Atual</label><br>
                         @if ($userUpdate->curriculo)
                             <a href="{{ asset('assets/imgs/curriculos/' . $userUpdate->curriculo) }}"
                                 target="_blank"style="color:black">Ver Currículo</a>
                         @else
-                            <p>Sem currículo cadastrado.</p>
+                            <p class="mb-4">Sem currículo cadastrado.</p>
                         @endif
 
 
-                        <input type="file" name="curriculo" class="form-control">
+                        <input type="file" name="curriculo" class="form-control mt-3">
                     </div>
 
                     {{-- Botão de envio --}}

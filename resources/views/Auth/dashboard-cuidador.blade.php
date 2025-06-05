@@ -7,27 +7,37 @@
 
         <div class="dashboard-cuidador">
 
-            <div class="dasboard-cuidador box-dados">
+            <div class="box-dados">
                 <div class="img-user">
                     <img src="{{ asset('assets/imgs/cuidadores/' . Auth::user()->foto) }}" alt="foto do usuario">
-                    <h1 class='dashboard-cuidador title-nome'>{{ Auth::user()->nome }}</h1>
+                    <h1 class='title-nome'>{{ Auth::user()->nome }}</h1>
                 </div>
 
-                <div class="dashboard-cuidador dados">
-                    <p>E-MAIL : {{ Auth::user()->email }}</p><br>
-                    <p>TELEFONE : {{ Auth::user()->telefone }}</p><br>
-                    <p>CPF : {{ Auth::user()->cpf }}</p><br>
-                    <p>CIDADE : {{ Auth::user()->cidade }}</p><br>
-                    <p>BAIRRO : {{ Auth::user()->bairro }}</p><br>
-                    <p>RUA : {{ Auth::user()->rua }}</p><br>
+                <div class="dados">
+                    <ul>
+                        <li>E-MAIL : {{ Auth::user()->email }}</li>
+                        <li>TELEFONE : {{ Auth::user()->telefone }}</li>
+                        <li>CPF : {{ Auth::user()->cpf }}</li>
+                        <li>CIDADE : {{ Auth::user()->cidade }}</li>
+                        <li>BAIRRO : {{ Auth::user()->bairro }}</li>
+                        <li>RUA : {{ Auth::user()->rua }}</li>
+                    </ul>
+                    <a href="{{ route('update', encrypt(Auth::user()->id)) }}" class="btn btn-success form-control">Atualizar
+                        Dados</a>
                 </div>
             </div>
 
-            <div class="dashboard-cuidador show-data">
-                <p><iframe src="{{ asset('assets/imgs/curriculos/' . Auth::user()->curriculo) }}"></iframe></p>
+            <div class="show-data">
+                <iframe src="{{ asset('assets/imgs/curriculos/' . Auth::user()->curriculo) }}"></iframe>
+            </div>
 
-                <a href="{{ route('update', encrypt(Auth::user()->id)) }}" class="btn btn-danger">Atualizar
-                    Dados</a>
+            <div class="show-data-mobile">
+                <a href="{{ asset('assets/imgs/curriculos/' . Auth::user()->curriculo) }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary mt-2 form-control">
+                    Ver Currículo
+                </a>
             </div>
 
 

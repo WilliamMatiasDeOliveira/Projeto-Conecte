@@ -517,6 +517,22 @@ PAGINA CONTATOS
 
 /*
 ==================================================
+    CUIDADOR-UPDATE
+==================================================
+*/
+
+.campo-dados {
+    padding: 2rem;
+}
+
+.campo-foto {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+==================================================
     PAGINA LOGIN
 ==================================================
 */
@@ -548,107 +564,129 @@ PAGINA CONTATOS
     PAGINA DASHBOARD-CUIDADOR
 ==================================================
 */
-.dashboard-cuidador-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    background-color: black;
-
-}
-
 .dashboard-cuidador {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    width: 100vw;
 }
 
-.box-dados{
+.box-dados {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    background-color: yellow;
+    width: 40vw;
+    padding: 2rem 5rem;
 }
 
-.box-dados .img-user img{
+.img-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.img-user img {
     width: 250px;
     height: 200px;
     border-radius: 20px;
 }
 
-.dasboard-cuidador .dados{
+.dados {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
-.show-data{
+.show-data {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    background-color: green;
-}
-
-
-
-
-
-
-
-/*
-
-.dashboard-cuidador .dados{
-    display: flex;
-    flex-direction: column;
-}
-
-.dashboard-cuidador .show-data{
-    width: 40%;
-} */
-/*
-.dashboard-cuidador .img-user {
-    display: flex;
-    width: 40%;
-    justify-content: start;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    background-color: silver;
+    width: 50vw;
+    padding: 2rem 5rem;
 }
 
-.dashboard-cuidador .dashboard-dados{
+.show-data iframe {
     width: 100%;
-    background-color: red;
+    height: 100%;
+    margin-bottom: 2rem;
 }
-
-.dashboard-cuidador .img-user img {
-    width: 220px;
-    height: 200px;
-    border-radius: 50%;
-    margin-top: 2rem
-}
-
-.dashboard-cuidador .img-user h1 {
-    font-size: 40px;
-}
-
-.dashboard-cuidador .info-user {
-    text-align: center;
-    font-weight: 600;
-}
-
-.dashboard-cuidador .show-data{
-    width: 40%;
-} */
 
 /*
 ==================================================
     PAGINA DASHBOARD-CLIENTE
 ==================================================
 */
+.dashboard-cliente-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0rem 1rem;
+}
+
+.dashboard-cliente .img-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dashboard-cliente .img-user img {
+    width: 220px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 2rem
+}
+
+.dashboard-cliente .img-user h1 {
+    font-size: 40px;
+}
+
+.dashboard-cliente .info-user {
+    flex-direction: column;
+    text-align: center;
+    font-weight: 600;
+}
+
+.dashboard-cliente .info-user a {
+    margin: 0 auto;
+}
 
 
 
+/* --------------------------------------------- */
 
+.lista-cuidadores-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
 
+.lista-cuidadores {
+    width: 25rem;
+}
+
+.lista-cuidadores img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.lista-cuidadores .card-body {
+    background-color: var(--azul-escuro);
+    padding: 1rem;
+    border: 1px solid var(--azul-escuro);
+}
+
+.lista-cuidadores .card-body .botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
 /*
 ======================================================================================================================================================
@@ -694,11 +732,6 @@ PAGINA CONTATOS
         transition: none;
     }
 
-    header .menu-nav ul li a:hover {
-        padding: 0 2rem;
-        transition: none;
-    }
-
     header .menu-nav .buttons {
         align-items: center;
         margin: 1rem 0;
@@ -711,6 +744,31 @@ PAGINA CONTATOS
         font-size: 1.5rem;
         font-weight: 500;
     }
+
+    .auth-user {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .auth-user svg {
+        display: none;
+        /* Ícone oculto no mobile, opcional */
+    }
+
+    .auth-user form,
+    .auth-user a {
+        width: 80vw;
+        text-align: center;
+    }
+
+    .auth-user input[type="submit"],
+    .auth-user .btn {
+        width: 100%;
+    }
+
+
 
     footer {
         flex-direction: column;
@@ -896,7 +954,81 @@ PAGINA LOGIN @MEDIA QUERY
         margin-bottom: 4rem;
     }
 
+    /*
+==================================================
+PAGINA DASHBOARD-CLIENTE @MEDIA QUERY
+==================================================
+*/
+    .dashboard-cliente-container {
+        width: 100%;
+    }
+
+    .dashboard-cliente .img-user {
+        flex-wrap: wrap;
+    }
+
+    .dashboard-cliente .img-user h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    /* --------------------------------------------- */
+
+    .lista-cuidadores-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lista-cuidadores {
+        width: 100%;
+    }
+
+        /*
+==================================================
+PAGINA DASHBOARD-CUIDADOR @MEDIA QUERY
+==================================================
+*/
+.dashboard-cuidador {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .box-dados {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .img-user img {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+    }
+
+    .dados ul {
+        padding-left: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    .dados a {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .show-data {
+        display: none;
+    }
+
+   .show-data-mobile{
+    display: block;
+    width: 90%;
+   }
 }
+
 
 
 /*fim da media query de celular*/

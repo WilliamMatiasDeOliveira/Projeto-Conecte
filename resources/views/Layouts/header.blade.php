@@ -56,14 +56,14 @@
 
                         <form action="{{ route('logout') }}" method="post">
                             @csrf
-                            <input type="submit"value="Logout" class="btn btn-danger me-3">
+                            <input type="submit"value="Logout" class="btn btn-danger">
                         </form>
 
                         @if (Auth::user()->tipo == 'cuidador')
-                            <a href="{{ route('dashboard.cuidador') }}" class='btn btn-secondary ms-3'>Meu Perfil</a>
+                            <a href="{{ route('dashboard.cuidador') }}" class='btn btn-secondary'>Meu Perfil</a>
                         @endif
                         @if (Auth::user()->tipo == 'cliente')
-                            <a href="{{ route('dashboard.cliente') }}" class='btn btn-secondary ms-3'>Meu Perfil</a>
+                            <a href="{{ route('dashboard.cliente') }}" class='btn btn-secondary'>Meu Perfil</a>
                         @endif
                     </div>
 
