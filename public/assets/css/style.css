@@ -601,8 +601,13 @@ PAGINA CONTATOS
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50vw;
-    padding: 2rem 5rem;
+    width: 100%;
+    border: none;
+    /* padding: 2rem 5rem; */
+}
+
+.show-data-mobile{
+    display: none;
 }
 
 .show-data iframe {

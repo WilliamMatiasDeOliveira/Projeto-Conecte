@@ -33,7 +33,7 @@
 
             <div class="show-data-mobile">
                 <a href="{{ asset('assets/imgs/curriculos/' . Auth::user()->curriculo) }}"
-                    target="_blank"
+                    download
                     rel="noopener noreferrer"
                     class="btn btn-secondary mt-2 form-control">
                     Ver Currículo
