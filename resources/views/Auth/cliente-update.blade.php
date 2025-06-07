@@ -167,9 +167,10 @@
             <p>Sem foto cadastrada.</p>
         @endif
 
-    
+
         <input type="file" name="foto" class="form-control">
     </div>
+    <br>
 
     {{-- Botão de envio --}}
     <div class="mt-4">
