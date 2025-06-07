@@ -317,26 +317,12 @@ class AuthController extends Controller
             $password = $user->password;
         }
 
-        // $user->update([
-        //     'nome' => $request->nome,
-        //     'email' => $request->email,
-        //     'telefone' => $request->telefone,
-        //     'cpf' => $request->cpf,
-        //     'cidade' => $request->cidade,
-        //     'bairro' => $request->bairro,
-        //     'rua' => $request->rua,
-        //     'password' => $password,
-        //     'foto' => $image_name,
-        //     'curriculo' => $curriculo_name
-        // ])->save();
-
-        // instanciar um objeto do usuario e ir dando update
         $user->nome = $request->nome;
         $user->email = $request->email;
         $user->telefone = $request->telefone;
         $user->cpf = $request->cpf;
         $user->cidade = $request->cidade;
-        $user->bairro = $request->bairro;   
+        $user->bairro = $request->bairro;
         $user->rua = $request->rua;
         $user->password = $password;
         $user->foto = $image_name;
@@ -350,12 +336,12 @@ class AuthController extends Controller
             ->route('dashboard.cuidador')
             ->with('update_cuidador_success', compact('msg_success'));
         }
-     
+
         return redirect()
             ->route('dashboard.cliente')
             ->with('update_cuidador_success', compact('msg_success'));
 
-        
+
     }
 }
 

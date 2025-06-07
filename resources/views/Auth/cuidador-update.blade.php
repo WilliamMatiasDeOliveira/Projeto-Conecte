@@ -23,7 +23,7 @@
                         <label for="nome">Nome</label>
                         <input type="text"name="nome" class="form-control"
                             value="@php
-                            if (isset($userUpdate)) {
+if (isset($userUpdate)) {
                                 echo $userUpdate->nome;
                             } else {
                                 echo old('nome');
@@ -38,7 +38,7 @@
                         <label for="cpf">Cpf</label>
                         <input type="text"name="cpf" class="form-control"
                             value="@php
-                            if (isset($userUpdate)) {
+if (isset($userUpdate)) {
                                 echo $userUpdate->cpf;
                             } else {
                                 echo old('cpf');
@@ -53,7 +53,7 @@
                         <label for="email">E-mail</label>
                         <input type="email"name="email" class="form-control"
                             value="@php
-                            if (isset($userUpdate)) {
+if (isset($userUpdate)) {
                                 echo $userUpdate->email;
                             } else {
                                 echo old('email');
@@ -68,7 +68,7 @@
                         <label for="telefone">Telefone</label>
                         <input type="text"name="telefone" class="form-control"
                             value="@php
-                            if (isset($userUpdate)) {
+if (isset($userUpdate)) {
                                 echo $userUpdate->telefone;
                             } else {
                                 echo old('telefone');
@@ -86,7 +86,7 @@
                         <label for="cidade">Cidade</label>
                         <input type="text"name="cidade" class="form-control"
                             value="@php
-                            if (isset($userUpdate)) {
+if (isset($userUpdate)) {
                                 echo $userUpdate->cidade;
                             } else {
                                 echo old('cidade');
@@ -101,7 +101,7 @@
                         <label for="bairro">Bairro</label>
                         <input type="text"name="bairro" class="form-control"
                             value="@php
-                            if (isset($userUpdate)) {
+if (isset($userUpdate)) {
                                 echo $userUpdate->bairro;
                             } else {
                                 echo old('bairro');
@@ -116,7 +116,7 @@
                         <label for="rua">Rua</label>
                         <input type="text"name="rua" class="form-control"
                             value="@php
-                            if (isset($userUpdate)) {
+if (isset($userUpdate)) {
                                 echo $userUpdate->rua;
                             } else {
                                 echo old('rua');
@@ -171,6 +171,22 @@
                         @if ($userUpdate->curriculo)
                             <a href="{{ asset('assets/imgs/curriculos/' . $userUpdate->curriculo) }}"
                                 target="_blank"style="color:black">Ver Currículo</a>
+                        @else
+                            <p class="mb-4">Sem currículo cadastrado.</p>
+                        @endif
+
+
+                        <input type="file" name="curriculo" class="form-control mt-3">
+                    </div>
+
+                    {{-- campo curriculo celular --}}
+                    <div class="campo-curriculo-celular">
+                        <label for="curriculo"class="mb-2">Currículo Atual</label><br>
+                        @if ($userUpdate->curriculo)
+                            <a href="{{ asset('assets/imgs/curriculos/' . Auth::user()->curriculo) }}" download
+                                rel="noopener noreferrer" class=" mt-2"style="color:black">
+                                Ver Currículo
+                            </a>
                         @else
                             <p class="mb-4">Sem currículo cadastrado.</p>
                         @endif

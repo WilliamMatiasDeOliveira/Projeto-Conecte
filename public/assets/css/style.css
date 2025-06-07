@@ -515,6 +515,8 @@ PAGINA CONTATOS
     border: none;
 }
 
+
+
 /*
 ==================================================
     CUIDADOR-UPDATE
@@ -528,6 +530,14 @@ PAGINA CONTATOS
 .campo-foto {
     display: flex;
     flex-direction: column;
+}
+
+.campo-curriculo-celular{
+    display: none;
+}
+
+.campo-curriculo{
+    display: block;
 }
 
 
@@ -1032,6 +1042,20 @@ PAGINA DASHBOARD-CUIDADOR @MEDIA QUERY
     display: block;
     width: 90%;
    }
+
+   /* ===========================================================
+   PAGINA CUIDADOR UPDATE
+   =========================================================== */
+
+   .campo-curriculo{
+    display: none;
+   }
+
+   .campo-curriculo-celular{
+    display: block;
+   }
+
+
 }
 
 
