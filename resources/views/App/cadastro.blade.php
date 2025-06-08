@@ -81,6 +81,6 @@
         </section>
     </div>
 
-    @include('Layouts.footer')
-
 @endsection
+
+

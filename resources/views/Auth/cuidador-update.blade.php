@@ -18,7 +18,7 @@
 
                 <input type="hidden"name="id" value="{{ $userUpdate->id }}">
 
-                <div class="form-cliente-pessoal">
+                <div class="form-cliente-pessoal form">
                     <div>
                         <label for="nome">Nome</label>
                         <input type="text"name="nome" class="form-control"
@@ -81,7 +81,7 @@ if (isset($userUpdate)) {
                     </div>
                 </div>
 
-                <div class="form-cliente-endereco">
+                <div class="form-cliente-endereco form">
                     <div>
                         <label for="cidade">Cidade</label>
                         <input type="text"name="cidade" class="form-control"
@@ -129,7 +129,7 @@ if (isset($userUpdate)) {
                     </div>
                 </div>
 
-                <div class="form-cliente-senha">
+                <div class="form-cliente-senha form">
                     <div>
                         <label for="password">Senha</label>
                         <input type="password"name="password" class="form-control">

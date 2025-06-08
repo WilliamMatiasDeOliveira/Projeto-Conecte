@@ -9,7 +9,7 @@
 
             <div class="form-cliente-side">
                 <h1>Cadastre-se Gratuitamente</h1>
-                <p>Preencha os campos abaixo para criar sua conta como cliente.</p>
+                <p>Preencha os campos abaixo para criar sua conta como cuidador.</p>
                 <p>Ja possui uma conta? <a href="{{ route('login') }}">Entre aqui!</a></p>
                 <img src="{{ asset('assets/imgs/cadastro.png') }}" alt="Imagem de fundo">
             </div>
@@ -19,7 +19,7 @@
 
                 <input type="hidden"name="tipo" value="cuidador">
 
-                <div class="form-cliente-pessoal">
+                <div class="form-cliente-pessoal form">
                     <div>
                         <label for="nome">Nome</label>
                         <input type="text"name="nome" class="form-control"value="{{ old('nome') }}">
@@ -60,7 +60,7 @@
                     </div>
                 </div>
 
-                <div class="form-cliente-endereco">
+                <div class="form-cliente-endereco form">
                     <div>
                         <label for="cidade">Cidade</label>
                         <input type="text"name="cidade" class="form-control"value="{{ old('cidade') }}">
@@ -92,7 +92,7 @@
                     </div>
                 </div>
 
-                <div class="form-cliente-senha">
+                <div class="form-cliente-senha form">
                     <div>
                         <label for="password">Senha</label>
                         <input type="password"name="password" class="form-control">
@@ -113,7 +113,7 @@
                     </div>
                 </div>
 
-                <div class="form-cliente-fim">
+                <div class="form-cliente-fim form">
                     <div>
                         <label for="foto">Foto</label>
                         <input type="file"name="foto" class="form-control">
@@ -123,7 +123,7 @@
                         <input type="file"name="curriculo" class="form-control">
                     </div>
                     <div>
-                        <input type="submit"class="btn btn-secondary form-control mt-4" value="Cadastrar-se">
+                        <input type="submit"class="btn btn-secondary form-control mt-4 btn-cliente" value="Cadastrar-se">
                     </div>
                 </div>
             </form>

@@ -1,10 +1,10 @@
 @php
-    if(Auth::user()){
-        if(Auth::user()->tipo == "cliente"){
-            return redirect()->route("dashboard.cliente");
+    if (Auth::user()) {
+        if (Auth::user()->tipo == 'cliente') {
+            return redirect()->route('dashboard.cliente');
         }
 
-        return redirect()->route("dashboard.cuidador");
+        return redirect()->route('dashboard.cuidador');
     }
 @endphp
 
@@ -28,16 +28,16 @@
             <form action="{{ route('form.cliente.submit') }}" method="post"enctype="multipart/form-data">
                 @csrf
 
-                <input type="hidden"name="tipo"value="cliente">
+                <input type="hidden"name="tipo" value="cliente">
 
-                <div class="form-cliente-pessoal">
+                <div class="form-cliente-pessoal form">
                     <div>
                         <label for="nome">Nome</label>
                         <input type="text"name="nome" class="form-control">
                         @error('nome')
-                        <div class="text-warning">
-                            {{ $message }}
-                        </div>
+                            <div class="text-warning">
+                                {{ $message }}
+                            </div>
                         @enderror
                     </div>
                     <div>
@@ -62,14 +62,14 @@
                         <label for="telefone">Telefone</label>
                         <input type="text"name="telefone" class="form-control">
                         @error('telefone')
-                        <div class="text-warning">
-                            {{ $message }}
-                        </div>
+                            <div class="text-warning">
+                                {{ $message }}
+                            </div>
                         @enderror
                     </div>
                 </div>
 
-                <div class="form-cliente-endereco">
+                <div class="form-cliente-endereco form">
                     <div>
                         <label for="cidade">Cidade</label>
                         <input type="text"name="cidade" class="form-control">
@@ -99,7 +99,7 @@
                     </div>
                 </div>
 
-                <div class="form-cliente-senha">
+                <div class="form-cliente-senha form">
                     <div>
                         <label for="password">Senha</label>
                         <input type="password"name="password" class="form-control">
@@ -120,35 +120,35 @@
                     </div>
                 </div>
 
-            <div class="form-cliente-fim">
-                <div class="form-cliente-foto">
-                    <label for="foto">Foto de Perfil</label>
-                    <input type="file" name="foto" class="form-control">
-                    @error('foto')
-                        <div class="text-warning">
-                            {{ $message }}
-                        </div>
-                    @enderror
-                </div>
+                <div class="form-cliente-fim form">
+                    <div class="form-cliente-foto">
+                        <label for="foto">Foto de Perfil</label>
+                        <input type="file" name="foto" class="form-control">
+                        @error('foto')
+                            <div class="text-warning">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
 
-                <div class="form-cliente-curriculo">
-                    <label for="curriculo">Currículo</label>
-                    <input type="file" name="curriculo" class="form-control">
-                    @error('curriculo')
-                        <div class="text-warning">
-                            {{ $message }}
-                        </div>
-                    @enderror
+                    <div class="form-cliente-curriculo form">
+                        <label for="curriculo">Currículo</label>
+                        <input type="file" name="curriculo" class="form-control">
+                        @error('curriculo')
+                            <div class="text-warning">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
                 </div>
-            </div>
-    {{-- Botão de envio --}}
-    <div class="mt-4">
-        <input type="submit" class="btn btn-secondary form-control" value="Cadastrar">
+                {{-- Botão de envio --}}
+                <div class="mt-4 ">
+                    <input type="submit" class="btn btn-secondary form-control btn-cliente" value="Cadastrar">
+                </div>
     </div>
-</div>
 
-            </form>
-        </section>
+    </form>
+    </section>
 
     </div>
 
