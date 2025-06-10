@@ -553,11 +553,6 @@ PAGINA CONTATOS
 ==================================================
 */
 
-.form-login-container {
-    display: flex;
-    justify-content: center;
-}
-
 .form-login {
     display: flex;
     flex-direction: column;
@@ -568,10 +563,16 @@ PAGINA CONTATOS
     background-color: var(--azul-escuro);
     color: white;
     font-family: var(--font-destaque);
+    margin: 3rem auto;
 }
 
 .form-login h1 {
     text-align: center;
+}
+
+.alert{
+text-align: center;
+font-size: 1.5rem;
 }
 
 /*
@@ -585,38 +586,15 @@ PAGINA CONTATOS
     width: 100vw;
 }
 
-.box-dados {
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-    padding: 2rem 5rem;
-}
-
-.img-user {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.img-user img {
-    width: 250px;
-    height: 200px;
-    border-radius: 20px;
-}
-
-.dados {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.card{
+    width: 30rem;
 }
 
 .show-data {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 40rem;
     border: none;
     /* padding: 2rem 5rem; */
 }
@@ -637,39 +615,21 @@ PAGINA CONTATOS
 ==================================================
 */
 .dashboard-cliente-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     padding: 0rem 1rem;
 }
 
-.dashboard-cliente .img-user {
+.dashboard-cliente {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.dashboard-cliente .img-user img {
-    width: 220px;
-    height: 200px;
-    border-radius: 50%;
-    margin-top: 2rem
-}
-
-.dashboard-cliente .img-user h1 {
-    font-size: 40px;
-}
-
-.dashboard-cliente .info-user {
-    flex-direction: column;
-    text-align: center;
-    font-weight: 600;
-}
-
-.dashboard-cliente .info-user a {
-    margin: 0 auto;
+.card{
+    width: 30rem;
+    background-color: var(--azul-escuro);
+    color: white;
+    border: none;
 }
 
 
@@ -1027,27 +987,8 @@ PAGINA DASHBOARD-CUIDADOR CELULARES @MEDIA QUERY
         box-sizing: border-box;
     }
 
-    .box-dados {
-        width: 100%;
-        padding: 0 1rem;
-        box-sizing: border-box;
-    }
-
-    .img-user img {
-        width: 100%;
-        max-width: 220px;
-        height: auto;
-    }
-
-    .dados ul {
-        padding-left: 0;
-        list-style: none;
-        text-align: center;
-    }
-
-    .dados a {
-        margin-top: 1rem;
-        width: 100%;
+    .card{
+        width: 20rem;
     }
 
     .show-data {
@@ -1202,28 +1143,7 @@ CONFIG TABLET    MEDIAS QUERY TABLET
         /* =========================================================
     PÁGINA SOBRE
     ========================================================= */
-    .sobre {
-        flex-direction: column;
-    }
-
-    .sobre .sobre-info,
-    .sobre .sobre-img {
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .sobre-info p {
-        font-size: 1.5rem;
-    }
-
-    .sobre .sobre-img div {
-        text-align: center;
-    }
-
-    .sobre .sobre-img img {
-        border-radius: 20px;
-        width: 100%;
-    }
+    
 
         /* =========================================================
     COMO FUNCIONA / PAPÉIS
@@ -1300,12 +1220,7 @@ CONFIG TABLET    MEDIAS QUERY TABLET
         font-size: 1.5rem;
     }
 
-    /* ========== LOGIN ========== */
-    .form-login {
-        width: 80%;
-        margin-bottom: 4rem;
-        font-size: 1.5rem;
-    }
+
 
        /* =========================================================
     DASHBOARD CLIENTE

@@ -18,9 +18,17 @@
 
     <div class="form-login-container">
 
+        {{-- Menssagem caso a senha ou login estejam errados --}}
         @if (session('login_error'))
-            <div class="alert alert-danger">
+            <div class="alert alert-primary"id="login_error">
                 {{ session('login_error') }}
+            </div>
+        @endif
+
+        {{-- Menssagem quando o cadastro é bem sucedido  --}}
+        @if (session('create_user_success'))
+            <div class="alert alert-success"id="create_user_success">
+                {{ session('create_user_success') }}
             </div>
         @endif
 
@@ -50,7 +58,10 @@
                 </div>
 
                 <div>
-                    <input type="submit"class="btn btn-secondary form-control mt-4" value="LOGIN">
+                    <input type="submit"class="btn btn-secondary form-control mt-4 mb-4" value="LOGIN">
+                </div>
+                <div>
+                    <a href="{{route('cadastro')}}" class="text-light">Ainda não tem conta ?</a>
                 </div>
             </form>
         </section>

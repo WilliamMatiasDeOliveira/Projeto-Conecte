@@ -5,20 +5,31 @@
 
     <section class="dashboard-cliente-container">
 
-        <div class="dashboard-cliente">
-            <div class="dashboard-cuidador img-user">
-                <img src="{{ asset('assets/imgs/clientes/' . Auth::user()->foto) }}" alt="foto do usuario">
-                <h1 class='dashboard-cuidador title-nome'>{{ Auth::user()->nome }}</h1>
+        @if (session('update_cliente_success'))
+            <div class="alert alert-success"id="update_cliente_success">
+                {{ session('update_cliente_success') }}
             </div>
+        @endif
 
-            <div class="dashboard-cliente info-user">
-                <p>E-MAIL : {{ Auth::user()->email }}</p>
-                <p>TELEFONE : {{ Auth::user()->telefone }}</p>
-                <p>CPF : {{ Auth::user()->cpf }}</p>
-                <p>CIDADE : {{ Auth::user()->cidade }}</p>
-                <p>BAIRRO : {{ Auth::user()->bairro }}</p>
-                <p>RUA : {{ Auth::user()->rua }}</p>
-                <a href="{{route('update', encrypt(Auth::user()->id))}}" class="btn btn-success w-50 mt-4 mb-4">Atualizar Dados</a>
+        <div class="dashboard-cliente">
+
+            <div class="card">
+                <img src="{{ asset('assets/imgs/clientes/' . Auth::user()->foto) }}" alt="foto do usuario">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ Auth::user()->nome }}</h5>
+                    <p class="card-text">
+                        <ul>
+                            <li>E-MAIL : {{ Auth::user()->email }}</li>
+                            <li>TELEFONE : {{ Auth::user()->telefone }}</li>
+                            <li>CPF : {{ Auth::user()->cpf }}</li>
+                            <li>CIDADE : {{ Auth::user()->cidade }}</li>
+                            <li>BAIRRO : {{ Auth::user()->bairro }}</li>
+                            <li>RUA : {{ Auth::user()->rua }}</li>
+                        </ul>
+                    </p>
+                    <a href="{{ route('update', encrypt(Auth::user()->id)) }}" class="btn btn-primary w-100">Atualizar
+                    Dados</a>
+                </div>
             </div>
 
             @php
