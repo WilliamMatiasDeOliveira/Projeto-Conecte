@@ -124,11 +124,9 @@ class AuthController extends Controller
             'foto' => $image_name ?? null,
         ]);
 
-        $msg_success = "Seu cadastro foi feito com Sucesso !";
-
         return redirect()
             ->route('login')
-            ->with('create_cliente_success', compact('msg_success'));
+            ->with('create_user_success', "Seu cadastro foi feito com Sucesso !");
     }
 
     public function form_cuidador_submit(Request $request)
@@ -210,12 +208,9 @@ class AuthController extends Controller
             'curriculo' => $curriculo_name ?? null,
         ]);
 
-
-        $msg_success = "Seu cadastro foi feito com Sucesso !";
-
         return redirect()
             ->route('login')
-            ->with('create_user_success', compact('msg_success'));
+            ->with('create_user_success', "Seu cadastro foi feito com Sucesso !");
     }
 
     public function logout(){
@@ -329,17 +324,15 @@ class AuthController extends Controller
         $user->curriculo = $curriculo_name;
         $user->save();
 
-        $msg_success = "Seus dados foram atualizados com sucesso !";
-
         if($user->tipo == "cuidador"){
             return redirect()
             ->route('dashboard.cuidador')
-            ->with('update_cuidador_success', compact('msg_success'));
+            ->with('update_cuidador_success', "Seus dados foram atualizados com sucesso !");
         }
 
         return redirect()
             ->route('dashboard.cliente')
-            ->with('update_cuidador_success', compact('msg_success'));
+            ->with('update_cliente_success', "Seus dados foram atualizados com sucesso !");
 
 
     }

@@ -6,11 +6,11 @@
     <div class="sobre-nos container">
 
         <div class="card" style="width: 18rem;">
-            <img src="{{ asset('assets/imgs/') }}" class="card-img-top" alt="...">
+            <img src="{{ asset('assets/imgs/foto-william.png') }}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">
-                    
+
                 </p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
