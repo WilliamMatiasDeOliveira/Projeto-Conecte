@@ -848,6 +848,10 @@ font-size: 1.5rem;
         display: block;
     }
 
+     .alert{
+        font-size: 1rem;
+    }
+
     /*
 ==================================================
     PAGINA SOBRE CELULARES @MEDIA QUERY
@@ -1199,7 +1203,7 @@ CONFIG TABLET    MEDIAS QUERY TABLET
     /* =========================================================
     PÁGINA SOBRE
     ========================================================= */
-    
+
 
     /* =========================================================
     COMO FUNCIONA / PAPÉIS
