@@ -1,10 +1,10 @@
 @php
-    if(Auth::user()){
-        if(Auth::user()->tipo == "cliente"){
-            return redirect()->route("dashboard.cliente");
+    if (Auth::user()) {
+        if (Auth::user()->tipo == 'cliente') {
+            return redirect()->route('dashboard.cliente');
         }
 
-        return redirect()->route("dashboard.cuidador");
+        return redirect()->route('dashboard.cuidador');
     }
 @endphp
 
@@ -15,7 +15,15 @@
 @section('title', 'Cadastro')
 
 @section('content')
+
     <div class="form-login-container">
+
+        @if (session('login_error'))
+            <div class="alert alert-danger">
+                {{ session('login_error') }}
+            </div>
+        @endif
+
         <section class="form-login">
             <h1>LOGIN</h1>
             <form action="{{ route('login.submit') }}" method="post">

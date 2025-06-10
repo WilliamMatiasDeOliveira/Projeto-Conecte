@@ -25,9 +25,9 @@ class AppController extends Controller
         return view('App.home');
     }
 
-    public function sobre()
+    public function sobre_nos()
     {
-        return view('App.sobre');
+        return view('App.sobre-nos');
     }
 
     public function cadastro()

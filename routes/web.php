@@ -8,7 +8,7 @@ Route::controller(AppController::class)->group(function() {
 
     Route::get('/', 'home')->name('home');
 
-    Route::get('/sobre', 'sobre')->name('sobre');
+    Route::get('/sobre-nos', 'sobre_nos')->name('sobre.nos');
 
     Route::get('/cadastro', 'cadastro')->name('cadastro');
 

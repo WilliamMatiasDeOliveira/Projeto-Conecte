@@ -51,7 +51,7 @@ class AuthController extends Controller
                 }
             } else {
                 return redirect()
-                    ->back()
+                    ->route('login')
                     ->with('login_error', 'E-mail ou Senha incorreta !');
             }
         }
