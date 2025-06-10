@@ -8,7 +8,7 @@
         <section class="form-cliente">
 
             <div class="form-cliente-side">
-                <h1>Cadastre-se Gratuitamente</h1>
+                <h1>Cadastre-se Gratuitamente!</h1>
                 <p>Preencha os campos abaixo para criar sua conta como cuidador.</p>
                 <p>Ja possui uma conta? <a href="{{ route('login') }}">Entre aqui!</a></p>
                 <img src="{{ asset('assets/imgs/cadastro.png') }}" alt="Imagem de fundo">
@@ -115,17 +115,18 @@
 
                 <div class="form-cliente-fim form">
                     <div>
-                        <label for="foto">Foto</label>
+                        <label for="foto">Foto de Perfil</label>
                         <input type="file"name="foto" class="form-control">
                     </div>
                     <div>
                         <label for="curriculo">Curriculo</label>
                         <input type="file"name="curriculo" class="form-control">
                     </div>
-                    <div>
-                        <input type="submit"class="btn btn-secondary form-control mt-4 btn-cliente" value="Cadastrar-se">
-                    </div>
                 </div>
+                {{-- Botão de envio --}}
+                    <div class="mt-4">
+                        <input type="submit"class="btn btn-secondary form-control btn-cliente" value="Cadastrar-se">
+                    </div>
             </form>
         </section>
 

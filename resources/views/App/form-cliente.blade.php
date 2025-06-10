@@ -130,20 +130,10 @@
                             </div>
                         @enderror
                     </div>
-
-                    <div class="form-cliente-curriculo form">
-                        <label for="curriculo">Currículo</label>
-                        <input type="file" name="curriculo" class="form-control">
-                        @error('curriculo')
-                            <div class="text-warning">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                    </div>
                 </div>
                 {{-- Botão de envio --}}
                 <div class="mt-4 ">
-                    <input type="submit" class="btn btn-secondary form-control btn-cliente" value="Cadastrar">
+                    <input type="submit" class="btn btn-secondary form-control btn-cliente" value="Cadastrar-se">
                 </div>
     </div>
 

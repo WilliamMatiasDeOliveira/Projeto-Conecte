@@ -2,6 +2,8 @@
     --azul-claro: #dcedf7;
     --azul-medio: #A4CDEB;
     --azul-escuro: #6b8cb1;
+    --branco: #f8f9fa;
+    --branco2: #EBEBEB;
     --preto: #1F2A33;
     --preto2: #3D4346;
     --font-padrao: "Roboto", sans-serif;
@@ -143,11 +145,13 @@ footer .apoio img {
     justify-content: space-between;
     max-width: 1300px;
     margin: 0 auto;
-    gap: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    gap: 1rem;
+    margin-bottom: 4rem;
 }
 
 .hero .hero-intro {
-    margin: 1rem 0 1rem 0;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -172,7 +176,7 @@ footer .apoio img {
 
 .hero .hero-intro .btn {
     margin-top: 1rem;
-    margin-bottom: 4.5rem;
+    margin-bottom: 4rem;
 }
 
 .hero .hero-img {
@@ -200,11 +204,13 @@ footer .apoio img {
     flex-wrap: wrap;
     max-width: 1300px;
     margin: 0 auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-bottom: 5rem;
 }
 
 .sobre .sobre-info {
     width: 50%;
-    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -215,7 +221,7 @@ footer .apoio img {
     font-weight: 600;
     font-size: 3rem;
     text-align: center;
-    color: var(--azul-escuro);
+    color: var(--preto);
     margin-bottom: 2rem;
 }
 
@@ -236,13 +242,12 @@ footer .apoio img {
 }
 
 .sobre .sobre-img div {
-    width: 100%;
-    padding: 2rem;
     text-align: center;
 }
 
 .sobre .sobre-img img {
-    border-radius: 20px;
+    border-radius: 10px;
+    width: 75%;
 }
 
 /*
@@ -270,13 +275,17 @@ footer .apoio img {
     gap: 5rem;
 }
 
+.papeis img {
+    max-width: 400px;
+}
+
 .papeis .papeis-item {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 3rem 1rem;
     margin-top: 2rem;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     font-size: 1.2rem;
 }
@@ -288,13 +297,12 @@ footer .apoio img {
 
 .papeis .item1 {
     flex: 1;
-    background-color: var(--azul-medio);
+    background-color: var(--azul-escuro);
 }
 
 .papeis .item2 {
     flex: 1;
-    background-color: var(--azul-escuro);
-    color: white;
+    background-color: var(--azul-medio);
 }
 
 .papeis-item .btn {
@@ -335,7 +343,7 @@ footer .apoio img {
 .como-funciona .card {
     width: 35vw;
     padding: 0.5rem;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
 }
 
@@ -377,20 +385,63 @@ PAGINA CONTATOS
 */
 
 .contatos-container {
-    display: flex;
-    justify-content: space-between;
     padding: 2rem;
     max-width: 1300px;
     margin: 0 auto;
+    display: flex;
+    gap: 1rem;
 }
 
 .contatos-redes {
+    width: 45%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    width: 30%;
-    gap: 3rem;
-    padding: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contatos-email {
+    align-self: stretch;
+}
+
+.contatos-email input {
+    margin-top: 1rem;
+    gap: 0.5rem;
+    padding: 0.3rem auto;
+    border-radius: 0;
+    border: none;
+    border-bottom: solid 2px #6b8cb1;
+}
+
+.contatos-email input.btn {
+    border: none;
+    color: #222222;
+    border-radius: 10px;
+}
+
+.contatos-email input.btn:hover {
+    background-color: #6b8cb1;
+}
+
+.contatos-email div a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contatos-outros {
+    display: flex;
+    gap: 2rem;
+}
+
+.contatos-outros div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .contatos-redes span {
@@ -408,14 +459,14 @@ PAGINA CONTATOS
     color: var(--azul-escuro);
 }
 
-
 .contatos-mapa {
-    width: 70%;
+    width: 55%;
+    margin: 0 auto;
 }
 
 .contatos-mapa iframe {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
 
 }
 
@@ -556,15 +607,17 @@ PAGINA CONTATOS
 .form-login-container {
     display: flex;
     justify-content: center;
+    margin: 3rem;
 }
 
 .form-login {
     display: flex;
     flex-direction: column;
     width: 30%;
-    margin-top: 4rem;
-    border-radius: 20px;
-    padding: 3rem;
+    border-radius: 10px;
+    padding: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     background-color: var(--azul-escuro);
     color: white;
     font-family: var(--font-destaque);
@@ -820,7 +873,7 @@ PAGINA CONTATOS
 
     .hero .hero-intro p {
         text-align: left;
-        font-size: .8rem;
+        font-size: 1rem;
     }
 
     .hero .hero-intro .btn {
@@ -841,7 +894,6 @@ PAGINA CONTATOS
 ==================================================
 */
 
-
     .sobre {
         flex-direction: column;
     }
@@ -851,13 +903,23 @@ PAGINA CONTATOS
         padding: 1rem;
     }
 
+    .sobre .sobre-info h1 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .sobre .sobre-info p {
+        text-align: left;
+        font-size: 1rem;
+    }
+
     .sobre .sobre-img {
         width: 100%;
+        order: 1;
     }
 
     .sobre .sobre-img div {
         width: 100%;
-        padding: 1rem;
         text-align: center;
     }
 
@@ -916,12 +978,12 @@ PAGINA CONTATOS
     .contatos-container {
         display: flex;
         flex-direction: column;
-        padding: 0rem;
+        padding: 1rem;
     }
 
     .contatos-redes {
         width: 100%;
-        gap: 2rem;
+        gap: 0.5rem;
     }
 
     .contatos-redes span {
@@ -940,14 +1002,8 @@ PAGINA CONTATOS
 
     .contatos-mapa {
         width: 100%;
-        padding: 0.5rem;
     }
 
-    .contatos-mapa iframe {
-        width: 100%;
-        border-radius: 20px;
-
-    }
 
     /*
 ==================================================
@@ -1163,7 +1219,7 @@ CONFIG TABLET    MEDIAS QUERY TABLET
         gap: 20px;
     }
 
-         /* =========================================================
+    /* =========================================================
     PÁGINA HOME
     ========================================================= */
     .hero {
@@ -1199,7 +1255,7 @@ CONFIG TABLET    MEDIAS QUERY TABLET
         display: block;
     }
 
-        /* =========================================================
+    /* =========================================================
     PÁGINA SOBRE
     ========================================================= */
     .sobre {
@@ -1225,7 +1281,7 @@ CONFIG TABLET    MEDIAS QUERY TABLET
         width: 100%;
     }
 
-        /* =========================================================
+    /* =========================================================
     COMO FUNCIONA / PAPÉIS
     ========================================================= */
     .como-funciona-container h1,
@@ -1245,7 +1301,7 @@ CONFIG TABLET    MEDIAS QUERY TABLET
         width: 100%;
     }
 
-       /* =========================================================
+    /* =========================================================
     CONTATOS
     ========================================================= */
     .contatos-container {
@@ -1272,7 +1328,7 @@ CONFIG TABLET    MEDIAS QUERY TABLET
         border-radius: 20px;
     }
 
-       /* =========================================================
+    /* =========================================================
     FORMULÁRIO DE CADASTRO
     ========================================================= */
     .form-cliente {
@@ -1307,7 +1363,7 @@ CONFIG TABLET    MEDIAS QUERY TABLET
         font-size: 1.5rem;
     }
 
-       /* =========================================================
+    /* =========================================================
     DASHBOARD CLIENTE
     ========================================================= */
 
@@ -1341,7 +1397,7 @@ CONFIG TABLET    MEDIAS QUERY TABLET
         display: block;
     }
 
-       /* =========================================================
+    /* =========================================================
     DASHBOARD CUIDADOR
     ========================================================= */
     .dashboard-cuidador {
@@ -1402,7 +1458,8 @@ CONFIG TABLET    MEDIAS QUERY TABLET
     .campo-curriculo-celular {
         display: block;
     }
-    .campo-dados{
+
+    .campo-dados {
         font-size: 1.5rem;
     }
 
