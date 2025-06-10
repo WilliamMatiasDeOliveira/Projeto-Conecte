@@ -74,4 +74,8 @@ class AppController extends Controller
     {
         return view('Auth.dashboard-cuidador');
     }
+
+    public function envio_email(){
+        return redirect()->route("home")->with('email-success', "Seu e-mail foi eviado com sucesso te responderemos em breve");
+    }
 }

@@ -20,7 +20,8 @@
                         Nos envie um Email!</a>
                     </span>
                 </div>
-                <form>
+                <form action="{{route('envio.email')}}"method="POST">
+                    @csrf
                         <input type="email" placeholder="Insira seu Nome " name="nome" class="form-control"value="">
                         <input type="email" placeholder="Insira um Email válido" name="email" class="form-control"value="">
                         <input type="email" placeholder="Insira sua mensagem" name="texto" class="form-control"value="">

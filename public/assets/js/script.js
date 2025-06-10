@@ -34,3 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 3000);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+        const message = document.getElementById('email-success');
+        if (message) {
+            message.style.display = 'none';
+        }
+    }, 3000);
+});

@@ -23,6 +23,8 @@ Route::controller(AppController::class)->group(function() {
     Route::get('/dashboard-cliente', 'dashboard_cliente')->name('dashboard.cliente');
 
     Route::get('/dashboard-cuidador', 'dashboard_cuidador')->name('dashboard.cuidador');
+
+    Route::post('/envio-email', 'envio_email')->name('envio.email');
 });
 
 Route::controller(AuthController::class)->group(function() {
