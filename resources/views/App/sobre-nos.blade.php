@@ -22,7 +22,7 @@
 
         {{-- card vini --}}
         <div class="card" style="width: 18rem;">
-            <img src="{{ asset('assets/imgs/foto-vini.jpg') }}" class="card-img-top img-fluid"
+            <img src="{{ asset('assets/imgs/empty-foto1.avif') }}" class="card-img-top img-fluid"
                 alt="Foto do desenvolvedor"style="object-fit: cover; height: 250px;">
             <div class="card-body">
                 <h5 class="card-title">Vinicius Leonardo Silveira</h5>

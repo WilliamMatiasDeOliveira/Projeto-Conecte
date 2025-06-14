@@ -27,10 +27,10 @@
                         <a href="{{ route('form.cliente') }}" class="nav-link">Contrate um Cuidador</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('form.cuidador') }}"class="nav-link">Trabalhe Conosco</a>
+                        <a href="{{ route('form.cuidador') }}"class="nav-link">Sou Cuidador</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('sobre.nos') }}" class="nav-link">Sobre</a>
+                        <a href="{{ route('sobre.nos') }}" class="nav-link">Sobre Nós</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('contatos') }}" class="nav-link">Contatos</a>
