@@ -4,57 +4,7 @@
 @section('content')
 
     <style>
-        .sobre-nos-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 3.4rem;
-        }
 
-        .card {
-            margin: 2rem 0 2rem 0 ;
-        }
-
-        .card-title {
-            text-align: center
-        }
-
-        .card-text {
-            display: flex;
-            justify-content: center;
-            gap: 1rem align-items: center
-        }
-
-        .card-text a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-
-        .card-img-top {
-            max-height: 16rem;
-        }
-
-         .text-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: justify;
-            width: 83%;
-            margin: 0 auto;
-        }
-
-
-        .text-container h1 {
-            color: var(--azul-escuro);
-            font-size: 4rem;
-            margin-top: 2rem
-        }
-
-        .text-container p {
-            font-size: 1.2rem;
-        }
 
         /* =========================== */
         /* CELULAR */
@@ -62,21 +12,7 @@
 
         @media (max-width: 480px) {
 
-            .sobre-nos-container{
-                gap: 1.5rem;
-            }
-
-            .card{
-                margin: 0;
-            }
-            .text-container h1 {
-                font-size: 2rem;
-                text-align: center;
-            }
-
-            .text-container p {
-                font-size: 1rem;
-            }
+            
         }
     </style>
 

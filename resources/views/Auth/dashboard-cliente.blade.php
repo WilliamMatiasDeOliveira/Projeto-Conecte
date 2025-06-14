@@ -18,17 +18,17 @@
                 <div class="card-body">
                     <h5 class="card-title text-center">{{ Auth::user()->nome }}</h5>
                     <p class="card-text">
-                        <ul>
-                            <li>E-MAIL : {{ Auth::user()->email }}</li>
-                            <li>TELEFONE : {{ Auth::user()->telefone }}</li>
-                            <li>CPF : {{ Auth::user()->cpf }}</li>
-                            <li>CIDADE : {{ Auth::user()->cidade }}</li>
-                            <li>BAIRRO : {{ Auth::user()->bairro }}</li>
-                            <li>RUA : {{ Auth::user()->rua }}</li>
-                        </ul>
+                    <ul>
+                        <li>E-MAIL : {{ Auth::user()->email }}</li>
+                        <li>TELEFONE : {{ Auth::user()->telefone }}</li>
+                        <li>CPF : {{ Auth::user()->cpf }}</li>
+                        <li>CIDADE : {{ Auth::user()->cidade }}</li>
+                        <li>BAIRRO : {{ Auth::user()->bairro }}</li>
+                        <li>RUA : {{ Auth::user()->rua }}</li>
+                    </ul>
                     </p>
                     <a href="{{ route('update', encrypt(Auth::user()->id)) }}" class="btn btn-primary w-100">Atualizar
-                    Dados</a>
+                        Dados</a>
                 </div>
             </div>
 
@@ -41,7 +41,14 @@
             <section class="lista-cuidadores-container">
                 @foreach ($cuidadores as $cuidador)
                     <div class="lista-cuidadores">
-                        <img src="{{ asset('assets/imgs/cuidadores/' . $cuidador->foto) }}"alt="imagem do cuidador">
+
+                        @if (!isset($cuidador->foto))
+                            <img src="{{ asset('assets/imgs/empty-foto.jpg') }}"class="img-fluid  mx-auto d-block"
+                                style="width: 300px; height: 200px; object-fit: cover;" alt="Foto padrão">
+                        @else
+                            <img src="{{ asset('assets/imgs/cuidadores/' . $cuidador->foto) }}">
+                        @endif
+
                         <div class="card-body">
                             <h5 class="card-title text-center">{{ $cuidador->nome }}</h5>
                             <p class="card-text">E-MAIL: {{ $cuidador->email }}

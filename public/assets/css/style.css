@@ -608,7 +608,7 @@ PAGINA CONTATOS
 
 .form-login {
     display: flex;
-     justify-content: center;
+    justify-content: center;
     flex-direction: column;
     width: 30%;
     border-radius: 10px;
@@ -625,9 +625,9 @@ PAGINA CONTATOS
     text-align: center;
 }
 
-.alert{
-text-align: center;
-font-size: 1.5rem;
+.alert {
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 /*
@@ -641,7 +641,7 @@ font-size: 1.5rem;
     width: 100vw;
 }
 
-.card{
+.card {
     width: 30rem;
 }
 
@@ -680,7 +680,7 @@ font-size: 1.5rem;
     flex-direction: column;
 }
 
-.card{
+.card {
     width: 30rem;
     background-color: var(--azul-escuro);
     color: white;
@@ -727,14 +727,66 @@ font-size: 1.5rem;
     display: none;
 }
 
-/*
-======================================================================================================================================================
-======================================================================================================================================================
+/* ======================================================================================================
+ PAGINA SOBRE-NOS
+====================================================================================================== */
+.sobre-nos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3.4rem;
+}
+
+.card {
+    margin: 2rem 0 2rem 0;
+}
+
+.card-title {
+    text-align: center
+}
+
+.card-text {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.card-text a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.card-img-top {
+    max-height: 16rem;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    width: 83%;
+    margin: 0 auto;
+}
+
+
+.text-container h1 {
+    color: var(--azul-escuro);
+    font-size: 4rem;
+    margin-top: 2rem
+}
+
+.text-container p {
+    font-size: 1.2rem;
+}
+
+/* ======================================================================================================================================================
     CONFIG PRA CELULARES
 ======================================================================================================================================================
-======================================================================================================================================================
-
-*/
+====================================================================================================================================================== */
 
 @media (max-width: 480px) {
 
@@ -850,11 +902,11 @@ font-size: 1.5rem;
         display: block;
     }
 
-     .alert{
+    .alert {
         font-size: 1rem;
     }
 
-     /*
+    /*
 ==================================================
     SEÇÃO SOBRE CELULARES @MEDIA QUERY
 ==================================================
@@ -1051,7 +1103,7 @@ PAGINA DASHBOARD-CUIDADOR CELULARES @MEDIA QUERY
         box-sizing: border-box;
     }
 
-    .card{
+    .card {
         width: 20rem;
     }
 
@@ -1077,6 +1129,29 @@ PAGINA DASHBOARD-CUIDADOR CELULARES @MEDIA QUERY
     }
 
 
+}
+
+/*
+==================================================
+    PAGINA SOBRE-NOS CELULARES @MEDIA QUERY
+==================================================
+*/
+
+.sobre-nos-container {
+    gap: 1.5rem;
+}
+
+.card {
+    margin: 0;
+}
+
+.text-container h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.text-container p {
+    font-size: 1rem;
 }
 
 /*fim da media query de celular*/
