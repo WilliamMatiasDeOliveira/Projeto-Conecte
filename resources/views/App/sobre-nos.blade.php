@@ -6,11 +6,14 @@
     <style>
         .sobre-nos-container {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3.4rem;
         }
 
         .card {
-            margin-top: 2rem;
+            margin: 2rem 0 2rem 0 ;
         }
 
         .card-title {
@@ -19,8 +22,8 @@
 
         .card-text {
             display: flex;
-            justify-content: space-around;
-            align-items: center
+            justify-content: center;
+            gap: 1rem align-items: center
         }
 
         .card-text a {
@@ -33,22 +36,58 @@
             max-height: 16rem;
         }
 
-        .container h1{
+         .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: justify;
+            width: 83%;
+            margin: 0 auto;
+        }
+
+
+        .text-container h1 {
             color: var(--azul-escuro);
             font-size: 4rem;
             margin-top: 2rem
         }
 
-        .container p{
+        .text-container p {
             font-size: 1.2rem;
         }
+
+        /* =========================== */
+        /* CELULAR */
+        /* =========================== */
+
+        @media (max-width: 480px) {
+
+            .sobre-nos-container{
+                gap: 1.5rem;
+            }
+
+            .card{
+                margin: 0;
+            }
+            .text-container h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .text-container p {
+                font-size: 1rem;
+            }
+        }
     </style>
+
+    <h1 class="text-center mt-4">Colaboradores do Projeto</h1>
 
     <div class="sobre-nos-container">
 
         {{-- card vini --}}
         <div class="card" style="width: 18rem;">
-            <img src="{{ asset('assets/imgs/foto-vini.jpg') }}" class="card-img-top" alt="Foto do desenvolvedor">
+            <img src="{{ asset('assets/imgs/foto-vini.jpg') }}" class="card-img-top img-fluid"
+                alt="Foto do desenvolvedor"style="object-fit: cover; height: 250px;">
             <div class="card-body">
                 <h5 class="card-title">Vinicius Leonardo Silveira</h5>
                 <p class="card-text">
@@ -84,7 +123,8 @@
 
         {{-- card william --}}
         <div class="card" style="width: 18rem;">
-            <img src="{{ asset('assets/imgs/foto-william2edit.jpg') }}" class="card-img-top" alt="Foto do desenvolvedor">
+            <img src="{{ asset('assets/imgs/foto-william2edit.jpg') }}" class="card-img-top img-fluid"
+                alt="Foto do desenvolvedor"style="object-fit: cover; height: 250px;">
             <div class="card-body">
                 <h5 class="card-title">William Matias de OLiveira</h5>
                 <p class="card-text">
@@ -120,7 +160,8 @@
 
         {{-- card lucas --}}
         <div class="card" style="width: 18rem;">
-            <img src="{{ asset('assets/imgs/foto-lucas.jpg') }}" class="card-img-top" alt="Foto do desenvolvedor">
+            <img src="{{ asset('assets/imgs/foto-lucas.jpg') }}" class="card-img-top img-fluid"
+                alt="Foto do desenvolvedor"style="object-fit: cover; height: 250px;">
             <div class="card-body">
                 <h5 class="card-title">Lucas Catto</h5>
                 <p class="card-text">
@@ -156,11 +197,12 @@
 
         {{-- card aquiles --}}
         <div class="card" style="width: 18rem;">
-            <img src="{{ asset('assets/imgs/') }}" class="card-img-top" alt="Foto do desenvolvedor">
+            <img src="{{ asset('assets/imgs/foto-aquiles.jpg') }}" class="card-img-top img-fluid"
+                alt="Foto do desenvolvedor"style="object-fit: cover; height: 250px;">
             <div class="card-body">
                 <h5 class="card-title">Aquiles Pedro Sanches</h5>
                 <p class="card-text">
-                    <a href=""target="_blank">
+                    <a href="#"target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-linkedin" viewBox="0 0 16 16">
                             <path
@@ -169,7 +211,7 @@
                         Linkedin
                     </a>
 
-                    <a href=""target="_blank">
+                    <a href="https://github.com/Aquiles-Pedro-Sanches"target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-github" viewBox="0 0 16 16">
                             <path
@@ -193,11 +235,11 @@
 
     </div>{{-- fim do container --}}
 
-    <div class="container">
+    <div class="text-container">
         <h1>Sobre o Projeto</h1>
 
         <p>
-            O sistema foi desenvolvido por um grupo de estudantes do curso de DSM da FATEC, como parte do
+            O sistema foi desenvolvido por este grupo de estudantes do curso de DSM da FATEC, como parte do
             Projeto Integrador, uma disciplina que visa aplicar na prática os conhecimentos adquiridos ao longo da formação
             acadêmica.
 
