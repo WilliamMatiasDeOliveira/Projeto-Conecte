@@ -6,7 +6,7 @@
 
 
             <div class="logo">
-                <a href="#">
+                <a href="{{route('home')}}">
                     <img src="{{ asset('assets/imgs/logo.png') }}" alt="logo">
                     <span>Conecte</span>
                 </a>
