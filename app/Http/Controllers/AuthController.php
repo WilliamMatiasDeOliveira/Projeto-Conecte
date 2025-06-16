@@ -54,6 +54,8 @@ class AuthController extends Controller
                     ->route('login')
                     ->with('login_error', 'E-mail ou Senha incorreta !');
             }
+        } else {
+            return redirect()->route('login');
         }
     }
 
@@ -71,7 +73,8 @@ class AuthController extends Controller
                 'rua' => 'required|string',
                 'password' => 'required|min:8|max:16|confirmed',
 
-                'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
+                // 'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
+                'foto' => 'image|mimes:jpg,jpeg,png',
             ],
             // menssagens
             [
@@ -97,7 +100,7 @@ class AuthController extends Controller
 
 
                 'foto.mimes' => 'A imagem deve ser do tipo: :values',
-                'foto.max' => 'A imagem deve ter no maximo :max KB',
+                // 'foto.max' => 'A imagem deve ter no maximo :max KB',
                 'foto.image' => 'O arquivo deve ser uma imagem',
             ]
         );
@@ -142,8 +145,10 @@ class AuthController extends Controller
                 'bairro' => 'required|string',
                 'rua' => 'required|string',
                 'password' => 'required|min:8|max:16|confirmed',
-                'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
-                'curriculo' => 'file|mimes:pdf,docx|max:2048',
+                // 'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
+                'foto' => 'image|mimes:jpg,jpeg,png',
+                // 'curriculo' => 'file|mimes:pdf,docx|max:2048',
+                'curriculo' => 'file|mimes:pdf,docx',
             ],
             // menssagens
             [
@@ -168,11 +173,11 @@ class AuthController extends Controller
                 'password.max' => 'A senha deve ter no minimo :max caracteres',
 
                 'foto.mimes' => 'A imagem deve ser do tipo: :values',
-                'foto.max' => 'A imagem deve ter no maximo :max KB',
+                // 'foto.max' => 'A imagem deve ter no maximo :max KB',
                 'foto.image' => 'O arquivo deve ser uma imagem',
 
                 'curriculo.mimes' => 'O arquivo deve ser do tipo: :values',
-                'curriculo.max' => 'O arquivo deve ter no maximo :max KB',
+                // 'curriculo.max' => 'O arquivo deve ter no maximo :max KB',
                 'curriculo.file' => 'O arquivo deve ser um arquivo',
             ]
         );
