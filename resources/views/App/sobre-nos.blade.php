@@ -3,19 +3,6 @@
 
 @section('content')
 
-    <style>
-
-
-        /* =========================== */
-        /* CELULAR */
-        /* =========================== */
-
-        @media (max-width: 480px) {
-
-            
-        }
-    </style>
-
     <h1 class="text-center mt-4">Colaboradores do Projeto</h1>
 
     <div class="sobre-nos-container">
@@ -138,7 +125,7 @@
             <div class="card-body">
                 <h5 class="card-title">Aquiles Pedro Sanches</h5>
                 <p class="card-text">
-                    <a href="#"target="_blank">
+                    <a href="https://www.linkedin.com/in/aquiles-sanches-56475a36b/"target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-linkedin" viewBox="0 0 16 16">
                             <path
