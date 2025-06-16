@@ -47,7 +47,7 @@
             @endphp
 
 
-            <h1 class="text-center">Contrate um de nossos cuidadores</h1>
+            <h1 class="text-center mt-5 mb-3">Contrate um de nossos cuidadores</h1>
             <section class="lista-cuidadores-container">
                 @foreach ($cuidadores as $cuidador)
                     <div class="lista-cuidadores">
@@ -60,7 +60,10 @@
                                     d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
                             </svg>
                         @else
-                            <img src="{{ asset('assets/imgs/cuidadores/' . $cuidador->foto) }}">
+                            {{-- <img src="{{ asset('assets/imgs/cuidadores/' . $cuidador->foto) }}"> --}}
+                            <img src="{{ asset('assets/imgs/cuidadores/' . $cuidador->foto) }}"
+                                class="img-fluid rounded mx-auto d-block"
+                                style="width: 100%; max-height: 300px; object-fit: contain;" alt="Foto Cuidador">
                         @endif
 
                         <div class="card-body">

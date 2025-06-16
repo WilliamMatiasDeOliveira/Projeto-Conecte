@@ -255,7 +255,7 @@ class AuthController extends Controller
                 'rua' => 'required|string',
                 'password' => 'nullable|min:8|max:16|confirmed',
                 'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
-                'curriculo' => 'file|mimes:pdf,docx|max:2048',
+                // 'curriculo' => 'file|mimes:pdf,docx|max:2048',
             ],
             // menssagens
             [

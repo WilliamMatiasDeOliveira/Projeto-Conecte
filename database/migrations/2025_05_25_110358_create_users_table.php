@@ -22,8 +22,8 @@ return new class extends Migration
             $table->string('bairro', 100)->nullable();
             $table->string('rua', 100)->nullable();
             $table->string('password', 255)->nullable();
-            $table->string('foto', 255)->nullable();
-            $table->string('curriculo', 255)->nullable();
+            $table->string('foto', 300)->nullable();
+            $table->string('curriculo', 300)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

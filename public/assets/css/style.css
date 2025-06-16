@@ -706,7 +706,7 @@ PAGINA CONTATOS
 
 .lista-cuidadores img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -1309,7 +1309,7 @@ CONFIG TABLET    MEDIAS QUERY TABLET
     ========================================================= */
     .contatos-container {
         flex-direction: column;
-        padding: 0rem;
+        padding: 1.5remrem;
     }
 
     .contatos-redes {
