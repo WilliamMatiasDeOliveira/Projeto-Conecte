@@ -243,6 +243,8 @@ class AuthController extends Controller
 
     public function update_submit(Request $request)
     {
+        
+
         $request->validate(
             // regras
             [
