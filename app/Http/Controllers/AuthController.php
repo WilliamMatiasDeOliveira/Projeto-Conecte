@@ -173,11 +173,11 @@ class AuthController extends Controller
                 'password.max' => 'A senha deve ter no minimo :max caracteres',
 
                 'foto.mimes' => 'A imagem deve ser do tipo: :values',
-                // 'foto.max' => 'A imagem deve ter no maximo :max KB',
+                'foto.max' => 'A imagem deve ter no maximo :max KB',
                 'foto.image' => 'O arquivo deve ser uma imagem',
 
                 'curriculo.mimes' => 'O arquivo deve ser do tipo: :values',
-                // 'curriculo.max' => 'O arquivo deve ter no maximo :max KB',
+                'curriculo.max' => 'O arquivo deve ter no maximo :max KB',
                 'curriculo.file' => 'O arquivo deve ser um arquivo',
             ]
         );
@@ -243,7 +243,7 @@ class AuthController extends Controller
 
     public function update_submit(Request $request)
     {
-        
+
 
         $request->validate(
             // regras
@@ -257,7 +257,7 @@ class AuthController extends Controller
                 'rua' => 'required|string',
                 'password' => 'nullable|min:8|max:16|confirmed',
                 'foto' => 'image|mimes:jpg,jpeg,png|max:2048',
-                // 'curriculo' => 'file|mimes:pdf,docx|max:2048',
+                'curriculo' => 'file|mimes:pdf,docx|max:2048',
             ],
             // menssagens
             [

@@ -180,7 +180,7 @@ if (isset($userUpdate)) {
                     </div>
 
                     {{-- campo curriculo celular --}}
-                    <div class="campo-curriculo-celular">
+                    {{-- <div class="campo-curriculo-celular">
                         <label for="curriculo"class="mb-2">Currículo Atual</label><br>
                         @if ($userUpdate->curriculo)
                             <a href="{{ asset('assets/imgs/curriculos/' . Auth::user()->curriculo) }}" download
@@ -193,7 +193,7 @@ if (isset($userUpdate)) {
 
 
                         <input type="file" name="curriculo" class="form-control mt-3">
-                    </div>
+                    </div> --}}
 
                     {{-- Botão de envio --}}
                     <div class="mt-4">
