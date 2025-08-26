@@ -1,8 +1,9 @@
 <div align="center">
     
 # DOCUMENTO DA APLICAÇÃO WEB  
-    
-## **<img src="public\assets\imgs\logobranca.svg" />**  
+
+## ![Logo LightMode](public/assets/imgs/logoescura.svg#gh-light-mode-only)
+## ![Logo DarkMode](public/assets/imgs/logobranca.svg#gh-dark-mode-only)
 
 Plataforma digital que conecta cuidadores de saúde a pacientes que necessitam de acompanhamento e cuidados médicos.
 
@@ -171,10 +172,10 @@ Fonte: Elaborado pelos autores.
 
 |    Cargo   |   Descrição   |   Hex   | Cor                                                                                                                                    |
 |:----------:|:-------------:|:-------:|----------------------------------------------------------------------------------------------------------------------------------------|
-|  Primária  |   Azul Claro  | #D1E4F5 | <span style="display:inline-block; width:40px; height:20px; background-color:#D1E4F5; border:1px solid #000;"></span> |
-| Secundária |   Azul Médio  | #7997B9 | <span style="display:inline-block; width:40px; height:20px; background-color:#7997B9; border:1px solid #000;"></span> |
-|  Terciária |  Azul Escuro  | #5A7CA0 | <span style="display:inline-block; width:40px; height:20px; background-color:#517CA0; border:1px solid #000;"></span> |
-|   Reserva  | Verde Sucesso | #7FC7A7 | <span style="display:inline-block; width:40px; height:20px; background-color:#7FC7A7; border:1px solid #000;"></span> |
+|  Primária  |   Azul Claro  | #D1E4F5 | ![](https://placehold.co/30x15/D1E4F5/D1E4F5.png) |
+| Secundária |   Azul Médio  | #7997B9 | ![](https://placehold.co/30x15/7997B9/7997B9.png)|
+|  Terciária |  Azul Escuro  | #5A7CA0 | ![](https://placehold.co/30x15/5A7CA0/5A7CA0.png) |
+|   Reserva  | Verde Sucesso | #7FC7A7 | ![](https://placehold.co/30x15/7FC7A7/7FC7A7.png) |
 
 ### 8.2 Cores e Estilo  
 - Azul → calma, tecnologia, segurança, confiança.  
