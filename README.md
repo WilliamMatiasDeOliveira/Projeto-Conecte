@@ -1,9 +1,8 @@
 <div align="center">
     
-# DOCUMENTO DA APLICAÇÃO WEB  
+# DOCUMENTO DA APLICAÇÃO WEB 
 
-## ![Logo LightMode](public/assets/imgs/logoescura.svg#gh-light-mode-only)
-## ![Logo DarkMode](public/assets/imgs/logobranca.svg#gh-dark-mode-only)
+## ![Logo LightMode](public/assets/imgs/logoescura.svg#gh-light-mode-only)![Logo DarkMode](public/assets/imgs/logobranca.svg#gh-dark-mode-only)
 
 Plataforma digital que conecta cuidadores de saúde a pacientes que necessitam de acompanhamento e cuidados médicos.
 
