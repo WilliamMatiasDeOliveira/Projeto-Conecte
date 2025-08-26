@@ -172,10 +172,10 @@ Fonte: Elaborado pelos autores.
 
 |    Cargo   |   Descrição   |   Hex   | Cor                                                                                                                                    |
 |:----------:|:-------------:|:-------:|----------------------------------------------------------------------------------------------------------------------------------------|
-|  Primária  |   Azul Claro  | #D1E4F5 | <span style="display:inline-block; width:40px; height:20px; background-color:#D1E4F5; border:1px solid #000; margin-left:8px;"></span> |
-| Secundária |   Azul Médio  | #7997B9 | <span style="display:inline-block; width:40px; height:20px; background-color:#7997B9; border:1px solid #000; margin-left:8px;"></span> |
-|  Terciária |  Azul Escuro  | #5A7CA0 | <span style="display:inline-block; width:40px; height:20px; background-color:#517CA0; border:1px solid #000; margin-left:8px;"></span> |
-|   Reserva  | Verde Sucesso | #7FC7A7 | <span style="display:inline-block; width:40px; height:20px; background-color:#7FC7A7; border:1px solid #000; margin-left:8px;"></span> |
+|  Primária  |   Azul Claro  | #D1E4F5 | <span style="display:inline-block; width:40px; height:20px; background-color:#D1E4F5; border:1px solid #000;">&nbsp</span> |
+| Secundária |   Azul Médio  | #7997B9 | <span style="display:inline-block; width:40px; height:20px; background-color:#7997B9; border:1px solid #000;">&nbsp</span> |
+|  Terciária |  Azul Escuro  | #5A7CA0 | <span style="display:inline-block; width:40px; height:20px; background-color:#517CA0; border:1px solid #000;">&nbsp</span> |
+|   Reserva  | Verde Sucesso | #7FC7A7 | <span style="display:inline-block; width:40px; height:20px; background-color:#7FC7A7; border:1px solid #000;">&nbsp</span> |
 
 ### 8.2 Cores e Estilo  
 - Azul → calma, tecnologia, segurança, confiança.  
