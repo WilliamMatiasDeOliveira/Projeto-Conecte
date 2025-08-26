@@ -1,16 +1,3 @@
-:root {
-    --azul-claro: #dcedf7;
-    --azul-medio: #A4CDEB;
-    --azul-escuro: #6b8cb1;
-    --branco: #f8f9fa;
-    --branco2: #EBEBEB;
-    --preto: #1F2A33;
-    --preto2: #3D4346;
-    --font-padrao: "Roboto", sans-serif;
-    --font-destaque: "Poppins", sans-serif;
-    --font-decorativa: "Lobster", sans-serif;
-}
-
 /* ==========================================================================================
 ==========================================================================================
 CONFIG PARA DESKTOP
@@ -20,44 +7,33 @@ CONFIG PARA DESKTOP
 .navbar {
     margin: 0;
     padding: 0;
+    position: sticky;
 }
 
 header .menu-bg {
-    background-color: var(--azul-escuro);
+    background-color: var(--branco);
+    box-shadow: var(--shadow);
 }
 
 header .menu {
     display: flex;
-    align-items: center;
-    padding: 1.3rem;
-    gap: 4rem;
-}
-
-header .menu .logo a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--preto);
-    font-size: 2.2rem;
-    font-family: var(--font-decorativa);
-    font-weight: 500;
-    gap: 8px;
+    padding: 1.2rem;
 }
 
 header .menu .logo a img {
-    width: 45px;
+    width: 160px;
     height: auto;
 }
 
 header .menu-nav {
     display: flex;
-    justify-content: flex-end;
+    flex: 1;
     gap: 2rem;
+    justify-content: flex-end;
 }
 
 header .menu-nav ul {
-    gap: 1.25rem;
-
+    gap: 1rem;
 }
 
 header .menu-nav ul li {
@@ -65,23 +41,38 @@ header .menu-nav ul li {
 }
 
 header .menu-nav ul li a {
-    color: white;
+    font-family: var(--font-destaque);
+    font-size: 1rem;
+    color: var(--preto);
+    position: relative;
     font-weight: 500;
-    padding: .50rem;
-    border-bottom: 2px solid transparent;
-    border-top: 2px solid transparent;
-
+    text-decoration: none;
 }
 
 header .menu-nav ul a:hover {
-    color: var(--preto);
-    border-bottom: 2px solid var(--preto);
-    transition: 0.25s ease;
+    color: var(--azul-escuro);
+}
+
+header .menu-nav ul a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--azul-escuro);
+    transition: width .4s;
+}
+
+header .menu-nav ul a:hover::before, 
+header .menu-nav ul a:active{
+    width: 100%;
 }
 
 header .menu-nav .buttons {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    justify-content: flex-end;
 }
 
 footer {
@@ -92,7 +83,6 @@ footer {
     flex-wrap: wrap;
     padding: 15px 0px;
     background-color: var(--azul-escuro);
-
 }
 
 footer .logo {

@@ -7,8 +7,7 @@
 
             <div class="logo">
                 <a href="{{route('home')}}">
-                    <img src="{{ asset('assets/imgs/logo.png') }}" alt="logo">
-                    <span>Conecte</span>
+                    <img src="{{ asset('assets/imgs/logoescura.svg') }}" alt="logo">
                 </a>
             </div>
 
@@ -39,7 +38,7 @@
 
                 @guest
                     <div class="buttons ms-md-2">
-                        <a href="{{ route('login') }}"class="btn btn-primary form-control">Entrar</a>
+                        <a href="{{ route('login') }}"class="btn btn-secondary form-control">Entrar</a>
                         <a href="{{ route('cadastro') }}"class="btn btn-secondary form-control">Cadastrar</a>
                     </div>
                 @endguest
