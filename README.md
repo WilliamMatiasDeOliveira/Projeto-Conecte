@@ -1,19 +1,18 @@
-# CENTRO PAULA SOUZA  
-## FACULDADE DE TECNOLOGIA DE JAHU  
-### CURSO DE TECNOLOGIA EM DESENVOLVIMENTO DE SOFTWARE MULTIPLATAFORMA  
-
----
 <div align="center">
     
 # DOCUMENTO DA APLICAÇÃO WEB  
     
-## **CONECTE**  
+## **<img src="public\assets\imgs\logobranca.svg" />**  
 
 Plataforma digital que conecta cuidadores de saúde a pacientes que necessitam de acompanhamento e cuidados médicos.
 
+### CENTRO PAULA SOUZA - FACULDADE DE TECNOLOGIA DE JAHU  
+
+### CURSO DE TECNOLOGIA EM DESENVOLVIMENTO DE SOFTWARE MULTIPLATAFORMA  
+
 **Jahu, SP**  
 
-**1º semestre/2025**  
+**Início: 1º semestre/2025**  
 </div>
 
 **Autores:**  
