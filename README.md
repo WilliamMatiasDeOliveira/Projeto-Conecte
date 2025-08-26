@@ -4,18 +4,23 @@
 
 ---
 <div align="center">
+    
 # DOCUMENTO DA APLICAÇÃO WEB  
+    
 ## **CONECTE**  
+
 Plataforma digital que conecta cuidadores de saúde a pacientes que necessitam de acompanhamento e cuidados médicos.
 
 **Jahu, SP**  
+
 **1º semestre/2025**  
+</div>
 
 **Autores:**  
 - [Vinicius Leonardo Silveira](https://github.com/vinisilveiraa);
 - [William Matias de Oliveira](https://github.com/WilliamMatiasDeOliveira);
 - [Lucas Catto Silva](https://github.com/lucas-catto);
-</div>
+
 ---
 
 # SUMÁRIO  
