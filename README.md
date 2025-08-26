@@ -172,18 +172,20 @@ Fonte: Elaborado pelos autores.
 
 |    Cargo   |   Descrição   |   Hex   | Cor                                                                                                                                    |
 |:----------:|:-------------:|:-------:|----------------------------------------------------------------------------------------------------------------------------------------|
-|  Primária  |   Azul Claro  | #D1E4F5 | <span style="display:inline-block; width:40px; height:20px; background-color:#D1E4F5; border:1px solid #000;">&nbsp</span> |
-| Secundária |   Azul Médio  | #7997B9 | <span style="display:inline-block; width:40px; height:20px; background-color:#7997B9; border:1px solid #000;">&nbsp</span> |
-|  Terciária |  Azul Escuro  | #5A7CA0 | <span style="display:inline-block; width:40px; height:20px; background-color:#517CA0; border:1px solid #000;">&nbsp</span> |
-|   Reserva  | Verde Sucesso | #7FC7A7 | <span style="display:inline-block; width:40px; height:20px; background-color:#7FC7A7; border:1px solid #000;">&nbsp</span> |
+|  Primária  |   Azul Claro  | #D1E4F5 | <span style="display:inline-block; width:40px; height:20px; background-color:#D1E4F5; border:1px solid #000;"></span> |
+| Secundária |   Azul Médio  | #7997B9 | <span style="display:inline-block; width:40px; height:20px; background-color:#7997B9; border:1px solid #000;"></span> |
+|  Terciária |  Azul Escuro  | #5A7CA0 | <span style="display:inline-block; width:40px; height:20px; background-color:#517CA0; border:1px solid #000;"></span> |
+|   Reserva  | Verde Sucesso | #7FC7A7 | <span style="display:inline-block; width:40px; height:20px; background-color:#7FC7A7; border:1px solid #000;"></span> |
 
 ### 8.2 Cores e Estilo  
 - Azul → calma, tecnologia, segurança, confiança.  
 
 ### 8.3 Tipografia  
-- Roboto (padrão)  
-- Lobster (complementar)  
-- Poppins (complementar)  
+|    Cargo   |     Descrição    |    Hex    |
+|:----------:|:----------------:|:---------:|
+|  Primária  |      Títulos     |  Poppins  |
+| Secundária |   Texto Padrão   |   Nunito  |
+|    Logo    | Apenas para Logo | Righteous |
 
 ### 8.4 Imagotipo  
 - **Símbolo gráfico:** círculo azul-claro, medalha com coração branco.  
