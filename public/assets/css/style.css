@@ -7,12 +7,13 @@ CONFIG PARA DESKTOP
 .navbar {
     margin: 0;
     padding: 0;
-    position: sticky;
+    position: fixed;
+
 }
 
 header .menu-bg {
     background-color: var(--branco);
-    box-shadow: var(--shadow);
+    width: 100vw;
 }
 
 header .menu {
@@ -64,7 +65,7 @@ header .menu-nav ul a::before {
     transition: width .4s;
 }
 
-header .menu-nav ul a:hover::before, 
+header .menu-nav ul a:hover::before,
 header .menu-nav ul a:active{
     width: 100%;
 }
@@ -139,6 +140,7 @@ footer .apoio img {
     padding-left: 2rem;
     gap: 1rem;
     margin-bottom: 4rem;
+
 }
 
 .hero .hero-intro {
