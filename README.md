@@ -169,8 +169,8 @@ Fonte: Elaborado pelos autores.
 
 ### 8.1 Paleta de cores  
 
-|    Cargo   |   Descrição   |   Hex   | Cor                                                                                                                                    |
-|:----------:|:-------------:|:-------:|----------------------------------------------------------------------------------------------------------------------------------------|
+|    Nivel   |   Descrição   |   Hex   | Cor       
+|:----------:|:-------------:|:-------:|--------------------------------------------------|
 |  Primária  |   Azul Claro  | #D1E4F5 | ![](https://placehold.co/30x15/D1E4F5/D1E4F5.png) |
 | Secundária |   Azul Médio  | #7997B9 | ![](https://placehold.co/30x15/7997B9/7997B9.png)|
 |  Terciária |  Azul Escuro  | #5A7CA0 | ![](https://placehold.co/30x15/5A7CA0/5A7CA0.png) |
@@ -180,11 +180,11 @@ Fonte: Elaborado pelos autores.
 - Azul → calma, tecnologia, segurança, confiança.  
 
 ### 8.3 Tipografia  
-|    Cargo   |     Descrição    |    Hex    |
-|:----------:|:----------------:|:---------:|
-|  Primária  |      Títulos     |  Poppins  |
-| Secundária |   Texto Padrão   |   Nunito  |
-|    Logo    | Apenas para Logo | Righteous |
+|  Descrição  |   Nome    |
+|:-----------:|:-----------
+|  Títulos    |  Poppins  |
+| Texto Padrão|   Nunito  |
+|    Logo     | Righteous |
 
 ### 8.4 Imagotipo  
 - **Símbolo gráfico:** círculo azul-claro, medalha com coração branco.  
