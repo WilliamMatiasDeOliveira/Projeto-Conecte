@@ -1,7 +1,7 @@
 
-/* 
+/*
 =======================
-    ! Reset base 
+    ! Reset base
 =======================
 */
 
@@ -30,7 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--azul-claro);
+    background-color: var(--branco);
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -73,6 +73,7 @@ main {
 .btn-success:hover {
     background-color: var(--azul-medio);
     color: var(--preto);
+    text-decoration: none;
 }
 
 /*
@@ -87,7 +88,7 @@ ROOT
     --azul-escuro: #5A7CA0; /* titulos */
     --azul-medio: #7997B9; /* botoes principais */
     --azul-claro: #D1E4F5; /* fundos */
-    
+
     --verde: #7FC7A7; /* cor de sucesso */
     --amarelo: #F8A864; /* cor de alerta */
 
@@ -110,7 +111,7 @@ ROOT
     --transition: 0.3s ease-in-out; /* transicao padrao */
 
 
-    
+
     /* TODO: ABAIXO A SER DEFINIDO AINDA */
     --shadow: 0 2px 8px 0 rgba(90, 124, 160, 0.10);
     /* sombra padrao */
@@ -120,10 +121,10 @@ ROOT
     /* sombra ao clicar */
 }
 
-/* 
+/*
 =================================
     ! TIPOGRAFIA
-================================= 
+=================================
 */
 
 body {
@@ -165,7 +166,7 @@ button {
     border: none;
     border-radius: var(--radius);
     cursor: pointer;
-    
+
     font-family: var(--font-padrao);
     font-size: 1rem;
     font-weight: 600;
@@ -188,7 +189,7 @@ button:active {
 /*
 =================================
     ! LAYOUT
-================================= 
+=================================
 */
 
 .containerglobal {
@@ -206,7 +207,7 @@ button:active {
 /*
 =================================
     ! MEDIA QUERIES
-================================= 
+=================================
 */
 
 @media (max-width: 768px) {

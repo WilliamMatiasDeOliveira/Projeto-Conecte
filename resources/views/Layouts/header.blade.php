@@ -5,8 +5,10 @@
         <div class="menu container">
 
 
+
+
             <div class="logo">
-                <a href="{{route('home')}}">
+                <a href="{{ route('home') }}">
                     <img src="{{ asset('assets/imgs/logoescura.svg') }}" alt="logo">
                 </a>
             </div>
