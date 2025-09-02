@@ -42,28 +42,30 @@ class AppController extends Controller
 
     public function form_cliente()
     {
-        if (Auth::check()) {
-            if (Auth::user()->tipo == "cliente") {
-                return redirect()->route("dashboard.cliente");
-            }
+         return view('App.form-cliente');
 
-            return redirect()->route("dashboard.cuidador");
-        }
+        // if (Auth::check()) {
+        //     if (Auth::user()->tipo == "cliente") {
+        //         return redirect()->route("dashboard.cliente");
+        //     }
 
-        return view('App.form-cliente');
+        //     return redirect()->route("dashboard.cuidador");
+        // }
+
+
     }
 
     public function form_cuidador()
     {
-        if (Auth::check()) {
-            if (Auth::user()->tipo == "cliente") {
-                return redirect()->route("dashboard.cliente");
-            }
-
-            return redirect()->route("dashboard.cuidador");
-        }
-
         return view('App.form-cuidador');
+
+        // if (Auth::check()) {
+        //     if (Auth::user()->tipo == "cliente") {
+        //         return redirect()->route("dashboard.cliente");
+        //     }
+
+        //     return redirect()->route("dashboard.cuidador");
+        // }
     }
 
     public function dashboard_cliente()

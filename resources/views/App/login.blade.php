@@ -12,7 +12,7 @@
 
 @extends('Layouts.main_layout')
 
-@section('title', 'Cadastro')
+@section('title', 'Login')
 
 @section('content')
 
@@ -33,7 +33,9 @@
         @endif
 
         <section class="form-login">
-            <h1>LOGIN</h1>
+            <div class="logo-form">
+                <img src="{{ asset('assets/imgs/logobranca.svg') }}" alt="">
+            </div>
             <form action="{{ route('login.submit') }}" method="post">
                 @csrf
 
@@ -60,8 +62,9 @@
                 <div>
                     <input type="submit"class="btn btn-secondary form-control mt-4 mb-4" value="LOGIN">
                 </div>
-                <div>
-                    <a href="{{route('cadastro')}}" class="text-light">Ainda não tem conta ?</a>
+                <div class="links">
+                    <a href="{{ route('cadastro') }}" class="text-light">Ainda não tem conta ?</a>
+                    <a href="#"class="text-light">Esqueceu a senha ?</a>
                 </div>
             </form>
         </section>
