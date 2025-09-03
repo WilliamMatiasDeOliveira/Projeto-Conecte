@@ -158,9 +158,8 @@ Fonte: [Visual Paradigm Online](https://online.visual-paradigm.co)
 
 ## 5. REGRAS DE NEGÓCIO  
 
-  ![Modelo UML de caso de uso](app/assets/imgs/img_doc/modeloCanva.png)
+  ![Modelo UML de caso de uso](public/assets/imgs/modelo_negocios.jpg)
 
-Fonte: [Sebrae Canvas](https://canvas-apps.pr.sebrae.com.br)  
 <div align= "end"> 
     
 <sub> [↑ Voltar ao sumário](#0-sumário) </sub>
