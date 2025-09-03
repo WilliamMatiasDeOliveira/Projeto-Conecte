@@ -22,7 +22,7 @@ Plataforma digital que conecta cuidadores de saúde a pacientes que necessitam d
 
 ---
 
-# SUMÁRIO  
+# 0. SUMÁRIO  
 
 1. [RESUMO DA APLICAÇÃO WEB](#1-resumo-da-aplicação-web)  
 2. [OBJETIVO](#2-objetivo)  
@@ -48,7 +48,10 @@ Plataforma digital que conecta cuidadores de saúde a pacientes que necessitam d
 
 ---
 
-## 1. RESUMO DA APLICAÇÃO WEB  
+
+
+## 1. RESUMO DA APLICAÇÃO WEB 
+
 
 Atualmente, muitas famílias enfrentam dificuldades para encontrar cuidadores de confiança e devidamente qualificados. A busca por esses profissionais geralmente é feita de maneira informal, o que pode resultar em contratações inseguras.  
 
@@ -60,7 +63,11 @@ Este sistema surge como uma resposta moderna, segura e eficiente para aproximar 
 
 Vivemos em um cenário tecnológico no qual muitas áreas já são digitalizadas. No entanto, o setor de cuidados domiciliares ainda carece de soluções organizadas.  
 
-Assim, a proposta desta aplicação é centralizar informações, filtrar cuidadores, permitir avaliações e facilitar o contato.  
+Assim, a proposta desta aplicação é centralizar informações, filtrar cuidadores, permitir avaliações e facilitar o contato.
+<div align= "end"> 
+    
+<sub> [↑ Voltar ao sumário](#0-sumário) </sub>
+</div>
 
 ---
 
@@ -71,6 +78,10 @@ Assim, a proposta desta aplicação é centralizar informações, filtrar cuidad
 - Valorizar o trabalho dos cuidadores, oferecendo visibilidade profissional.  
 - Agilizar o processo de contratação com comunicação e agendamento direto com o cuidador.  
 - Proporcionar segurança e confiabilidade no processo de seleção de cuidadores através de demonstração de seus currículos.  
+<div align= "end"> 
+    
+<sub> [↑ Voltar ao sumário](#0-sumário) </sub>
+</div>
 
 ---
 
@@ -92,6 +103,10 @@ Assim, a proposta desta aplicação é centralizar informações, filtrar cuidad
 - Meses 3 e 4: Desenvolvimento.  
 - Mês 5: Testes e ajustes.  
 - Mês 6: Entrega final e documentação.  
+<div align= "end"> 
+    
+<sub> [↑ Voltar ao sumário](#0-sumário) </sub>
+</div>
 
 ---
 
@@ -101,14 +116,20 @@ Este documento especifica as funcionalidades esperadas da aplicação.
 
 ### 4.1 Requisitos funcionais  
 
-- **RF01:** Cadastrar cuidadores (nome, email, telefone, CPF, endereço, foto, currículo em PDF, senha criptografada).  
-- **RF02:** Cadastrar usuários (familiares/pacientes).  
-- **RF03:** Realizar Login/logout seguro.  
-- **RF04:** Visualizar perfis de cuidadores com botão para exibir currículo.  
-- **RF05:** Comunicação via mensagens ou agendamento (WhatsApp externo).  
-- **RF06:** Atualizar perfil e disponibilidade.  
-- **RF07:** Avaliar cuidadores (*não implementado*).  
-- **RF08:** Enviar denúncias (*não implementado*).  
+- **RF01:** O sistema deve ser capaz de *CADASTRAR cuidadores* (nome, email, CPF, senha criptografada);
+- **RF02:** O sistema deve ser capaz de *CADASTRAR clientes* (nome, email, CPF, senha criptografada);
+- **RF03:** Apos feito o cadastro, o usuario poderá realizar *LOGIN* na plataforma com ( email, senha ) tendo acesso ao sistema;
+- **RF04:** Apos o cadastro, o usuario **deve** *EDITAR* seu perfil com outras informações relevantes para ficar disponivel ( endereco, curriculo, foto, telefone );
+- **RF05:** O cliente poderá vizualizar o perfil de qualquer cuidador cadastrado na plataforma;
+- **RF05:** O cuidador somente tera acesso ao perfil do contratante apos ter prestado serviço anteriormente;
+- **RF06:** O contratante só podera avaliar ( Deixar um like ) em quem ja prestou serviço a ela.
+- **RF07:** Os clientes poderão entrar em contato com cuidores atraves de um botão fixado no card de apresentação do cuidador;
+- **RF08:** Os clientes poderão ver os curriculos dos cuidadores atraves de um botão fixado no card de apresentação do cuidador;
+- **RF09:** Todo cuidador já cadastrado e com o perfil atualizado (editado) poderá ser exibido na pagina de busca;
+- **RF10:** O cliente conseguirá ter acesso a todos os seus cuidadores já contratados, através de um botão "Histórico de Contratações" no seu dashboard. Onde sera exibido nome do cuidador data_inicio, data_fim da prestação de serviço;
+- **RF11:** No perfil do cuidador, o cliente poderá ver todos os outros clientes que ja o contrataram anteriormente;
+- **RF12:** O sistema deve fornecer uma barra de pesquisa para clientes para facilitar a busca por cuidadores por nome;
+- **RF13:** O sistema deve fornecer TAGs para facilitar a busca e filtragem de cuidadores de acordo com especialidades especificas;
 
 ### 4.2 Requisitos não funcionais  
 
@@ -128,6 +149,10 @@ Este documento especifica as funcionalidades esperadas da aplicação.
 
 
 Fonte: [Visual Paradigm Online](https://online.visual-paradigm.co)  
+<div align= "end"> 
+    
+<sub> [↑ Voltar ao sumário](#0-sumário) </sub>
+</div>
 
 ---
 
@@ -136,6 +161,10 @@ Fonte: [Visual Paradigm Online](https://online.visual-paradigm.co)
   ![Modelo UML de caso de uso](app/assets/imgs/img_doc/modeloCanva.png)
 
 Fonte: [Sebrae Canvas](https://canvas-apps.pr.sebrae.com.br)  
+<div align= "end"> 
+    
+<sub> [↑ Voltar ao sumário](#0-sumário) </sub>
+</div>
 
 ---
 
@@ -152,6 +181,10 @@ Viável – Resolve problema real com aderência à LGPD.
 
 ### 6.4. Viabilidade de Mercado  
 Viável – Nicho em expansão, pouca concorrência local, oportunidade estratégica.  
+<div align= "end"> 
+    
+<sub> [↑ Voltar ao sumário](#0-sumário) </sub>
+</div>
 
 ---
 
@@ -162,6 +195,10 @@ Fonte: Elaborado pelos autores.
 
 ### 7.2 Modelo lógico  
 Fonte: Elaborado pelos autores.  
+<div align= "end"> 
+    
+<sub> [↑ Voltar ao sumário](#0-sumário) </sub>
+</div>
 
 ---
 
@@ -189,18 +226,30 @@ Fonte: Elaborado pelos autores.
 ### 8.4 Imagotipo  
 - **Símbolo gráfico:** círculo azul-claro, medalha com coração branco.  
 - **Nome da marca:** "Conecte" em tipografia cursiva escura, itálico.  
+<div align= "end"> 
+    
+<sub> [↑ Voltar ao sumário](#0-sumário) </sub>
+</div>
 
 ---
 
 ## 9. PROTÓTIPO  
 
 Protótipo disponível no Figma: [Link para o figma](https://www.figma.com)  
+<div align= "end"> 
+    
+<sub> [↑ Voltar ao sumário](#0-sumário) </sub>
+</div>
 
 ---
 
 ## 10. APLICAÇÃO  
 
 A aplicação foi desenvolvida em Laravel, com layout responsivo. Inclui login, busca, visualização de perfil e contato. Testes de usabilidade foram aplicados.  
+<div align= "end"> 
+    
+<sub> [↑ Voltar ao sumário](#0-sumário) </sub>
+</div>
 
 ---
 
@@ -209,6 +258,10 @@ A aplicação foi desenvolvida em Laravel, com layout responsivo. Inclui login, 
 O desenvolvimento da aplicação permitiu compreender o processo de construção de sistemas web com foco social.  
 
 Apesar das dificuldades (requisitos e validação), a aplicação tem potencial de impacto positivo, conectando cuidadores e famílias de forma segura e organizada.  
+<div align= "end"> 
+    
+<sub> [↑ Voltar ao sumário](#0-sumário) </sub>
+</div>
 
 ---
 
@@ -221,4 +274,8 @@ Apesar das dificuldades (requisitos e validação), a aplicação tem potencial 
 - FIGMA. Disponível em: <https://www.figma.com>.  
 - PEREIRA, Rubens Queiroz de Almeida. *BRModelo*. Disponível em: <https://github.com/rquellh/brModelo>.  
 - VISUAL PARADIGM. Disponível em: <https://online.visual-paradigm.com>.  
+<div align= "end"> 
+    
+<sub> [↑ Voltar ao sumário](#0-sumário) </sub>
+</div>
 
