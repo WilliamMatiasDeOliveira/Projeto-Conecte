@@ -139,14 +139,6 @@ Este documento especifica as funcionalidades esperadas da aplicação.
 - **RNF07:** Suporte inicial a 1000 usuários simultâneos.  
 - **RNF08:** Backups automáticos.  
 - **RNF09:** Interface intuitiva e acessível.  
-
-### 4.3 Modelo de casos de uso  
-
-![Modelo UML de caso de uso](app/assets/imgs/img_doc/useCase.png)
-
-
-Fonte: [Visual Paradigm Online](https://online.visual-paradigm.co)  
-<div align= "end"> 
     
 <sub> [↑ Voltar ao sumário](#0-sumário) </sub>
 </div>
@@ -155,7 +147,7 @@ Fonte: [Visual Paradigm Online](https://online.visual-paradigm.co)
 
 ## 5. REGRAS DE NEGÓCIO  
 
-  ![Modelo UML de caso de uso](public/assets/imgs/modelo_negocios.jpg)
+  ![Modelo de Regras de negocio](public/assets/imgs/modelo_negocios.jpg)
 
 <div align= "end"> 
     
@@ -186,7 +178,9 @@ Viável – Nicho em expansão, pouca concorrência local, oportunidade estraté
 
 ## 7. MODELO DE DADOS  
 
-### 7.1 Modelo conceitual  
+### 7.1 Modelo de Caso de Uso
+
+### 7.2 Modelo conceitual  
 Fonte: Elaborado pelos autores.  
 
 ### 7.2 Modelo lógico  
