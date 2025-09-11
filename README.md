@@ -73,8 +73,8 @@ Assim, a proposta desta aplicação é centralizar informações, filtrar cuidad
 
 ## 2. OBJETIVO  
 
-- Facilitar a busca por cuidadores qualificados com base em filtros como localização, experiência e disponibilidade.  
-- Criar perfis verificados com avaliações de outros usuários.  
+- Facilitar a busca por cuidadores qualificados com base em filtros como especialidades.  
+- Criar perfis com avaliações de outros usuários.  
 - Valorizar o trabalho dos cuidadores, oferecendo visibilidade profissional.  
 - Agilizar o processo de contratação com comunicação e agendamento direto com o cuidador.  
 - Proporcionar segurança e confiabilidade no processo de seleção de cuidadores através de demonstração de seus currículos.  
@@ -116,20 +116,17 @@ Este documento especifica as funcionalidades esperadas da aplicação.
 
 ### 4.1 Requisitos funcionais  
 
-- **RF01:** O sistema deve ser capaz de *CADASTRAR cuidadores* (nome, email, CPF, senha criptografada);
-- **RF02:** O sistema deve ser capaz de *CADASTRAR clientes* (nome, email, CPF, senha criptografada);
+- **RF01:** O sistema deve ser capaz de *CADASTRAR cuidadores* (nome, email, CPF, senha, telefone, foto, curriculo);
+- **RF02:** O sistema deve ser capaz de *CADASTRAR clientes* (nome, email, CPF, senha, telefone, foto);
 - **RF03:** Apos feito o cadastro, o usuario poderá realizar *LOGIN* na plataforma com ( email, senha ) tendo acesso ao sistema;
-- **RF04:** Apos o cadastro, o usuario **deve** *EDITAR* seu perfil com outras informações relevantes para ficar disponivel ( endereco, curriculo, foto, telefone );
-- **RF05:** O cliente poderá vizualizar o perfil de qualquer cuidador cadastrado na plataforma;
+- **RF04:** O cliente poderá vizualizar o perfil de qualquer cuidador cadastrado na plataforma através de filtro por especialidade;
 - **RF05:** O cuidador somente tera acesso ao perfil do contratante apos ter prestado serviço anteriormente;
-- **RF06:** O contratante só podera avaliar ( Deixar um like ) em quem ja prestou serviço a ela.
-- **RF07:** Os clientes poderão entrar em contato com cuidores atraves de um botão fixado no card de apresentação do cuidador;
+- **RF06:** O contratante só podera avaliar ( Deixar um like ) em quem ja prestou serviço a ele.
+- **RF07:** Os clientes poderão entrar em contato com cuidores atraves de um botão (WatsApp) fixado no card de apresentação do cuidador;
 - **RF08:** Os clientes poderão ver os curriculos dos cuidadores atraves de um botão fixado no card de apresentação do cuidador;
-- **RF09:** Todo cuidador já cadastrado e com o perfil atualizado (editado) poderá ser exibido na pagina de busca;
+- **RF09:** Todo cuidador já cadastrado poderá ser exibido na pagina de busca;
 - **RF10:** O cliente conseguirá ter acesso a todos os seus cuidadores já contratados, através de um botão "Histórico de Contratações" no seu dashboard. Onde sera exibido nome do cuidador data_inicio, data_fim da prestação de serviço;
-- **RF11:** No perfil do cuidador, o cliente poderá ver todos os outros clientes que ja o contrataram anteriormente;
-- **RF12:** O sistema deve fornecer uma barra de pesquisa para clientes para facilitar a busca por cuidadores por nome;
-- **RF13:** O sistema deve fornecer TAGs para facilitar a busca e filtragem de cuidadores de acordo com especialidades especificas;
+- **RF11:** O sistema deve fornecer uma barra de pesquisa para clientes para facilitar a busca por cuidadores por especialidade;
 
 ### 4.2 Requisitos não funcionais  
 
