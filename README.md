@@ -98,11 +98,11 @@ Assim, a proposta desta aplicação é centralizar informações, filtrar cuidad
 - Ambientes virtuais: entrevistas online, desenvolvimento em ambiente local e posterior hospedagem online.  
 
 **Quando?**  
-- Mês 1: Pesquisa e levantamento de requisitos.  
-- Mês 2: Prototipação e validação.  
-- Meses 3 e 4: Desenvolvimento.  
-- Mês 5: Testes e ajustes.  
-- Mês 6: Entrega final e documentação.  
+- Etapa 1: Pesquisa e levantamento de requisitos.  
+- Etapa 2: Prototipação e validação.  
+- Etapa 3 e 4: Desenvolvimento.  
+- Etapa 5: Testes e ajustes.  
+- Etapa 6: Entrega final e documentação.  
 <div align= "end"> 
     
 <sub> [↑ Voltar ao sumário](#0-sumário) </sub>
