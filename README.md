@@ -147,7 +147,7 @@ Este documento especifica as funcionalidades esperadas da aplicação.
 
 ## 5. REGRAS DE NEGÓCIO  
 
-  ![Modelo de Regras de negocio](public/assets/imgs/modelo_negocios.jpg)
+  ![Modelo de Regras de negocio](public/assets/imgs/modelo_negocios.png)
 
 <div align= "end"> 
     
