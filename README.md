@@ -27,10 +27,9 @@ Plataforma digital que conecta cuidadores de saúde a pacientes que necessitam d
 1. [RESUMO DA APLICAÇÃO WEB](#1-resumo-da-aplicação-web)  
 2. [OBJETIVO](#2-objetivo)  
 3. [MÉTODOS DA PESQUISA](#3-métodos-da-pesquisa)  
-4. [DOCUMENTO DE REQUISITOS](#4-documento-de-requisitos)  
-   - [Requisitos funcionais](#41-requisitos-funcionais)  
-   - [Requisitos não funcionais](#42-requisitos-não-funcionais)  
-   - [Modelo de casos de uso](#43-modelo-de-casos-de-uso)  
+4. [DOCUMENTO DE REQUISITOS](#4-documento-de-requisitos)
+   - [Requisitos funcionais](#41-requisitos-funcionais)
+   - [Requisitos não funcionais](#42-requisitos-não-funcionais)
 5. [REGRAS DE NEGÓCIO](#5-regras-de-negócio)  
 6. [ESTUDO DE VIABILIDADE](#6---estudo-de-viabilidade)  
    - [Viabilidade Técnica](#61-viabilidade-técnica)  
@@ -38,8 +37,9 @@ Plataforma digital que conecta cuidadores de saúde a pacientes que necessitam d
    - [Viabilidade Operacional](#63-viabilidade-operacional)  
    - [Viabilidade de Mercado](#64-viabilidade-de-mercado)  
 7. [MODELO DE DADOS](#7-modelo-de-dados)  
-   - [Modelo conceitual](#71-modelo-conceitual)  
-   - [Modelo lógico](#72-modelo-lógico)  
+   - [Modelo de Caso de Uso](#71-modelo-de-caso-de-uso)  
+   - [Modelo Conceitual](#72-modelo-conceitual)  
+   - [Modelo Lógico](#73-modelo-lógico)  
 8. [DESIGN](#8-design)  
 9. [PROTÓTIPO](#9-protótipo)  
 10. [APLICAÇÃO](#10-aplicação)  
@@ -180,10 +180,18 @@ Viável – Nicho em expansão, pouca concorrência local, oportunidade estraté
 
 ### 7.1 Modelo de Caso de Uso
 
-### 7.2 Modelo conceitual  
+![Modelo Casos de Uso](public/assets/imgs/PI-Conecte-caso_uso.jpg)
+
+### 7.2 Modelo Conceitual  
+
+![Modelo Conceitual](public/assets/imgs/PI-Conecte-conceitual.png)
+
 Fonte: Elaborado pelos autores.  
 
-### 7.2 Modelo lógico  
+### 7.3 Modelo Lógico  
+
+![Modelo Casos de Uso](public/assets/imgs/PI-Conecte-DER.png)
+
 Fonte: Elaborado pelos autores.  
 <div align= "end"> 
     
@@ -214,8 +222,8 @@ Fonte: Elaborado pelos autores.
 |    Logo     | Righteous |
 
 ### 8.4 Imagotipo  
-- **Símbolo gráfico:** círculo azul-claro, medalha com coração branco.  
-- **Nome da marca:** "Conecte" em tipografia cursiva escura, itálico.  
+- **Símbolo gráfico:** círculo, medalha com coração branco.  
+- **Nome da marca:** "Conecte" usando fonte Righteous, moderno e tecnológico.  
 <div align= "end"> 
     
 <sub> [↑ Voltar ao sumário](#0-sumário) </sub>
