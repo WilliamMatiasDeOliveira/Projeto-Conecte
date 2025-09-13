@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->text('descricao')->nullable();
+             $table->foreignId('cuidador_id')
+          ->constrained('cuidadores')
+          ->cascadeOnUpdate()
+          ->cascadeOnDelete();
             $table->timestamps();
         });
     }

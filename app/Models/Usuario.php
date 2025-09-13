@@ -2,35 +2,28 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class Usuario extends Model
+class Usuario extends Authenticatable
 {
+    use HasFactory, Notifiable;
+
     protected $fillable = [
         'nome',
         'email',
-        'cpf',
         'senha',
-        'telefone',
-        'foto',
-        'tipo'
     ];
-    protected $hidden = ['senha'];
 
-    public function enderecos(){
-        return $this->hasMany(Endereco::class);
-    }
+    protected $hidden = [
+        'senha',
+        'remember_token',
+    ];
 
-    public function clientes(){
-        return $this->hasMany(Cliente::class);
-    }
-
-    public function cuidadores(){
-        return $this->hasMany(Cuidador::class);
-    }
-
-
-
-
-
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'senha' => 'hashed',
+    ];
 }
+

@@ -13,13 +13,17 @@ return new class extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('email')->unique();
-            $table->string('cpf')->unique();
-            $table->string('senha');
-            $table->string('telefone')->nullable();
-            $table->string('foto')->nullable();
-            $table->enum('tipo', ['cuidador', 'cliente']);
+            $table->string('nome', 80);
+            $table->string('email', 255)->unique();
+            $table->string('cpf', 15)->unique();
+            $table->string('senha', 255);
+            $table->string('telefone', 45)->nullable();
+            $table->string('tipo_usuario', 45);
+            $table->string('foto', 255)->nullable();
+            $table->foreignId('endereco_id')
+          ->constrained('enderecos')
+          ->cascadeOnUpdate()
+          ->cascadeOnDelete();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -13,10 +13,13 @@ return new class extends Migration
     {
         Schema::create('cuidadores', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('usuario_id')->constrained('usuarios')->onDelete('cascade');
-            $table->string('curriculo')->nullable();
+            $table->string('curriculo', 255)->nullable();
             $table->integer('like')->nullable();
+            $table->foreignId('usuario_id')
+            ->constrained('usuarios')
+            ->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
