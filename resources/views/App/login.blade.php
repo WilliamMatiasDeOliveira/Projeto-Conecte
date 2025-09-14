@@ -8,8 +8,6 @@
     }
 @endphp
 
-
-
 @extends('Layouts.main_layout')
 
 @section('title', 'Login')

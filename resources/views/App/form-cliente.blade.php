@@ -8,8 +8,6 @@
     }
 @endphp
 
-
-
 @extends('Layouts.main_layout')
 
 @section('title', 'Cadastro')
@@ -28,7 +26,7 @@
             <form action="{{ route('form.cliente.submit') }}" method="post"enctype="multipart/form-data">
                 @csrf
 
-                <input type="hidden"name="tipo" value="cliente">
+                <input type="hidden"name="tipo_usuario" value="cliente">
 
                 <div class="form-cliente-pessoal form">
                     <div>

@@ -1,4 +1,11 @@
 
+function timeMessage(session){
+    
+}
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
         const message = document.getElementById('login_error');

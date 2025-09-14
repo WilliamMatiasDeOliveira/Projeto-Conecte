@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Endereco;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -31,7 +32,7 @@ class AuthController extends Controller
             ]
         );
 
-        $user = User::where('email', $request->email)->first();
+        $user = Usuario::where('email', $request->email)->first();
         if ($user) {
             if (Hash::check($request->password, $user->password)) {
                 // autenticar o usuario
@@ -39,7 +40,7 @@ class AuthController extends Controller
 
                 if ($user->tipo == 'cliente') {
                     // pegar todos os cuidadores
-                    $cuidadores = User::where('tipo', 'cuidador')->get();
+                    $cuidadores = Usuario::where('tipo', 'cuidador')->get();
                     Session::put('cuidadores', $cuidadores);
 
                     return view('Auth.dashboard-cliente');
@@ -114,18 +115,25 @@ class AuthController extends Controller
             $request->foto->move(public_path('/assets/imgs/clientes/'), $image_name);
         }
 
-        User::insert([
-            'tipo' => $request->tipo,
-            'nome' => $request->nome,
-            'email' => $request->email,
-            'telefone' => $request->telefone,
-            'cpf' => $request->cpf,
+        $endereco = Endereco::create([
+            'cep' => $request->cep,
             'cidade' => $request->cidade,
             'bairro' => $request->bairro,
             'rua' => $request->rua,
-            'password' => Hash::make($request->password),
-            'foto' => $image_name ?? null,
         ]);
+
+        Usuario::insert([
+            'tipo_usuario' => $request->tipo_usuario,
+            'nome' => $request->nome,
+            'email' => $request->email,
+            'cpf' => $request->cpf,
+            'password' => Hash::make($request->password),
+            'telefone' => $request->telefone,
+            'foto' => $image_name ?? null,
+            'endereco_id' => $endereco->id
+        ]);
+
+
 
         return redirect()
             ->route('login')
@@ -199,7 +207,7 @@ class AuthController extends Controller
         }
 
 
-        User::insert([
+        Usuario::insert([
             'tipo' => $request->tipo,
             'nome' => $request->nome,
             'email' => $request->email,
@@ -232,7 +240,7 @@ class AuthController extends Controller
 
         $id = decrypt($id);
 
-        $userUpdate = User::find($id);
+        $userUpdate = Usuario::find($id);
 
         if($userUpdate->tipo == 'cliente'){
             return view('Auth.cliente-update', compact('userUpdate'));
@@ -289,7 +297,7 @@ class AuthController extends Controller
             ]
         );
 
-        $user = User::find($request->id);
+        $user = Usuario::find($request->id);
 
         if ($request->hasFile('foto') && $request->file('foto')->isValid()) {
             $extension = $request->foto->extension();
