@@ -14,17 +14,22 @@ class Usuario extends Authenticatable
     protected $fillable = [
         'nome',
         'email',
-        'senha',
+        'cpf',
+        'password',
+        'telefone',
+        'tipo_usuario',
+        'foto',
+        'endereco_id'
     ];
 
     protected $hidden = [
-        'senha',
+        'password',
         'remember_token',
     ];
 
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'senha' => 'hashed',
+        'password' => 'hashed',
     ];
 }
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cliente;
 use App\Models\Endereco;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
@@ -122,7 +123,7 @@ class AuthController extends Controller
             'rua' => $request->rua,
         ]);
 
-        Usuario::insert([
+        $usuario = Usuario::create([
             'tipo_usuario' => $request->tipo_usuario,
             'nome' => $request->nome,
             'email' => $request->email,
@@ -131,6 +132,10 @@ class AuthController extends Controller
             'telefone' => $request->telefone,
             'foto' => $image_name ?? null,
             'endereco_id' => $endereco->id
+        ]);
+
+        Cliente::create([
+            'usuario_id' => $usuario->id
         ]);
 
 

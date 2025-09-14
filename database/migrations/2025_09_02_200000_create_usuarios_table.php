@@ -25,6 +25,7 @@ return new class extends Migration
           ->constrained('enderecos')
           ->cascadeOnUpdate()
           ->cascadeOnDelete();
+          
             $table->timestamps();
             $table->softDeletes();
         });
