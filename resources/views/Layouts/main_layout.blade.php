@@ -9,7 +9,7 @@
     <title>@yield('title')</title>
 
     {{-- favicon --}}
-    <link rel="icon" type="image/png" href="{{ asset('assets/imgs/logobranca.svg') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/imgs/logos/img-logobranca.svg') }}">
 
     {{-- link bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
