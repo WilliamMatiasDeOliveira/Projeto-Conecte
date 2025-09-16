@@ -17,7 +17,7 @@
             <form action="{{ route('form.cuidador.submit') }}" method="post" enctype="multipart/form-data">
                 @csrf
 
-                <input type="hidden"name="tipo" value="cuidador">
+                <input type="hidden"name="tipo_usuario" value="cuidador">
 
                 <div class="form-cliente-pessoal form">
                     <div>
