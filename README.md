@@ -147,7 +147,7 @@ Este documento especifica as funcionalidades esperadas da aplicação.
 
 ## 5. REGRAS DE NEGÓCIO  
 
-  ![Modelo de Regras de negocio](public/assets/imgs/modelo_negocios.png)
+  ![Modelo de Regras de negocio](public/assets/imgs/diagrama_images/modelo_negocios.png)
 
 <div align= "end"> 
     
@@ -184,13 +184,13 @@ Viável – Nicho em expansão, pouca concorrência local, oportunidade estraté
 
 ### 7.2 Modelo Conceitual  
 
-![Modelo Conceitual](public/assets/imgs/diagama_imagesPI-Conecte-conceitual.png)
+![Modelo Conceitual](public/assets/imgs/diagama_images/PI-Conecte-conceitual.png)
 
 Fonte: Elaborado pelos autores.  
 
 ### 7.3 Modelo Lógico  
 
-![Modelo Casos de Uso](public/assets/imgs/diagama_imagesPI-Conecte-DER.png)
+![Modelo Casos de Uso](public/assets/imgs/diagama_images/PI-Conecte-DER.png)
 
 Fonte: Elaborado pelos autores.  
 <div align= "end"> 
