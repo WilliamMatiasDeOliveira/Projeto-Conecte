@@ -27,54 +27,65 @@ header .menu .logo a img {
     height: auto;
 }
 
-header .menu-nav {
-    display: flex;
-    flex: 1;
-    gap: 2rem;
-    justify-content: flex-end;
+@media (min-width:992px) {
+    
+    header .menu-nav {
+        display: flex;
+        flex: 1;
+        gap: 2rem;
+        justify-content: flex-end;
+    }
+
+    header .menu-nav ul {
+        gap: 1rem;
+    }
+
+    header .menu-nav ul li {
+        margin: 0;
+    }
+
+    header .menu-nav ul li a {
+        font-family: var(--font-destaque);
+        font-size: 1rem;
+        color: var(--preto);
+        position: relative;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    header .menu-nav ul a:hover {
+        color: var(--azul-escuro);
+    }
+
+    header .menu-nav ul a::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--azul-escuro);
+        transition: width .4s;
+    }
+
+    header .menu-nav ul a:hover::before,
+    header .menu-nav ul a:active {
+        width: 100%;
+    }
+
+    header .menu-nav .buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
 }
 
-header .menu-nav ul {
-    gap: 1rem;
-}
-
-header .menu-nav ul li {
-    margin: 0;
-}
-
-header .menu-nav ul li a {
-    font-family: var(--font-destaque);
-    font-size: 1rem;
-    color: var(--preto);
-    position: relative;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-header .menu-nav ul a:hover {
-    color: var(--azul-escuro);
-}
-
-header .menu-nav ul a::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--azul-escuro);
-    transition: width .4s;
-}
-
-header .menu-nav ul a:hover::before,
-header .menu-nav ul a:active {
-    width: 100%;
-}
-
-header .menu-nav .buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
+@media (max-width:992px) {
+    header .menu-nav .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
 }
 
 footer {
