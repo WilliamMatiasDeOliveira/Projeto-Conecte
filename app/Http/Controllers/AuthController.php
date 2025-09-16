@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cliente;
+use App\Models\Cuidador;
 use App\Models\Endereco;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
@@ -148,6 +149,7 @@ class AuthController extends Controller
     public function form_cuidador_submit(Request $request)
     {
         $request->validate(
+            
             // regras
             [
                 'nome' => 'required|string',
@@ -211,43 +213,55 @@ class AuthController extends Controller
             $request->curriculo->move(public_path('assets/imgs/curriculos/'), $curriculo_name);
         }
 
-
-        Usuario::insert([
-            'tipo' => $request->tipo,
-            'nome' => $request->nome,
-            'email' => $request->email,
-            'telefone' => $request->telefone,
-            'cpf' => $request->cpf,
+        $endereco = Endereco::create([
+            'cep' => $request->cep,
             'cidade' => $request->cidade,
             'bairro' => $request->bairro,
             'rua' => $request->rua,
-            'password' => Hash::make($request->password),
-            'foto' => $image_name ?? null,
-            'curriculo' => $curriculo_name ?? null,
         ]);
+
+
+        $usuario = Usuario::create([
+            'tipo_usuario' => $request->tipo_usuario,
+            'nome' => $request->nome,
+            'email' => $request->email,
+            'cpf' => $request->cpf,
+            'password' => Hash::make($request->password),
+            'telefone' => $request->telefone,
+            'foto' => $image_name ?? null,
+            'endereco_id' => $endereco->id
+        ]);
+
+        Cuidador::create([
+            'usuario_id' => $usuario->id,
+            'curriculo' => $curriculo_name ?? null
+        ]);
+
+        
 
         return redirect()
             ->route('login')
             ->with('create_user_success', "Seu cadastro foi feito com Sucesso !");
     }
 
-    public function logout(){
+    public function logout()
+    {
         Auth::logout();
 
         request()->session()->invalidate();
         request()->session()->regenerateToken();
         return redirect()->route('home');
-
     }
 
     // update
-    public function update($id){
+    public function update($id)
+    {
 
         $id = decrypt($id);
 
         $userUpdate = Usuario::find($id);
 
-        if($userUpdate->tipo == 'cliente'){
+        if ($userUpdate->tipo == 'cliente') {
             return view('Auth.cliente-update', compact('userUpdate'));
         } else {
             return view('Auth.cuidador-update', compact('userUpdate'));
@@ -308,9 +322,9 @@ class AuthController extends Controller
             $extension = $request->foto->extension();
             $image_name = md5($request->foto->getClientOriginalName() . strtotime("now")) . "." . $extension;
 
-            if($user->tipo == "cliente"){
+            if ($user->tipo == "cliente") {
                 $request->foto->move(public_path('assets/imgs/clientes/'), $image_name);
-            }else if($user->tipo == "cuidador"){
+            } else if ($user->tipo == "cuidador") {
                 $request->foto->move(public_path('assets/imgs/cuidadores/'), $image_name);
             }
         } else {
@@ -344,18 +358,14 @@ class AuthController extends Controller
         $user->curriculo = $curriculo_name;
         $user->save();
 
-        if($user->tipo == "cuidador"){
+        if ($user->tipo == "cuidador") {
             return redirect()
-            ->route('dashboard.cuidador')
-            ->with('update_cuidador_success', "Seus dados foram atualizados com sucesso !");
+                ->route('dashboard.cuidador')
+                ->with('update_cuidador_success', "Seus dados foram atualizados com sucesso !");
         }
 
         return redirect()
             ->route('dashboard.cliente')
             ->with('update_cliente_success', "Seus dados foram atualizados com sucesso !");
-
-
     }
 }
-
-

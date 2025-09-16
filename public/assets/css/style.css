@@ -8,12 +8,13 @@ CONFIG PARA DESKTOP
     margin: 0;
     padding: 0;
     position: fixed;
-
+    z-index: 100;
 }
 
 header .menu-bg {
     background-color: var(--branco);
     width: 100vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header .menu {
@@ -26,97 +27,137 @@ header .menu .logo a img {
     height: auto;
 }
 
-header .menu-nav {
-    display: flex;
-    flex: 1;
-    gap: 2rem;
-    justify-content: flex-end;
+@media (min-width:992px) {
+    
+    header .menu-nav {
+        display: flex;
+        flex: 1;
+        gap: 2rem;
+        justify-content: flex-end;
+    }
+
+    header .menu-nav ul {
+        gap: 1rem;
+    }
+
+    header .menu-nav ul li {
+        margin: 0;
+    }
+
+    header .menu-nav ul li a {
+        font-family: var(--font-destaque);
+        font-size: 1rem;
+        color: var(--preto);
+        position: relative;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    header .menu-nav ul a:hover {
+        color: var(--azul-escuro);
+    }
+
+    header .menu-nav ul a::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--azul-escuro);
+        transition: width .4s;
+    }
+
+    header .menu-nav ul a:hover::before,
+    header .menu-nav ul a:active {
+        width: 100%;
+    }
+
+    header .menu-nav .buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
 }
 
-header .menu-nav ul {
-    gap: 1rem;
-}
-
-header .menu-nav ul li {
-    margin: 0;
-}
-
-header .menu-nav ul li a {
-    font-family: var(--font-destaque);
-    font-size: 1rem;
-    color: var(--preto);
-    position: relative;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-header .menu-nav ul a:hover {
-    color: var(--azul-escuro);
-}
-
-header .menu-nav ul a::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--azul-escuro);
-    transition: width .4s;
-}
-
-header .menu-nav ul a:hover::before,
-header .menu-nav ul a:active{
-    width: 100%;
-}
-
-header .menu-nav .buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
+@media (max-width:992px) {
+    header .menu-nav .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
 }
 
 footer {
     margin-top: 0.75rem;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     padding: 15px 0px;
-    background-color: var(--azul-escuro);
+    background-color: var(--preto);
+    color: var(--branco);
+    gap: 6rem;
 }
 
-footer .logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 5px;
-    font-family: var(--font-decorativa);
-    font-weight: 500;
-    font-size: 2rem;
-    color: #222222;
-}
-
-footer .colaboradores {
+footer .principal-footer {
     display: flex;
     flex-direction: column;
-    color: #222222;
-    text-align: center;
+    align-self: center;
+    gap: 1.25rem;
 }
 
-footer .colaboradores a {
-    color: white;
+footer .logo img {
+    width: 200px;
 }
 
-footer .colaboradores a:hover {
-    color: var(--preto);
+footer .logo p {
+    font-weight: 500;
+    margin: 0;
+}
+
+footer .social-contato {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+}
+
+footer .social-contato span {
+    display: flex;
+    align-items: center;
+}
+
+footer 
+.outros-links-a,
+.outros-links-b {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .outros-links-a h3,
+footer .outros-links-b h3,
+footer .apoio h3 {
+    margin-bottom: 0.3rem;
+    color: var(--azul-escuro);
+}
+
+footer 
+.outros-links-a a,
+.outros-links-b a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+footer .outros-links-a a:hover,
+footer .outros-links-b a:hover {
+    color: var(--azul-claro);
+    text-decoration: underline;
 }
 
 footer .apoio {
     display: flex;
     flex-direction: column;
-    color: #222222;
-    font-weight: 500;
 }
 
 footer .apoio img {
@@ -149,14 +190,7 @@ footer .apoio img {
 }
 
 .hero .hero-intro h1 {
-    font-family: var(--font-destaque);
-    font-weight: bold;
-    font-size: 2.75rem;
-    margin-top: 5rem;
-}
-
-.hero .hero-intro h1 strong {
-    color: var(--azul-escuro);
+    margin-top: 4rem;
 }
 
 .hero .hero-intro p {
@@ -472,13 +506,14 @@ PAGINA CONTATOS
 .form-cliente-container {
     display: flex;
     justify-content: center;
+    padding-top: 6%;
 }
 
 .form-cliente {
     display: flex;
-    width: 80%;
-    padding: 30px;
-    margin: 3rem;
+    width: 85%;
+    padding: 20px;
+    margin: 1rem;
     gap: 1rem;
 
     background-color: var(--azul-escuro);
@@ -497,19 +532,16 @@ PAGINA CONTATOS
 }
 
 .form-cliente-side img {
-    max-width: 300px;
+    max-width: 250px;
 }
 
 .form-cliente h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
     text-align: center;
+    margin-bottom: 1rem;
     font-family: var(--font-destaque);
 }
 
 .form-cliente-side p {
-    font-size: 1.1rem;
     text-align: center;
     margin-bottom: 1rem;
     font-weight: 400;
@@ -520,6 +552,10 @@ PAGINA CONTATOS
     color: inherit;
     text-decoration: underline;
     font-weight: 600;
+}
+
+.form-cliente-side a:hover {
+    color: var(--azul-claro);
 }
 
 .form-cliente .btn {
@@ -548,7 +584,7 @@ PAGINA CONTATOS
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.6rem;
     margin-top: .5rem;
     padding-bottom: 1.5rem;
     border-bottom: 2px solid white;
@@ -613,13 +649,13 @@ PAGINA CONTATOS
     margin: 6rem auto;
 }
 
-.form-login .links{
+.form-login .links {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.form-login .text-light{
+.form-login .text-light {
     font-size: 1rem;
 }
 
@@ -627,15 +663,16 @@ PAGINA CONTATOS
     margin-top: 1rem;
 }
 
-.logo-form{
+.logo-form {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
 }
 
-.logo-form img{
+.logo-form img {
     width: 15rem;
 }
+
 .alert {
     text-align: center;
     font-size: 1.5rem;
@@ -869,11 +906,10 @@ PAGINA CONTATOS
         width: 100%;
     }
 
-
-
     footer {
+        gap: 1rem;
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
     }
 
     /*
@@ -1252,6 +1288,7 @@ CONFIG TABLET    MEDIAS QUERY TABLET
     footer {
         flex-direction: column;
         gap: 20px;
+        text-align: center;
     }
 
     /* =========================================================

@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Cuidador extends Model
 {
     use SoftDeletes;
+
+    protected $fillable = [
+        'curriculo',
+        'like',
+        'usuario_id'
+    ];
+
+    protected $table = 'cuidadores'; 
 }

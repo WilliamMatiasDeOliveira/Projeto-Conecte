@@ -32,7 +32,7 @@
 
         <section class="form-login">
             <div class="logo-form">
-                <img src="{{ asset('assets/imgs/logobranca.svg') }}" alt="">
+                <img src="{{ asset('assets/imgs/logos/logobranca.svg') }}" alt="">
             </div>
             <form action="{{ route('login.submit') }}" method="post">
                 @csrf
