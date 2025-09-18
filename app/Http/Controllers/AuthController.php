@@ -40,15 +40,15 @@ class AuthController extends Controller
                 // autenticar o usuario
                 Auth::login($user);
 
-                if ($user->tipo == 'cliente') {
+                if ($user->tipo_usuario == 'cliente') {
                     // pegar todos os cuidadores
-                    $cuidadores = Usuario::where('tipo', 'cuidador')->get();
+                    $cuidadores = Usuario::where('tipo_usuario', 'cuidador')->get();
                     Session::put('cuidadores', $cuidadores);
 
                     return view('Auth.dashboard-cliente');
                 }
 
-                if ($user->tipo == 'cuidador') {
+                if ($user->tipo_usuario == 'cuidador') {
                     // pegar todos os cuidadores
                     return view('Auth.dashboard-cuidador');
                 }

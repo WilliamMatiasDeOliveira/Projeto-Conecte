@@ -137,7 +137,7 @@
                             </svg>
                             Cidade:
                         </h4>
-                        <span>{{ Auth::user()->cidade }}</span>
+                        <span>{{ Auth::user()->endereco->cidade }}</span>
 
                         <h4>
                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +147,7 @@
                                     fill="currentColor" /></svg>
                             Bairro:
                         </h4>
-                        <span>{{ Auth::user()->bairro }}</span>
+                        <span>{{ Auth::user()->endereco->bairro }}</span>
 
                         <h4>
                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +158,7 @@
                             </svg>
                             Rua:</h4>
                         <span>
-                            {{ Auth::user()->rua }}</span>
+                            {{ Auth::user()->endereco->rua }}</span>
                     </ul>
                     <a href="{{ route('update', encrypt(Auth::user()->id)) }}" class="btn btn-primary w-100">Atualizar
                         Dados</a>
