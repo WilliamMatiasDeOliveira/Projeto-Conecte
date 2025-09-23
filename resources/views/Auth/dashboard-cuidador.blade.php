@@ -44,7 +44,7 @@
                             </svg> Histórico</a>
                     </li>
                     <li>
-                        <a href=""><svg xmlns="http://www.w3.org/2000/svg"
+                        <a href="{{ route('home') }}"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
                                     d="M569 337C578.4 327.6 578.4 312.4 569 303.1L425 159C418.1 152.1 407.8 150.1 398.8 153.8C389.8 157.5 384 166.3 384 176L384 256L272 256C245.5 256 224 277.5 224 304L224 336C224 362.5 245.5 384 272 384L384 384L384 464C384 473.7 389.8 482.5 398.8 486.2C407.8 489.9 418.1 487.9 425 481L569 337zM224 160C241.7 160 256 145.7 256 128C256 110.3 241.7 96 224 96L160 96C107 96 64 139 64 192L64 448C64 501 107 544 160 544L224 544C241.7 544 256 529.7 256 512C256 494.3 241.7 480 224 480L160 480C142.3 480 128 465.7 128 448L128 192C128 174.3 142.3 160 160 160L224 160z"
@@ -144,7 +144,8 @@
                                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
                                     d="M288 112C288 85.5 309.5 64 336 64L432 64C458.5 64 480 85.5 480 112L480 160L528 160L528 88C528 74.7 538.7 64 552 64C565.3 64 576 74.7 576 88L576 160L592 160C618.5 160 640 181.5 640 208L640 528C640 554.5 618.5 576 592 576L336 576C309.5 576 288 554.5 288 528L288 112zM352 176L352 208C352 216.8 359.2 224 368 224L400 224C408.8 224 416 216.8 416 208L416 176C416 167.2 408.8 160 400 160L368 160C359.2 160 352 167.2 352 176zM368 256C359.2 256 352 263.2 352 272L352 304C352 312.8 359.2 320 368 320L400 320C408.8 320 416 312.8 416 304L416 272C416 263.2 408.8 256 400 256L368 256zM352 368L352 400C352 408.8 359.2 416 368 416L400 416C408.8 416 416 408.8 416 400L416 368C416 359.2 408.8 352 400 352L368 352C359.2 352 352 359.2 352 368zM528 256C519.2 256 512 263.2 512 272L512 304C512 312.8 519.2 320 528 320L560 320C568.8 320 576 312.8 576 304L576 272C576 263.2 568.8 256 560 256L528 256zM512 368L512 400C512 408.8 519.2 416 528 416L560 416C568.8 416 576 408.8 576 400L576 368C576 359.2 568.8 352 560 352L528 352C519.2 352 512 359.2 512 368zM96 544L96 384L80 384C35.8 384 0 348.2 0 304C0 277.3 13.1 253.7 33.2 239.1C32.4 234.2 32 229.1 32 224C32 171 75 128 128 128C181 128 224 171 224 224L224 320C224 355.3 195.3 384 160 384L160 544C160 561.7 145.7 576 128 576C110.3 576 96 561.7 96 544z"
-                                    fill="currentColor" /></svg>
+                                    fill="currentColor" />
+                            </svg>
                             Bairro:
                         </h4>
                         <span>{{ Auth::user()->endereco->bairro }}</span>
@@ -156,7 +157,8 @@
                                     d="M287.9 96L211.7 96C182.3 96 156.6 116.1 149.6 144.6L65.4 484.5C57.9 514.7 80.8 544 112 544L287.9 544L287.9 480C287.9 462.3 302.2 448 319.9 448C337.6 448 351.9 462.3 351.9 480L351.9 544L528 544C559.2 544 582.1 514.7 574.6 484.5L490.5 144.6C483.4 116.1 457.8 96 428.3 96L351.9 96L351.9 160C351.9 177.7 337.6 192 319.9 192C302.2 192 287.9 177.7 287.9 160L287.9 96zM351.9 288L351.9 352C351.9 369.7 337.6 384 319.9 384C302.2 384 287.9 369.7 287.9 352L287.9 288C287.9 270.3 302.2 256 319.9 256C337.6 256 351.9 270.3 351.9 288z"
                                     fill="currentColor" />
                             </svg>
-                            Rua:</h4>
+                            Rua:
+                        </h4>
                         <span>
                             {{ Auth::user()->endereco->rua }}</span>
                     </ul>
@@ -166,55 +168,13 @@
             </div>
 
 
-            {{-- @if (session('update_cuidador_success'))
-            <div class="alert alert-success"id="update_cuidador_success">
-                {{ session('update_cuidador_success') }}
-            </div>
-        @endif --}}
+            @if (session('update_cuidador_success'))
+                <div class="alert alert-success"id="update_cuidador_success">
+                    {{ session('update_cuidador_success') }}
+                </div>
+            @endif
 
             <div class="dashboard-cuidador">
-
-                {{-- <div class="card">
-
-                @if (!isset(Auth::user()->foto))
-                    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" fill="currentColor"
-                        class="bi bi-person-square mx-auto mt-1" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                        <path
-                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
-                    </svg>
-                @else
-                    <img src="{{ asset('assets/imgs/cuidadores/' . Auth::user()->foto) }}" alt="foto do usuario"
-                    style="width:100%; max-height:300px; object-fit:contain;">
-                @endif
-
-                <div class="card-body">
-                    <h5 class="card-title text-center">{{ Auth::user()->nome }}</h5>
-                    <p class="card-text">
-                    <ul>
-                        <li>E-MAIL : {{ Auth::user()->email }}</li>
-                        <li>TELEFONE : {{ Auth::user()->telefone }}</li>
-                        <li>CPF : {{ Auth::user()->cpf }}</li>
-                        <li>CIDADE : {{ Auth::user()->cidade }}</li>
-                        <li>BAIRRO : {{ Auth::user()->bairro }}</li>
-                        <li>RUA : {{ Auth::user()->rua }}</li>
-                    </ul>
-                    </p>
-                    <a href="{{ route('update', encrypt(Auth::user()->id)) }}" class="btn btn-primary w-100">Atualizar
-                        Dados</a>
-                </div>
-            </div>
-
-            <div class="show-data">
-                <iframe src="{{ asset('assets/imgs/curriculos/' . Auth::user()->curriculo) }}"></iframe>
-            </div>
-
-            <div class="show-data-mobile">
-                <a href="{{ asset('assets/imgs/curriculos/' . Auth::user()->curriculo) }}" download
-                    rel="noopener noreferrer" class="btn btn-secondary mt-2 form-control">
-                    Ver Currículo
-                </a>
-            </div> --}}
 
             </div>
 

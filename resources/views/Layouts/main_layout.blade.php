@@ -40,7 +40,7 @@
 
 <body>
 
-    @include('Layouts.header')
+        @include('Layouts.header')
 
     <main>
         @yield('content')
@@ -56,7 +56,7 @@
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
     </script>
     {{-- link js aplicação --}}
-    <script src="{{asset('assets/js/script.js')}}"></script>
+    <script src="{{ asset('assets/js/script.js') }}"></script>
 </body>
 
 </html>

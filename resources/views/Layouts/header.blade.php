@@ -43,13 +43,19 @@
                 @endguest
 
                 @auth
-
                     <div class="auth-user d-flex justify-content-center align-items-center gap-4">
+                        <div class="buttons ms-md-2">
+                            <form action="{{ route('logout') }}" method="post">
+                                @csrf
+                                <input type="submit"value="Logout" class="btn btn-danger">
+                            </form>
 
-                        <form action="{{ route('logout') }}" method="post">
-                            @csrf
-                            <input type="submit"value="Logout" class="btn btn-danger">
-                        </form>
+
+                            <a href="{{ route('dashboard.cuidador') }}"class="btn btn-secondary form-control">Perfil</a>
+                            
+                        </div>
+
+
 
                         @if (Auth::user()->tipo == 'cuidador')
                             <a href="{{ route('dashboard.cuidador') }}" class='btn btn-secondary'>Meu Perfil</a>
@@ -58,9 +64,6 @@
                             <a href="{{ route('dashboard.cliente') }}" class='btn btn-secondary'>Meu Perfil</a>
                         @endif
                     </div>
-
-
-
                 @endauth
             </nav>
         </div>

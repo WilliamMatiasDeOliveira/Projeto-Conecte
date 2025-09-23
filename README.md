@@ -190,7 +190,7 @@ Fonte: Elaborado pelos autores.
 
 ### 7.3 Modelo Lógico  
 
-![Modelo Casos de Uso](public/assets/imgs/diagama_images/PI-Conecte-DER.png)
+![Modelo Entidade Relacionamento](public/assets/imgs/diagama_images/PI-Conecte-DER.jpeg)
 
 Fonte: Elaborado pelos autores.  
 <div align= "end"> 
